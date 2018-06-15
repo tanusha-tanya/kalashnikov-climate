@@ -1,2 +1,15 @@
 extends _layouts/default
 include modules/button/button
+include modules/download/download
+include modules/spoiler/spoiler
+
+block title
+  title uikit
+block header
+block content
+  +button("Задать вопрос")
+  include modules/search/search
+  +download("Скачать каталог")
+  include modules/slider/slider
+  include modules/social/social
+  +spoiler("Показать еще")

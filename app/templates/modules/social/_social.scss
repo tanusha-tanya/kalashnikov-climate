@@ -1,0 +1,37 @@
+.social{
+  margin: 0 -3px;
+  font-size: 0;
+  &__svg{
+    fill:$inactiveSvg;
+    color:$inactiveSvg;
+    transition: fill .3s, color .3s;
+  }
+  &__link{
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    background: $uppArrow;
+    display: inline-block;
+    margin: 0 3px;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    transition: background .3s;
+    &-fb{
+      padding: 10px 16px;
+    }
+    &-vk{
+      padding: 16px 10px;
+    }
+    &-ok{
+      padding: 10px 13px;
+    }
+    &:hover{
+      background: $activeBtn;
+      .social__svg{
+        fill:$hoverSvg;
+        color:$hoverSvg;
+      }
+    }
+  }
+}

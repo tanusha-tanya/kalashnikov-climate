@@ -1,0 +1,20 @@
+.download{
+  &__svg{
+    color: $muteTxt;
+    fill: $muteTxt;
+    transition: color .3s, fill .3s;
+  }
+  &__link{
+    color: $muteTxt;
+    font: $littleTxt;
+    transition: color .3s;
+    text-decoration: none;
+    &:hover{
+      color:$inactiveBtn;
+      .download__svg{
+        fill: $inactiveBtn;
+        color: $inactiveBtn;
+      }
+    }
+  }
+}

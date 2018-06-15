@@ -1,0 +1,31 @@
+.spoilarrow{
+  cursor:pointer;
+  &__text{
+    color:$inactiveBtn;
+    font:$pointer;
+    display: inline-block;
+  }
+  &__svg{
+    color:$inactiveBtn;
+    fill: $inactiveBtn;
+    display: inline-block;
+    transform: rotate(-90deg);
+    transition: transform .3s;
+  }
+  &:hover{
+    .spoilarrow__svg{
+      transform: rotate(-90deg) scaleX(1.5) translateX(-3px);
+    }
+  }
+  &.spoildown{
+    .spoilarrow__svg{
+      transform: rotate(90deg);
+      transition: transform .3s;
+    }
+      &:hover{
+        .spoilarrow__svg{
+          transform: rotate(90deg) scaleX(1.5) translateX(3px);
+        }
+    }
+  }
+}

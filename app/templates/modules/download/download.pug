@@ -1,0 +1,6 @@
+mixin download(text)
+
+  .download
+    a.download__link(href="#")
+      svg.download__svg(role="img")(width="10")(height="14"): use(xlink:href="#download")
+      download__text= text

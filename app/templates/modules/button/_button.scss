@@ -1,0 +1,21 @@
+.send{
+  &__button{
+    padding:9px 30px;
+    min-width: 240px;
+    min-height: 60px;
+    text-align:center;
+    background: $inactiveBtn;
+    border: 0;
+    outline: none;
+    color: $hoverSvg;
+    font:$pointer;
+    cursor: pointer;
+    transition: background .3s;
+    &:hover, &:active{
+      background: $hoverBtn;
+    }
+    &.sent, &.sent:hover{
+      background: $activeBtn;
+    }
+  }
+}

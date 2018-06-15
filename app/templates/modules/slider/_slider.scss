@@ -1,0 +1,64 @@
+.count{
+  &__amount{
+    display: inline-block;
+    vertical-align: middle;
+    &-current{
+      font:$bold;
+      color: $hoverTxt;
+      &:after{
+        content: "";
+        width: 40px;
+        height: 2px;
+        display: inline-block;
+        background: $hoverTxt;
+        vertical-align: middle;
+        margin: 0 17px;
+      }
+    }
+    &-total{
+      font: $link;
+    }
+  }
+}
+.flipping{
+  font-size:0;
+  margin: 0 -5px;
+  &__arrow{
+    width: 60px;
+    height: 40px;
+    display: inline-block;
+    margin: 0 5px;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    background: $inactiveBg;
+    cursor:pointer;
+    transition: background .3s;
+    .flipping__svg{
+      color: $inactiveSvg;
+      fill:$inactiveSvg;
+      transition: fill .3s, color .3s, transform .3s;
+    }
+    &-right{
+        transform: rotate(180deg);
+    }
+    &:hover{
+      background:$activeBtn;
+      .flipping__svg{
+        color:$hoverSvg;
+        fill:$hoverSvg;
+        transform: scaleX(1.5);
+      }
+    }
+    &.disabled{
+      cursor:default;
+      &:hover{
+        background:$activeBtn;
+        .flipping__svg{
+          color:$hoverSvg;
+          fill:$hoverSvg;
+          transform: none;
+        }
+      }
+    }
+  }
+}
