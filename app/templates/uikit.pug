@@ -2,6 +2,7 @@ extends _layouts/default
 include modules/button/button
 include modules/download/download
 include modules/spoiler/spoiler
+include modules/more/more
 
 block title
   title uikit
@@ -13,3 +14,12 @@ block content
   include modules/slider/slider
   include modules/social/social
   +spoiler("Показать еще")
+  +more("Узнать больше")
+  include modules/up/up
+  h1 Тепловая завеса
+  h2 KVC-D
+  h3 Капилярный термостат
+  h4 Искусство в деталях. Надежно
+  h5 Скачать каталог
+  a(href="#") Тепловые завесы
+  include modules/cities/cities

@@ -1,0 +1,31 @@
+.more{
+  cursor:pointer;
+  font-size: 0;
+  &__text{
+    color:$inactiveBtn;
+    font:$pointer;
+    display: inline-block;
+    margin-right: 22px;
+  }
+  &__arrow{
+    padding: 15px 20px;
+    background: $inactiveBtn;
+    display: inline-block;
+    transition: background .3s;
+    transform: rotate(180deg);
+  }
+  &__svg{
+    color:$hoverSvg;
+    fill: $hoverSvg;
+    display: inline-block;
+    transition: transform .3s;
+  }
+  &:hover{
+    .more__svg{
+      transform: scaleX(1.5) translateX(-3px);
+    }
+    .more__arrow{
+      background: $hoverBtn;
+    }
+  }
+}

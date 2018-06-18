@@ -1,0 +1,15 @@
+.lang{
+  &__link{
+    color:$inactiveBtn;
+    transition: color .3s;
+    text-decoration: none;
+    font: $pointer;
+    line-height: 0;
+    @media(min-width:$desctop){
+      font:$h5
+    }
+  &:hover{
+    color: $inactiveTxt;
+  }
+  }
+}

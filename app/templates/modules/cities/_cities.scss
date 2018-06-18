@@ -1,0 +1,71 @@
+.cities{
+  &__label{
+    color: $activeBtn;
+    font:$pointer;
+  }
+  &__wrap{
+    position: relative;
+    margin-left: 30px;
+  }
+  &__svg{
+    color:$inactiveSvg;
+    fill:$inactiveSvg;
+    position: absolute;
+    left: 25px;
+    top: 1px;
+    transition: fill .3s, color .3s;
+  }
+  &__input{
+    color: $muteTxt;
+    width: 488px;
+    box-sizing: border-box;
+    padding: 14px 50px;
+    border: none;
+    outline: none;
+    background: $inactiveBg;
+  &::-webkit-input-placeholder{
+    color: $muteTxt;
+    font:$pointer;
+    opacity: 1;
+    transition: color .3s;
+  }
+  &:-webkit-input-placeholder{
+    color: $muteTxt;
+    font:$pointer;
+    opacity: 1;
+    transition: color .3s;
+  }
+  &:-moz-placeholder{
+    color: $muteTxt;
+    font:$pointer;
+    opacity: 1;
+    transition: color .3s;
+  }
+  &::-moz-placeholder{
+    color: $muteTxt;
+    font:$pointer;
+    opacity: 1;
+    transition: color .3s;
+  }
+}
+&__wrap:hover{
+  .cities__svg{
+    color: $activeBtn;
+    fill:$activeBtn;
+  }
+  .cities__input{
+  &::-webkit-input-placeholder{
+    color: $activeBtn;
+  }
+  &:-webkit-input-placeholder{
+    color: $activeBtn;
+  }
+  &:-moz-placeholder{
+    color: $activeBtn;
+  }
+  &::-moz-placeholder{
+    color: $activeBtn;
+  }
+  }
+}
+}

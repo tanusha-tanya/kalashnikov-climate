@@ -1,0 +1,38 @@
+.header{
+  &__top{
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__link{
+    color:$inactiveBtn;
+    text-decoration:none;
+    display: none;
+  }
+  &__download{
+    display: none;
+    @media(min-width:$tablet){
+      display: flex;
+      margin-left: 55px;
+      .download{
+        margin: 0 20px;
+      }
+    }
+  }
+  &__search{
+    order: 1;
+  }
+  &__svg{
+    width: 240px;
+    height: 24px;
+    @media(min-width:$desctop){
+      width: 187px;
+      height: 18px;
+    }
+  }
+  &__search{
+    margin: 40px 0;
+  }
+}

@@ -1,0 +1,20 @@
+.up{
+  padding: 13px 15px;;
+  background: $uppArrow;
+  display: inline-block;
+  cursor:pointer;
+  transition: background .3s;
+  &__svg{
+    fill: $inactiveSvg;
+    color: $inactiveSvg;
+    transition: fill .3s, color .3s;
+  }
+  &:hover{
+    background:$activeBtn;
+    .up__svg{
+      fill: $hoverSvg;
+      color: $hoverSvg;
+      transition: fill .3s, color .3s;
+    }
+  }
+}

@@ -1,9 +1,11 @@
 .spoilarrow{
   cursor:pointer;
+  font-size: 0;
   &__text{
     color:$inactiveBtn;
     font:$pointer;
     display: inline-block;
+    margin-right: 22px;
   }
   &__svg{
     color:$inactiveBtn;
