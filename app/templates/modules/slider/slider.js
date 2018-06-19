@@ -1,3 +1,4 @@
+function slider () {
 const countCurrent =  document.querySelector(".count__amount-current");
 const countTotal =  document.querySelector(".count__amount-total");
 const countAdd = document.querySelector(".flipping__arrow-right");
@@ -57,3 +58,4 @@ countDeduct.onclick = function(){
   }
 }
 totalNumber()
+}

@@ -1,15 +1,28 @@
 .header{
+  @media(min-width:$notebook){
+    border-bottom: 1px solid $download;
+  }
   &__top{
-    margin: 15px 0;
+    margin: 15px -10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
+    @media(min-width:$tablet){
+      margin: 15px -20px;
+    }
+    @media(min-width:$notebook){
+      margin: 15px -30px;
+      flex-wrap:nowrap;
+    }
   }
   &__link{
     color:$inactiveBtn;
     text-decoration:none;
     display: none;
+    @media(min-width:$notebook){
+      display: block;
+    }
   }
   &__download{
     display: none;
@@ -23,16 +36,76 @@
   }
   &__search{
     order: 1;
-  }
-  &__svg{
-    width: 240px;
-    height: 24px;
-    @media(min-width:$desctop){
-      width: 187px;
-      height: 18px;
+    width: 83%;
+    width: calc(83% - 20px);
+    margin: 40px 10px;
+    @media(min-width:$tablet){
+      width: 92%;
+      width: calc(92% - 40px);
+      margin: 40px 20px;
+    }
+    @media(min-width:$notebook){
+      width: 25%;
+      width: calc(25% - 60px);
+      order: 0;
+      margin: -10px 30px;
     }
   }
-  &__search{
-    margin: 40px 0;
+  &__left{
+    width: 83%;
+    width: calc(83% - 20px);
+    height: 24px;
+    margin: 0 10px;
+    @media(min-width:$tablet){
+      width: 92%;
+      width: calc(92% - 40px);
+      margin: 0 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    @media(min-width:$notebook){
+      width: 58%;
+      width: calc(58% - 60px);
+      margin: 0 30px;
+    }
+  }
+  &__lang{
+    width: 17%;
+    width: calc(17% - 20px);
+    margin: 0 10px;
+    @media(min-width:$tablet){
+      width: 8%;
+      width: calc(8% - 40px);
+      margin: 0 20px;
+    }
+    @media(min-width:$notebook){
+      width: 8%;
+      width: calc(8% - 60px);
+      margin: 0 30px;
+    }
+  }
+  &__hamburger{
+    width: 17%;
+    width: calc(17% - 20px);
+    margin: 0 10px;
+    order: 2;
+    margin: 40px 10px;
+    align-self: center;
+    @media(min-width:$tablet){
+      width: 8%;
+      width: calc(8% - 40px);
+      margin: 0 20px;
+    }
+    @media(min-width:$notebook){
+      display: none;
+    }
+  }
+  &__bottom{
+    display: none;
+    @media(min-width:$notebook){
+      display: block;
+      margin: 40px -30px;
+      position: relative;
+    }
   }
 }

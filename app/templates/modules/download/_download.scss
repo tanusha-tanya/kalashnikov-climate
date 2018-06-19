@@ -6,9 +6,12 @@
   }
   &__link{
     color: $muteTxt;
-    font: $littleTxt;
+    font: $link;
     transition: color .3s;
     text-decoration: none;
+      @media(min-width:$notebook){
+        text-decoration: underline;
+      }
     &:hover{
       color:$inactiveBtn;
       .download__svg{

@@ -1,4 +1,5 @@
 .hamburger{
+  float: right;
   &__span{
     width: 30px;
     height: 4px;
@@ -20,11 +21,4 @@
       top: -7px;
     }
   }
-  position: absolute;
-  right: 15px;
-  bottom: 70px;
-    @media(min-width:$tablet){
-      bottom: 85px;
-      right: 30px;
-    }
 }

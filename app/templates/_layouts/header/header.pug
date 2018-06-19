@@ -1,14 +1,22 @@
 include ../../modules/logo/logo
 include ../../modules/download/download
+include ../../modules/menu/menu
 
 header.header
-  .header__top.container
-    +logo(layout="header")
-    .header__download
-      +download("Скачать прайс")
-      +download("Скачать каталог")
-    .header__search
-      include ../../modules/search/search
-    a.header__link(href="#") Задать вопрос
-    include ../../modules/lang/lang
-    include ../../modules/hamburger/hamburger
+  .container
+    .header__top
+      .header__left
+        .header__svg
+          +logo(layout="logo")
+        .header__download
+          +download("Скачать прайс")
+          +download("Скачать каталог")
+      .header__search
+        include ../../modules/search/search
+      a.header__link(href="#") Задать вопрос
+      .header__lang
+        include ../../modules/lang/lang
+      .header__hamburger
+        include ../../modules/hamburger/hamburger
+    .header__bottom
+      +menu()

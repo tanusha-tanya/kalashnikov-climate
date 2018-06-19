@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Главная",
+    "url": "index.html"
+  },
+  {
+    "title": "Каталог",
+    "url": "catalog.html"
+  },
+  {
+    "title": "О компании",
+    "url": "about.html"
+  },
+  {
+    "title": "Где купить",
+    "url": "wherebuy.html"
+  }
+  {
+    "title": "Новости",
+    "url": "news.html"
+  }
+  {
+    "title": "Партнерам",
+    "url": "partners.html"
+  }
+  {
+    "title": "Сервис центер",
+    "url": "service.html"
+  }
+  {
+    "title": "Контакты",
+    "url": "contacts.html"
+  }
+]
