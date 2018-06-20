@@ -1,0 +1,26 @@
+  .footer{
+    &__mobilemenu{
+      background: $inactiveBg;
+      position: absolute;
+      top: 170px;
+      left: 0;
+      right: 0;
+      height: auto;
+      transform: translateX(100%);
+      transition: transform .3s;
+      @media(min-width: $tablet){
+        max-width: 359px;
+        left: auto;
+      }
+      @media(min-width: $notebook){
+        display: none;
+      }
+      &.openmenu{
+        transform: translateX(0);
+      }
+    }
+    &__download{
+      display: flex;
+      justify-content: space-between;
+    }
+  }

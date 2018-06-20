@@ -1,11 +1,13 @@
 .hamburger{
   float: right;
+  cursor: pointer;
   &__span{
     width: 30px;
     height: 4px;
     background: $activeBtn;
     display: block;
     position: relative;
+    transition: width .3s;
     &:after, &:before{
       content: "";
       width: 30px;
@@ -13,12 +15,21 @@
       background: $activeBtn;
       display: block;
       position: absolute;
+      transition: width .3s;
     }
     &:after{
       top: 7px;
     }
     &:before{
       top: -7px;
+    }
+  }
+  &.openhamburger{
+    .hamburger__span{
+      width: 26px;
+      &:after{
+        width: 22px;
+      }
     }
   }
 }
