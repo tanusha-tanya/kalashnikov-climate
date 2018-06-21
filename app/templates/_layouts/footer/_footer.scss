@@ -2,14 +2,14 @@
     &__mobilemenu{
       background: $inactiveBg;
       position: absolute;
-      top: 170px;
+      top: 169px;
       left: 0;
       right: 0;
       height: auto;
       transform: translateX(100%);
       transition: transform .3s;
       @media(min-width: $tablet){
-        max-width: 359px;
+        width: 359px;
         left: auto;
       }
       @media(min-width: $notebook){

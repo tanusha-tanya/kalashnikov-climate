@@ -13,6 +13,7 @@
     position: relative;
     &-first{
       font: $link;
+      padding-left: 10px;
       .mobilemenu__svg{
         position: absolute;
         right: 10px;
@@ -20,7 +21,6 @@
       }
       &.openlist{
         background:$menubg;
-        padding-left: 10px;
       }
     }
     &-second{
@@ -34,6 +34,8 @@
     font: $pointer;
     margin-right: 20px;
     vertical-align:middle;
+    max-width: 90%;
+    word-wrap: normal;
     &-second{
       text-decoration: underline;
     }

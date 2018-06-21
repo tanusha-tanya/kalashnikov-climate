@@ -1,3 +1,161 @@
+.slider{
+  position: relative;
+  box-sizing: border-box;
+  margin-top: -30px;
+  @media(min-width:$tablet){
+    margin-top: -60px;
+  }
+  @media(min-width:$notebook){
+    margin-top: 30px;
+  }
+  &__items{
+    position: relative;
+    height: 350px;
+    width: 9999px;
+    cursor: grab;
+    padding: 0 15px;
+    @media(min-width:$tablet){
+      height: 630px;
+      padding: 0 30px;
+    }
+    @media(min-width:$tablet){
+      height: 500px;
+      padding: 0 60px;
+    }
+    &.is-grabbing{
+    cursor: grabbing;
+  }
+  }
+  &__item{
+    float: left;
+    padding: 15px;
+    width: calc(100vw - 30px);
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    @media(min-width:$tablet){
+      padding: 15px 30px;
+      width: 100vw;
+    }
+    @media(min-width:$notebook){
+      width: 60vw;
+    }
+  }
+  &__bg{
+    background-size: cover;
+    background-position: center;
+    padding: 70px 0 30px 30px;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @media(min-width:$tablet){
+      padding:  0 30px;
+    }
+    @media(min-width:$notebook){
+      padding: 0 50px;
+    }
+  }
+  &__content{
+    display:flex;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    &:before{
+      content: "";
+      width: 40px;
+      height: 2px;
+      background: $inactiveTxt;
+      margin-right: 15px;
+      margin-top: 15px;
+      @media(min-width:$tablet){
+        margin-top: 20px;
+      }
+    }
+    @media(min-width:$tablet){
+      margin-top: 32px;
+      margin-bottom: 47px;
+    }
+    @media(min-width:$notebook){
+      margin-top: 48px;
+      margin-bottom: 84px;
+    }
+  }
+  &__title{
+    font:$title;
+    @media(min-width:$tablet){
+      font:$h1;
+      line-height: 56px;
+      max-width: 90%;
+    }
+    @media(min-width:$notebook){
+      width: 50%;
+    }
+  }
+  &__text{
+    font:$pointer;
+    @media(min-width:$tablet){
+      font:$slidertext;
+    }
+    @media(min-width:$tablet){
+      font:$h3
+    }
+  }
+  &__link{
+    background: $inactiveBtn;
+    display: block;
+    padding: 10px 20px;
+    max-width: 74px;
+    @media(min-width:$tablet){
+      background: none;
+      padding: 0;
+      max-width: 50%;
+    }
+  }
+  &__href{
+    color: $hoverSvg;
+    text-decoration: none;
+    &:hover{
+      color: $hoverSvg;
+    }
+    @media(min-width:$tablet){
+      color: $inactiveBtn;
+      font:$pointer;
+      display: inline;
+    &:hover{
+      color: $inactiveBtn;
+    }
+  }
+  }
+  &__button{
+    display: none;
+    @media(min-width:$tablet){
+      display:block;
+      background:$inactiveBtn;
+      padding: 15px 20px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 12px;
+    }
+    @media(min-width:$notebook){
+      margin-left: 48px;
+    }
+  }
+  &__svg{
+    display: none;
+    @media(min-width:$tablet){
+      display: block;
+      transform: scale(-1);
+      fill:$hoverSvg;
+      color:$hoverSvg;
+    }
+  }
+  &__nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 .count{
   &__amount{
     display: inline-block;
