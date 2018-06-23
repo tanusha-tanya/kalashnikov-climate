@@ -19,7 +19,7 @@
       bottom: -42px;
       transition: background .3s;
     }
-    &:hover, &.menu__li-active{
+    &:hover, &.menu__li-active, &:focus{
       &:after{
         background: $activeBtn;
       }
@@ -27,7 +27,7 @@
   }
   &__link{
     text-decoration: none;
-    &:hover{
+    &:hover, &:focus{
       color: $inactiveTxt;
     }
   }

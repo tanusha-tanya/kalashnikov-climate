@@ -62,7 +62,7 @@ totalNumber()
 if (document.querySelector(".slider")){
   slider();
 }*/
-function lerp(a, b, n) {
+/*function lerp(a, b, n) {
     return (1 - n) * a + n * b
 }
 
@@ -205,3 +205,4 @@ const slider = new Effect({
 })
 
 slider.init()
+*/

@@ -1,5 +1,9 @@
 .search
-  .search__text Поиск
-  label.search__label
-    input.search__input(type="text")
-  svg.search__svg(role="img")(width="18")(height="18"): use(xlink:href="#search")
+  form.search__form(action="#")
+    fieldset.search__fieldset
+      .search__text Поиск
+      label.search__label(for="search__text")
+        input.search__input#search__text(type="text")
+      label.search__send(for="search__submit")
+        input.search__submit#search__submit(type="submit")
+        svg.search__svg(role="img")(width="18")(height="18"): use(xlink:href="#search")
