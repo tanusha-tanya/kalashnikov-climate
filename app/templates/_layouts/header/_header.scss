@@ -1,15 +1,16 @@
 .header{
   @media(min-width:$notebook){
     border-bottom: 1px solid $download;
+    margin-bottom: 30px;
   }
   &__top{
-    margin: 15px -10px 0 -10px;
+    margin: 15px -10px -15px -10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
     @media(min-width:$tablet){
-      margin: 0 -20px;
+      margin: 0 -20px -30px -20px
     }
     @media(min-width:$notebook){
       margin: 15px -30px;
@@ -42,7 +43,7 @@
     @media(min-width:$tablet){
       width: 92%;
       width: calc(92% - 40px);
-      margin: 40px 20px;
+      margin: 50px 20px;
     }
     @media(min-width:$notebook){
       width: 25%;

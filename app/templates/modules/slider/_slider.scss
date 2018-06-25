@@ -1,222 +1,174 @@
 .slider{
-  position: relative;
-  box-sizing: border-box;
-  margin-top: -30px;
-  @media(min-width:$tablet){
-    margin-top: -47px;
-  }
-  @media(min-width:$notebook){
-    margin-top: 30px;
-  }
   &__items{
-    position: relative;
-    height: 350px;
-    width: 9999px;
-    cursor: grab;
-    padding: 0 15px;
-    @media(min-width:$tablet){
-      height: 630px;
-      padding: 0 30px;
+    @media(min-width: $notebook){
+     .owl-stage-outer{
+      transform: translateX(-109px);
+      overflow: unset;
     }
-    @media(min-width:$tablet){
-      height: 500px;
-      padding: 0 60px;
-    }
-    &.is-grabbing{
-    cursor: grabbing;
   }
   }
   &__item{
-    float: left;
-    padding: 15px;
-    width: calc(100vw - 30px);
-    height: 100%;
-    box-sizing: border-box;
-    position: absolute;
-    @media(min-width:$tablet){
-      padding: 15px 30px;
-      width: 100vw;
+    height: 300px;
+    padding: 0 15px;
+    @media(min-width: $tablet){
+      height: 630px;
+      padding: 0 35px;
     }
-    @media(min-width:$notebook){
-      width: 60vw;
+    @media(min-width: $notebook){
+      height: 500px;
+      padding:0;
     }
   }
   &__bg{
-    background-size: cover;
-    background-position: center;
-    padding: 70px 0 30px 30px;
     height: 100%;
-    box-sizing: border-box;
+    width: 100%;
+    background-size:cover;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    @media(min-width:$tablet){
-      padding:  0 30px;
-    }
-    @media(min-width:$notebook){
-      padding: 0 50px;
-    }
+    justify-content: flex-end;
+    background-position: center;
   }
   &__content{
-    display:flex;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+    text-align: left;
+    @media(min-width:$tablet){
+      padding-bottom: 165px;
+      padding-left: 30px;
+    }
+    @media(min-width:$notebook){
+      padding-bottom: 40px;
+      padding-left: 60px;
+    }
+  }
+  &__title{
+    font:$title;
+    margin: 20px 0;
+    @media(min-width:$tablet){
+      font: $h1;
+      max-width: 83%;
+    }
+    @media(min-width:$notebook){
+      margin:0;
+    }
+  }
+  &__text{
+    display: flex;
+    font:$pointer;
+    margin: 20px 0;
     &:before{
       content: "";
       width: 40px;
       height: 2px;
       background: $inactiveTxt;
       margin-right: 15px;
-      margin-top: 15px;
+      margin-top: 12px;
+      display: inline-block;
       @media(min-width:$tablet){
         margin-top: 20px;
       }
     }
     @media(min-width:$tablet){
-      margin-top: 32px;
-      margin-bottom: 47px;
+      font: $slidertext;
     }
     @media(min-width:$notebook){
-      margin-top: 48px;
-      margin-bottom: 84px;
-    }
-  }
-  &__title{
-    font:$title;
-    @media(min-width:$tablet){
-      font:$h1;
-      line-height: 56px;
-      max-width: 90%;
-    }
-    @media(min-width:$notebook){
-      width: 50%;
-    }
-  }
-  &__text{
-    font:$pointer;
-    @media(min-width:$tablet){
-      font:$slidertext;
-    }
-    @media(min-width:$tablet){
-      font:$h3
+      font: $h3;
+      margin-top: 37px;
+      margin-bottom: 90px;
     }
   }
   &__link{
-    background: $inactiveBtn;
-    display: block;
-    padding: 10px 20px;
-    max-width: 74px;
-    @media(min-width:$tablet){
-      background: none;
-      padding: 0;
-      max-width: 50%;
-    }
+    margin-top: 36px;
   }
   &__href{
+    background: $inactiveBtn;
+    padding: 10px 20px;
+    font: $link;
     color: $hoverSvg;
     text-decoration: none;
     &:hover{
       color: $hoverSvg;
     }
     @media(min-width:$tablet){
+      padding: 0;
+      font: $pointer;
+      background: none;
       color: $inactiveBtn;
-      font:$pointer;
-      display: inline;
-    &:hover{
-      color: $inactiveBtn;
+      &:hover{
+        color: $inactiveBtn;
+      }
     }
-  }
   }
   &__button{
     display: none;
     @media(min-width:$tablet){
       display:block;
+      padding: 8px 20px;
       background:$inactiveBtn;
-      padding: 15px 20px;
       display: inline-block;
-      vertical-align: middle;
-      margin-left: 12px;
-    }
-    @media(min-width:$notebook){
-      margin-left: 48px;
+      margin-left: 18px;
     }
   }
   &__svg{
-    display: none;
-    @media(min-width:$tablet){
-      display: block;
-      transform: scale(-1);
-      fill:$hoverSvg;
-      color:$hoverSvg;
-    }
+    transform:scale(-1);
+    color: $hoverSvg;
+    fill: $hoverSvg;
   }
   &__nav{
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top:5px;
+    @media(min-width:$notebook){
+      margin-top:40px;
+    }
   }
 }
 .count{
+  display: flex;
   &__amount{
-    display: inline-block;
-    vertical-align: middle;
     &-current{
-      font:$bold;
-      color: $hoverTxt;
+      color:$inactiveBtn;
       &:after{
         content: "";
         width: 40px;
         height: 2px;
-        display: inline-block;
-        background: $hoverTxt;
+        background:$inactiveBtn;
+        display:inline-block;
+        margin: 0 10px;
         vertical-align: middle;
-        margin: 0 17px;
       }
-    }
-    &-total{
-      font: $link;
     }
   }
 }
 .flipping{
-  font-size:0;
   margin: 0 -5px;
   &__arrow{
-    width: 60px;
-    height: 40px;
+    padding: 10px 20px;
+    background:$inactiveBg;
     display: inline-block;
     margin: 0 5px;
-    padding: 15px 20px;
     box-sizing: border-box;
-    background: $inactiveBg;
-    cursor:pointer;
     transition: background .3s;
-    .flipping__svg{
-      color: $inactiveSvg;
-      fill:$inactiveSvg;
-      transition: fill .3s, color .3s, transform .3s;
-    }
-    &-right{
-        transform: rotate(180deg);
-    }
+    height: 40px;
+    cursor: pointer;
     &:hover{
-      background:$activeBtn;
+      background: $activeBtn;
       .flipping__svg{
-        color:$hoverSvg;
-        fill:$hoverSvg;
-        transform: scaleX(1.5);
+      transform: scaleX(1.5) translateX(-3px);
+      fill: $hoverSvg;
+      color: $hoverSvg;
       }
     }
-    &.disabled{
-      cursor:default;
-      &:hover{
-        background:$activeBtn;
-        .flipping__svg{
-          color:$hoverSvg;
-          fill:$hoverSvg;
-          transform: none;
-        }
-      }
-    }
+  }
+  &__svg{
+    color:$inactiveSvg;
+    fill:$inactiveSvg;
+    transition:transform .3s, fill .3s, color .3s;
+  }
+  .owl-next{
+    transform:rotate(180deg);
+    padding-top: 9px;
+    padding-bottom: 11px;
   }
 }

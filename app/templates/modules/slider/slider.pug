@@ -1,33 +1,44 @@
 .slider
-  .slider__items
+  .slider__items.owl-carousel
     .slider__item
       .slider__bg(style="background-image: url(assets/banner1.jpg)")
-        .slider__title Тепловая техника KALASHNIKOV
         .slider__content
-          .slider__text Искусство в деталях. Надежно
-        .slider__link
-          a.slider__href(href="#") В каталог
-            span.slider__button
-              svg.slider__svg(role="img")(width="20")(height="10"): use(xlink:href="#sliderarrow")
+          .slider__title Тепловая техника KALASHNIKOV
+          .slider__text
+            span Искусство в деталях. Надежно
+          .slider__link
+            a.slider__href(href="#") В каталог
+              span.slider__button
+                svg.slider__svg(role="img")(width="20")(height="10"): use(xlink:href="#sliderarrow")
     .slider__item
       .slider__bg(style="background-image: url(assets/banner1.jpg)")
-        .slider__title Тепловая техника KALASHNIKOV
         .slider__content
-          .slider__text Искусство в деталях. Надежно
-        .slider__link
-          a.slider__href(href="#") В каталог
-            span.slider__button
-              svg.slider__svg(role="img")(width="20")(height="10"): use(xlink:href="#sliderarrow")
+          .slider__title Новая модель техники KALASHNIKOV
+          .slider__text
+            span Крутая при-крутая техника
+          .slider__link
+            a.slider__href(href="#") В каталог
+              span.slider__button
+                svg.slider__svg(role="img")(width="20")(height="10"): use(xlink:href="#sliderarrow")
     .slider__item
       .slider__bg(style="background-image: url(assets/banner2.png)")
+        .slider__content
+          .slider__title KALASHNIKOV
+          .slider__text
+            span Кому калаша
+          .slider__link
+            a.slider__href(href="#") В каталог
+              span.slider__button
+                svg.slider__svg(role="img")(width="20")(height="10"): use(xlink:href="#sliderarrow")
     .slider__item
       .slider__bg(style="background-image: url(assets/banner3.png)")
+        .slider__content
+          .slider__link
+            a.slider__href(href="#") Просто ссылка
+              span.slider__button
+                svg.slider__svg(role="img")(width="20")(height="10"): use(xlink:href="#sliderarrow")
   .slider__nav.container
     .count
       .count__amount.count__amount-current 01
       .count__amount.count__amount-total 04
     .flipping
-      .flipping__arrow.flipping__arrow-left
-        svg.flipping__svg(role="img")(width="20")(height="10"): use(xlink:href="#sliderarrow")
-      .flipping__arrow.flipping__arrow-right
-        svg.flipping__svg(role="img")(width="20")(height="10"): use(xlink:href="#sliderarrow")

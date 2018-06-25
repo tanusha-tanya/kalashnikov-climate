@@ -4,7 +4,7 @@ const fieldset = (searchInput.parentElement).parentElement;
 const searchForm = fieldset.parentElement;
 function search(){
 
-  if (searchInput.value.length > 0 || searchInput.value !== " " ){
+  if (searchInput.value.length > 0 && searchInput.value !== " " ){
     inputText();
   }
   searchInput.onfocus = function(){
@@ -29,7 +29,7 @@ function search(){
     fieldset.classList.add("activeInput");
   }
   function clearText(){
-    if (searchInput.value.length === 0){
+    if (searchInput.value.length === 0 || searchInput.value === " "){
     fieldset.classList.remove("activeInput");
     }
     else {
