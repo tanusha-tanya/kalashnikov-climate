@@ -1,0 +1,17 @@
+include  ../logo/logo
+include  ../more/more
+
+.mainabout
+  .mainabout__left
+    +logo(layout="mainabout")
+    .mainabout__descript
+      span надежно
+    .mainabout__text
+      p.
+        Ижевский завод тепловой техники – это лидер на рынке тепловой техники России. Наша компания выпускает современную и качественную продукцию. Каждый год наши конструкторы создают новые, все более совершенные и технологичные образцы техники.
+        Запуск новых продуктов, освоение новых каналов сбыта, наращивание объемов производства являются залогом успеха компании на многие годы вперед.
+  .mainabout__right
+    .mainabout__video
+      iframe(width="560", height="315", src="https://www.youtube.com/embed/XjZ9iu_Z9G8", frameborder="0", allow="autoplay; encrypted-media", allowfullscreen)
+    .mainabout__more
+      +more("Узнать больше")

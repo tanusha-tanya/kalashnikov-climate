@@ -1,0 +1,57 @@
+.mainpluses{
+  margin: 40px 0;
+  @media(min-width:$tablet){
+    margin: 60px 0;
+  }
+  @media(min-width:$notebook){
+    position: relative;
+  }
+  &__flex{
+    @media(min-width:$tablet){
+      display: flex;
+      margin: -15px -30px 40px -30px;
+    }
+  }
+  &__left, &__right{
+    @media(min-width:$tablet){
+      margin: 0 30px;
+      width: calc(50% - 60px);
+    }
+    @media(min-width:$notebook){
+      margin: 0 60px;
+      width: 41%;
+    }
+  }
+  &__title{
+    font: $h3;
+    margin: 20px 0;
+    color: $inactiveTxt;
+    @media(min-width:$tablet){
+      font: $slidertext;
+    }
+    @media(min-width:$notebook){
+      font: $pluses;
+    }
+  }
+  &__figure{
+    padding: 0;
+    margin: 40px 0;
+    display: flex;
+  }
+  &__svg{
+    margin-right: 30px;
+    width: 70px;
+  }
+  &__figcaption{
+    font:$pointer;
+    color: $inactiveTxt;
+  }
+  &__more{
+    text-align: right;
+    @media(min-width:$notebook){
+      position: absolute;
+      right: 0;
+      bottom: 40px;
+    }
+  }
+}

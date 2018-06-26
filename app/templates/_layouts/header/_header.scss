@@ -3,6 +3,14 @@
     border-bottom: 1px solid $download;
     margin-bottom: 30px;
   }
+  &__logo{
+    width:240px;
+    height:24px;
+    @media(min-width:$notebook){
+    max-width: 187px;
+    height: 18px;
+    }
+  }
   &__top{
     margin: 15px -10px -15px -10px;
     display: flex;

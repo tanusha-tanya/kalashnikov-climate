@@ -1,5 +1,21 @@
 include ../../modules/download/download
+include ../../modules/logo/logo
 footer.footer
+  .footer__up
+    include ../../modules/up/up
+  .footer__svg
+    +logo(layout="footer")
+  .footer__menu
+    include ../../modules/footermenu/footermenu
+  .footer__download
+    +download("Скачать прайс")
+    +download("Скачать каталог")
+  .footer__soc
+    include ../../modules/social/social
+  .footer__lang
+    include ../../modules/lang/lang
+  .footer__copyright
+    include ../../modules/copyright/copyright
   .footer__mobilemenu
     .container
       include ../../modules/mobilemenu/mobilemenu
