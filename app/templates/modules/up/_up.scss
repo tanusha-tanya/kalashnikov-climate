@@ -1,9 +1,26 @@
 .up{
-  padding: 13px 15px;;
+  padding: 15px 19px;;
   background: $uppArrow;
   display: inline-block;
   cursor:pointer;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
   transition: background .3s;
+  position:absolute;
+  top:0;
+  right:15px;
+  z-index:100;
+  @media(min-width:$tablet){
+    top: auto;
+    bottom: 330px;
+    right: 30px;
+  }
+  &.fixedUp{
+    top:auto;
+    bottom: 220px;
+    position: fixed;
+  }
   &__svg{
     fill: $inactiveSvg;
     color: $inactiveSvg;
@@ -17,4 +34,5 @@
       transition: fill .3s, color .3s;
     }
   }
+
 }

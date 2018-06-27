@@ -5,13 +5,13 @@ block title
 block header
   include  _layouts/header/header
 block content
-  include modules/slider/slider
-  include modules/carousel/carousel
-  .container
-    include modules/mainabout/mainabout
-  .container
-    include modules/mainpluses/mainpluses
-  include modules/mainpartners/mainpartners
-  include modules/mainnews/mainnews
+  section.main__section
+    include modules/slider/slider
+    include modules/carousel/carousel
+    .container
+      include modules/mainabout/mainabout
+      include modules/mainpluses/mainpluses
+    include modules/mainpartners/mainpartners
+    include modules/mainnews/mainnews
 block footer
   include  _layouts/footer/footer

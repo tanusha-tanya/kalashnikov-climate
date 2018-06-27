@@ -1,7 +1,11 @@
 .mainnews{
+  margin-bottom:-40px;
   &__title{
     font:$h3;
     color: $inactiveTxt;
+    @media(min-width:$tablet){
+      font: $slidertext;
+    }
     @media(min-width:$notebook){
       font: $pluses;
     }

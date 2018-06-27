@@ -42,9 +42,11 @@
     margin-right: 30px;
     width: 70px;
   }
-  &__figcaption{
-    font:$pointer;
+  &__figcaption{    
     color: $inactiveTxt;
+    @media(min-width:$notebook){
+      font:$pointer;
+    }
   }
   &__more{
     text-align: right;

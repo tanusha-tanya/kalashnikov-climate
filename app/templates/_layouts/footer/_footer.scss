@@ -1,4 +1,14 @@
   .footer{
+    &__top{
+      position: relative;
+      padding-top:65px;
+    }
+    &__bottom{
+      background: $inactiveBg;
+      @media(min-width: $notebook){
+        padding-top:65px;
+      }
+    }
     &__mobilemenu{
       background: $inactiveBg;
       position: absolute;
@@ -23,5 +33,69 @@
     &__download{
       display: flex;
       justify-content: space-between;
+      width: 100%;
+      margin:20px 0;
+      @media(min-width:$tablet){
+        order: 2;
+        width: 50%;
+        margin:0;
+        justify-content: flex-start;
+        .download{
+          margin-right: 40px;
+        }
+      }
+    }
+    &__lang{
+      @media(min-width:$tablet){
+        order: 3;
+      }
+    }
+    &__soc{
+      @media(min-width:$tablet){
+        order: 1;
+        width: 41%;
+      }
+    }
+    &__logo{
+      width: 290px;
+      height: 29px;
+      margin: 30px 0;
+      @media(min-width:$tablet){
+        width: 240px;
+        height: 24px;
+      }
+      @media(min-width:$notebook){
+        width: 250px;
+        height: 25px;
+        margin: 0;
+      }
+    }
+    &__menu{
+      display:none;
+      @media(min-width:$tablet){
+        display:block;
+      }
+    }
+    &__flex{
+      display:flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin:20px 0 30px 0;
+      flex-wrap:wrap;
+      @media(min-width:$tablet){
+        flex-wrap:nowrap;
+      }
+    }
+    &__copyright{
+      border-top:solid 1px $download;
+      @media(min-width:$notebook){
+        margin-bottom:-30px;
+      }
+    }
+    &__menuwrap{
+      @media(min-width:$notebook){
+        display:flex;
+        margin-top: 60px;
+      }
     }
   }

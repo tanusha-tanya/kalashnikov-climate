@@ -1,0 +1,14 @@
+.copyright{
+  margin: -15px 0;
+  @media(min-width:$tablet){
+    display: flex;
+    justify-content: space-between;
+  }
+  &__company{
+    color: $muteTxt;
+    margin: 15px 0;
+  }
+  &__link{
+    color: $muteTxt;
+  }
+}
