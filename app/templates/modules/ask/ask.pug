@@ -1,0 +1,18 @@
+.ask
+  form.ask__form(action="")
+    fieldset.ask__fieldset
+      label.ask__label.ask__label-name
+        svg.ask__svg(role="img")(width="16")(height="16"): use(xlink:href="#user")
+        input.ask__input.ask__input-name(type="text")(placeholder="Имя")(name="name")
+    fieldset.ask__fieldset
+      label.ask__label.ask__label-phone
+        svg.ask__svg(role="img")(width="13")(height="22"): use(xlink:href="#phone")
+        input.ask__input.ask__input-phone(type="text")
+      label.ask__label.ask__label-email
+        svg.ask__svg(role="img")(width="20")(height="16"): use(xlink:href="#mail")
+        input.ask__input.ask__input-email(type="text")(placeholder="E-email")
+    fieldset.ask__fieldset.ask__fieldset-comment
+      legend.ask__legend
+      label.ask__label
+        textarea.ask__textarea(placeholder="Опишите ваш вопрос или добавьте любые комментарии")
+      button.ask__button(type="submit")(value="отправить")

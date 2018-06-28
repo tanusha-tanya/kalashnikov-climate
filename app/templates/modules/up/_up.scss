@@ -16,10 +16,16 @@
     bottom: 330px;
     right: 30px;
   }
+  @media(min-width: $notebook){
+    bottom: auto;
+    top:65px;
+    right: -15px;
+  }
   &.fixedUp{
     top:auto;
     bottom: 220px;
     position: fixed;
+    right:0;
   }
   &__svg{
     fill: $inactiveSvg;

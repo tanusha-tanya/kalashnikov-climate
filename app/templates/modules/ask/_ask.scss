@@ -1,0 +1,46 @@
+.ask{
+  background: $inactiveBg;
+  padding: 30px;
+  &__fieldset{
+    border: none;
+    outline: none;
+    margin: 0;
+    padding:0;
+    &:hover, &:focus{
+      border: none;
+      outline: none;
+    }
+  }
+  &__label{
+    position:relative;
+  }
+  &__input, &__textarea{
+    border: none;
+    outline: none;
+    background: $hoverSvg;
+    padding: 15px;
+    margin: 10px auto;
+    color: $muteTxt;
+    opacity:1;
+    &:hover, &:focus{
+      border: none;
+      outline: none;
+    }
+    &::-moz-placeholder{
+      color: $muteTxt;
+      opacity:1;
+    }
+    &:-moz-placeholder{
+      color: $muteTxt;
+      opacity:1;
+    }
+    &:-webkit-input-placeholder{
+      color: $muteTxt;
+      opacity:1;
+    }
+    &::-webkit-input-placeholder{
+      color: $muteTxt;
+      opacity:1;
+    }
+  }
+}

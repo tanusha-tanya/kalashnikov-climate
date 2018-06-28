@@ -13,7 +13,7 @@
   &__items{
     @media(min-width:$notebook){
       display: flex;
-      margin: 0 -30px;
+      margin: 0 -15px;
     }
   }
   &__item{
@@ -27,8 +27,8 @@
     }
     @media(min-width:$notebook){
       flex-wrap: nowrap;
-      margin: 0 30px;
-      width: calc(33% - 60px);
+      margin: 0 15px;
+      width: calc(33% - 30px);
       display: block;
     }
   }
