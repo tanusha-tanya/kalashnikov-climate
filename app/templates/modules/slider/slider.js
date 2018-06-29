@@ -19,20 +19,25 @@ $( document ).ready(function() {
         }
     }
   });
-  owl.on('changed.owl.carousel', function(event) {
-    changeCount()
-  });
-  let items = $('.owl-item:not(.cloned)'),
+
+  let items = $('.slider .owl-item:not(.cloned)'),
       total = items.length,
       current;
   (total<10)?
   $('.count__amount-total').text("0" + total):
   $('.count__amount-total').text(total);
-  function changeCount(){
-    for(let i = 0; i < total; i++){
-      if($(items[i]).hasClass('active')){
-        current = i + 1;
-      }
+
+  owl.on('changed.owl.carousel', function(event) {
+    current = event.item.index - 1;
+    console.log(current)
+    changeCurrent(current)
+  });
+
+  function changeCurrent(current){
+    if(current === 0){
+      console.log("current = 0")
+      current = total;
+      console.log(current)
     }
     (current<10)?
     $('.count__amount-current').text("0" + current):
