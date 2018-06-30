@@ -26,6 +26,8 @@
   &__logo{
     width: 100%;
     height: 31px;
+    color:$activeBtn;
+    fill:$activeBtn;
     @media(min-width:$tablet){
       width: 470px;
       height: 46px;

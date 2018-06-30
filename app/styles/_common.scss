@@ -1,6 +1,6 @@
 body{
   font: $link;
-  color: $activeBtn;
+  color: $inactiveTxt;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
@@ -52,4 +52,7 @@ a{
 }
 .main__section{
   flex-grow:1;
+  &.noscroll{
+    display: none;
+  }
 }

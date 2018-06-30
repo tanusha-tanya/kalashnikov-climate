@@ -11,8 +11,13 @@
       label.ask__label.ask__label-email
         svg.ask__svg(role="img")(width="20")(height="16"): use(xlink:href="#mail")
         input.ask__input.ask__input-email(type="text")(placeholder="E-email")
+    fieldset.ask__fieldset
+      input.ask__input.ask__input-confirm(type="checkbox")(id="confirm")
+      label.ask__label.ask__label-confirm(for="confirm")
+        span Согласен 
+          a(href="#") на обработку персональных данных
     fieldset.ask__fieldset.ask__fieldset-comment
-      legend.ask__legend
+      legend.ask__legend Ваш вопрос
       label.ask__label
         textarea.ask__textarea(placeholder="Опишите ваш вопрос или добавьте любые комментарии")
-      button.ask__button(type="submit")(value="отправить")
+      button.ask__button.ask__button-disabled(type="submit")(value="отправить") Отправить

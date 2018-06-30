@@ -6,6 +6,8 @@
   &__logo{
     width:240px;
     height:24px;
+    color: $activeBtn;
+    fill: $activeBtn;
     @media(min-width:$notebook){
     max-width: 187px;
     height: 18px;

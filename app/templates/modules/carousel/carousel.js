@@ -1,7 +1,7 @@
 $( document ).ready(function() {
  $(".carousel__items").owlCarousel({
-  center: true,
   autoWidth:true,
+  dots: false,
   margin: 20,
   responsive:{
     0:{

@@ -3,18 +3,23 @@
     margin-top:50px;
   }
   &__title{
-    font:$h3;
-    @media(min-width:$mobile){
+    font:$h3;    
+    @media(min-width:$tablet){
       font:$slidertext;
     }
     @media(min-width:$notebook){
       font:$h2;
     }
   }
+  &__wrap{
+    margin-left: 15px;
+    overflow:hidden;
+  }
   &__items{
     height:270px;
-    width: calc(100% - 15px);  
-    @media(min-width:$mobile){
+    width:100%;
+    margin-top: 12px;
+    @media(min-width:$tablet){
       height:324px;
       margin-top:15px;
     }
@@ -25,7 +30,7 @@
   }
   &__item{
     width: 229px;
-    @media(min-width:$mobile){
+    @media(min-width:$tablet){
       width: 339px;
     }
     @media(min-width:$notebook){
@@ -41,7 +46,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    @media(min-width:$mobile){
+    @media(min-width:$tablet){
       height: 231px;
     }
     @media(min-width:$notebook){

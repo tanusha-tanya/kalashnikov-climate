@@ -33,8 +33,9 @@
     }
   }
   &__img{
-    margin:10px 0;
-    max-width:100%;
+    margin:10px auto;
+    position:relative;
+    width:100%;
     @media(min-width:$tablet){
       margin: 0 20px;
       width: calc(25% - 40px);

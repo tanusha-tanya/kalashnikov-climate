@@ -29,15 +29,17 @@ $( document ).ready(function() {
 
   owl.on('changed.owl.carousel', function(event) {
     current = event.item.index - 1;
-    console.log(current)
     changeCurrent(current)
   });
 
   function changeCurrent(current){
-    if(current === 0){
+    if(current === 0 ){
       console.log("current = 0")
       current = total;
       console.log(current)
+    }
+    if (current > total){
+      current = 1;
     }
     (current<10)?
     $('.count__amount-current').text("0" + current):
