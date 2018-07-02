@@ -1,5 +1,8 @@
 .footermenu{
   display:flex;
+  @media(min-width:$tablet){
+    justify-content: space-between;
+  }
   &__ul{
     padding:0;
     margin-right: 90px;

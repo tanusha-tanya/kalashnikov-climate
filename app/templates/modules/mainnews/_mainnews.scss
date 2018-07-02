@@ -24,6 +24,7 @@
     @media(min-width:$tablet){
       margin: 40px -20px;
       justify-content: flex-start;
+      align-items: flex-start;
     }
     @media(min-width:$notebook){
       flex-wrap: nowrap;

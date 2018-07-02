@@ -3,6 +3,7 @@
   @media(min-width:$tablet){
     display: flex;
     justify-content: space-between;
+    margin: -25px 0;
   }
   &__company{
     color: $muteTxt;

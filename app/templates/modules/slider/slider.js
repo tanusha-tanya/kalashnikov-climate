@@ -34,9 +34,7 @@ $( document ).ready(function() {
 
   function changeCurrent(current){
     if(current === 0 ){
-      console.log("current = 0")
       current = total;
-      console.log(current)
     }
     if (current > total){
       current = 1;

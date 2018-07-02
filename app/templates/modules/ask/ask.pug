@@ -1,23 +1,26 @@
 .ask
   form.ask__form(action="")
     fieldset.ask__fieldset
-      label.ask__label.ask__label-name
+      label.ask__label
         svg.ask__svg(role="img")(width="16")(height="16"): use(xlink:href="#user")
         input.ask__input.ask__input-name(type="text")(placeholder="Имя")(name="name")
-    fieldset.ask__fieldset
-      label.ask__label.ask__label-phone
+    fieldset.ask__fieldset.ask__fieldset-flex
+      label.ask__label.ask__label-double
         svg.ask__svg(role="img")(width="13")(height="22"): use(xlink:href="#phone")
         input.ask__input.ask__input-phone(type="text")
-      label.ask__label.ask__label-email
+      label.ask__label.ask__label-double
         svg.ask__svg(role="img")(width="20")(height="16"): use(xlink:href="#mail")
         input.ask__input.ask__input-email(type="text")(placeholder="E-email")
     fieldset.ask__fieldset
       input.ask__input.ask__input-confirm(type="checkbox")(id="confirm")
       label.ask__label.ask__label-confirm(for="confirm")
-        span Согласен 
+        span Согласен&nbsp;
           a(href="#") на обработку персональных данных
     fieldset.ask__fieldset.ask__fieldset-comment
       legend.ask__legend Ваш вопрос
       label.ask__label
         textarea.ask__textarea(placeholder="Опишите ваш вопрос или добавьте любые комментарии")
-      button.ask__button.ask__button-disabled(type="submit")(value="отправить") Отправить
+        label.ask__sendlabel(for="askButton")
+          input(type="submit")(value="Отправить").ask__button.ask__button-disabled#askButton
+          .ask__arrowsend
+            svg.ask__arrowsvg(role="img")(width="20")(height="10"): use(xlink:href="#sliderarrow")

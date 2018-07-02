@@ -1,9 +1,14 @@
 .carousel{
   @media(min-width:$notebook){
     margin-top:50px;
+    &:before, &:after{
+      content:"";
+      clear:both;
+      display: block;
+    }
   }
   &__title{
-    font:$h3;    
+    font:$h3;
     @media(min-width:$tablet){
       font:$slidertext;
     }
@@ -14,6 +19,20 @@
   &__wrap{
     margin-left: 15px;
     overflow:hidden;
+    @media(min-width:$tablet){
+      margin-left: 30px;
+    }
+    @media(min-width:$notebook){
+      margin: 0 auto;
+      overflow: unset;
+      max-width: 1170px;
+      position: relative;
+      &:before, &:after{
+        content:"";
+        clear:both;
+        display: block;
+      }
+    }
   }
   &__items{
     height:270px;
@@ -67,5 +86,16 @@
   &__svg{
     color: $download;
     fill: $download;
+  }
+  .owl-carousel .owl-stage-outer{
+    @media(min-width:$notebook){
+      overflow: unset;
+    }
+  }
+  @media(min-width:$notebook){
+    .owl-carousel .owl-stage{
+      position:absolute;
+      left:0;
+    }
   }
 }

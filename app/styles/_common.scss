@@ -35,7 +35,7 @@ a{
   position: relative;
   box-sizing: border-box;
   @media(min-width:$tablet){
-    padding: 30px 35px;
+    padding: 30px;
   }
   @media(min-width:$notebook){
     max-width: 1170px;
@@ -54,5 +54,8 @@ a{
   flex-grow:1;
   &.noscroll{
     display: none;
+    @media(min-width:$tablet){
+      display: block;
+    }
   }
 }

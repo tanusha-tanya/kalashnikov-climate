@@ -1,11 +1,29 @@
 .ask{
   background: $inactiveBg;
   padding: 30px;
+  position: relative;
+  margin: 0 auto;
+  @media(min-width:$tablet){
+    max-width: $tablet;
+    padding:60px;
+    box-sizing: border-box;
+  }
+  @media(min-width:$notebook){
+    max-width: 960px;
+    padding:94px;
+    box-sizing: border-box;
+  }
   &__fieldset{
     border: none;
     outline: none;
-    margin:  0;
+    margin: 0;
     padding:0;
+  &-flex{
+    @media(min-width:$tablet){
+      display: flex;
+      margin: 15px -15px;
+    }
+  }
     &:hover, &:focus{
       border: none;
       outline: none;
@@ -17,6 +35,18 @@
   }
   &__label{
     position:relative;
+    @media(min-width:$tablet){
+      width: 100%;
+    }
+    &-double{
+      @media(min-width:$tablet){
+        width: calc(50% - 30px);
+        margin: 0 15px;
+        .ask__svg{
+          top:26px;
+        }
+      }
+    }
     &-confirm{
       margin-top:20px;
     }
@@ -24,7 +54,7 @@
   &__svg{
     position:absolute;
     left:17px;
-    top: 3px;
+    top: 1px;
     fill:$formsvg;
     color:$formsvg;
   }
@@ -67,16 +97,16 @@
         font: $littleTxt;
         display: flex;
         position: relative;
+        align-items: center;
         &:before{
           content: '';
           display: block;
           width:20px;
+          min-width:20px;
           height:20px;
           border:$inactiveBtn 2px solid;
           margin-right: 10px;
           text-align: left;
-          flex-grow:1;
-          flex-shrink:0;
         }
         &:hover, &:focus{
           &:after{
@@ -118,13 +148,29 @@
   }
   &__textarea{
     padding-left: 17px;
+    padding-bottom: 60px;
     margin-top:20px;
     height: 161px;
+    overflow: hidden;
+    box-sizing: border-box;
   }
-  &__button{
+  &__sendlabel{
     position: absolute;
     bottom: 20px;
     right: 20px;
+    @media(min-width: $tablet){
+      display:flex;
+      &:hover, :focus{
+        .ask__arrowsend{
+          background: #E57C04;
+        }
+        .ask__arrowsvg{
+          transform: scaleX(1.5) translateX(-3px);
+        }
+      }
+    }
+  }
+  &__button{
     color: $hoverSvg;
     font: $pointer;
     text-align: center;
@@ -133,8 +179,37 @@
     box-sizing: border-box;
     border:0;
     outline: none;
+    @media(min-width: $tablet){
+      background: none;
+      padding: 0;
+      color:$inactiveSvg;
+      font:$link;
+      margin-right:20px;
+    }
     &-disabled{
       background:$formsvg;
+      @media(min-width: $tablet){
+        background: none;
+      }
     }
+  }
+  &__arrowsend{
+    display:none;
+    @media(min-width: $tablet){
+      display:block;
+      transform:scale(-1);
+      padding: 9px 20px;
+      background: #F3930E;
+      transition: background .3s;
+      width: 60px;
+      height: 40px;
+      box-sizing: border-box;
+    }
+  }
+  &__arrowsvg{
+    color: #FFFFFF;
+    fill: #FFFFFF;
+    display: inline-block;
+    transition: transform .3s;
   }
 }
