@@ -17,6 +17,9 @@
         position: relative;
         margin: 30px auto;
       }
+      @media(min-width: $desctop){
+        max-width: 1440px;
+      }
     }
     &__mobilemenu{
       background: $inactiveBg;
@@ -61,12 +64,17 @@
       }
       @media(min-width:$notebook){
         margin: 0 15px;
-        width: calc(66% - 30px)
+        width: calc(58% - 30px)
       }
     }
     &__lang{
       @media(min-width:$tablet){
         order: 3;
+      }
+      @media(min-width:$notebook){
+        width: calc(8% - 30px);
+        margin: 0 15px;
+        float:right;
       }
     }
     &__soc{

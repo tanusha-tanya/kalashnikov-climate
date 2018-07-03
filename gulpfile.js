@@ -160,10 +160,7 @@ gulp.task('s', ['styles', 'scripts', 'template', 'sprites', 'svg', 'watch'], fun
     notify: false,
     port: 9000,
     server: {
-      baseDir: ['.tmp', 'app'],
-      routes: {
-        '/bower_components': 'bower_components'
-      },
+      baseDir: ['.tmp', 'app'],      
       files: [".tmp/styles/*.css", ".tmp/*.html", ".tmp/scripts/*.js"]
     }
   });

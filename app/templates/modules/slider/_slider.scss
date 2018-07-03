@@ -6,6 +6,9 @@
       overflow: unset;
     }
   }
+    @media(min-width: $desctop){
+      transform: translateX(0);
+    }
   }
   &__item{
     height: 300px;

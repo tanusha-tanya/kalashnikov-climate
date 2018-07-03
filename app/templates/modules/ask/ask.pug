@@ -1,5 +1,5 @@
 .ask
-  form.ask__form(action="")
+  form.ask__form.ajaxform(action="")
     fieldset.ask__fieldset
       label.ask__label
         svg.ask__svg(role="img")(width="16")(height="16"): use(xlink:href="#user")
@@ -12,7 +12,7 @@
         svg.ask__svg(role="img")(width="20")(height="16"): use(xlink:href="#mail")
         input.ask__input.ask__input-email(type="text")(placeholder="E-email")
     fieldset.ask__fieldset
-      input.ask__input.ask__input-confirm(type="checkbox")(id="confirm")
+      input.ask__input.ask__input-confirm.js-confirm(type="checkbox")(id="confirm")
       label.ask__label.ask__label-confirm(for="confirm")
         span Согласен&nbsp;
           a(href="#") на обработку персональных данных
@@ -22,5 +22,3 @@
         textarea.ask__textarea(placeholder="Опишите ваш вопрос или добавьте любые комментарии")
         label.ask__sendlabel(for="askButton")
           input(type="submit")(value="Отправить").ask__button.ask__button-disabled#askButton
-          .ask__arrowsend
-            svg.ask__arrowsvg(role="img")(width="20")(height="10"): use(xlink:href="#sliderarrow")

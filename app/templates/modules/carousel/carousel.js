@@ -14,7 +14,12 @@ $( document ).ready(function() {
     1120:{
      items:5,
      margin: 30
-    }
+   },
+   2000:{
+    items:5,
+    margin: 30,
+    loop:true
+   }
    }
  });
 });
