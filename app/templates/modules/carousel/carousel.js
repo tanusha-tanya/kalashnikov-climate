@@ -15,7 +15,7 @@ $( document ).ready(function() {
      items:5,
      margin: 30
    },
-   2000:{
+   1996:{
     items:5,
     margin: 30,
     loop:true

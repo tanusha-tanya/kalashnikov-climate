@@ -34,6 +34,7 @@
   }
   &__label{
     position:relative;
+    display:block;
     @media(min-width:$tablet){
       width: 100%;
     }
@@ -43,13 +44,10 @@
         margin: 0 15px;
         display: block;
         float: left;
-        .ask__svg{
-          top:26px;
-        }
       }
     }
     &-confirm{
-      margin-top:20px;
+      margin-bottom:20px;
     }
     &.notempty{
       .ask__svg{
@@ -57,14 +55,33 @@
         color:$activeBtn;
       }
     }
+    &.error-label{
+      .ask__input{
+        border-color:$inactiveBtn;
+      }
+    }
   }
   &__svg{
     position:absolute;
     left:17px;
-    top: 1px;
     fill:$formsvg;
     color:$formsvg;
     transition: color .3s;
+    &-name{
+      top: 25px;
+    }
+    &-phone{
+      top: -1px;
+      @media(min-width:$tablet){
+        top: 23px;
+      }
+    }
+    &-email{
+      top: 1px;
+      @media(min-width:$tablet){
+        top: 26px;
+      }
+    }
   }
   &__input, &__textarea{
     border: none;
@@ -72,12 +89,14 @@
     background: $hoverSvg;
     padding: 15px 50px;
     margin: 10px auto;
-    color: $muteTxt;
+    color: $activeBtn;
     width:100%;
     box-sizing: border-box;
     opacity:1;
+    border:1px solid transparent;
+    transition: border .3s;
     &:hover, &:focus{
-      border: none;
+      border:1px solid transparent;
       outline: none;
     }
     &::-moz-placeholder{
@@ -200,4 +219,10 @@
       background:$formsvg;
     }
   }
+}
+.error__text{
+  color: $inactiveBtn;
+  font: $littleTxt;
+  position: absolute;
+  bottom: -10px;
 }

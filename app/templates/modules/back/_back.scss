@@ -1,0 +1,38 @@
+.back{
+  padding: 10px 20px;
+  background: $inactiveBtn;
+  display: inline-block;
+  transition: background .3s;
+  width:60px;
+  height: 40px;
+  box-sizing: border-box;
+  margin-right: 10px;
+  @media(min-width:$tablet){
+    width:125px;
+    padding: 10px;
+    margin-right: 20px;
+  }
+  &__svg{
+    color: $hoverSvg;
+    fill: $hoverSvg;
+    display: inline-block;
+    transition: transform .3s;
+  }
+  &:hover{
+    background: $hoverBtn;
+    .back__svg{
+      transform: scaleX(1.5) translateX(-3px);
+    }
+  }
+  &__span{
+    display: none;
+    @media(min-width:$tablet){
+      display: inline-block;
+      color: $hoverSvg;
+      margin-left: 10px;
+    }
+  }
+  @media(min-width:$notebook){
+    display: none;
+  }
+}

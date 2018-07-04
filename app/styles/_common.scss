@@ -8,7 +8,13 @@ body{
   justify-content: space-between;
 }
 h1, .h1{
-  font: $h1;
+  font:$title;
+  @media(min-width:$tablet){
+    font: $bigh1;
+  }
+  @media(min-width:$notebook){
+    font: $h1;
+  }
 }
 h2, .h2{
   font: $h2;
@@ -51,6 +57,12 @@ a{
     margin-bottom:0;
   }
 }
+.wrapper-flex{
+  @media(min-width:$notebook){
+    display:flex;
+    margin: 0 -15px;
+  }
+}
 .main__section{
   flex-grow:1;
   &.noscroll{
@@ -58,5 +70,22 @@ a{
     @media(min-width:$tablet){
       display: block;
     }
+  }
+}
+.right{
+  margin: -45px 0 0 0;
+  @media(min-width:$notebook){
+    margin: -45px  15px 0 15px;
+    width: 75%;
+    width: calc(75% - 30px)
+  }
+}
+.left{
+  display: none;
+  @media(min-width:$notebook){
+    display: block;
+    margin: 0 15px;
+    width: 25%;
+    width: calc(25% - 30px)
   }
 }

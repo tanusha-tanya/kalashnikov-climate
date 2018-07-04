@@ -50,6 +50,7 @@
     width: 83%;
     width: calc(83% - 20px);
     margin: 40px 10px;
+    display: flex;
     @media(min-width:$tablet){
       width: 92%;
       width: calc(92% - 40px);

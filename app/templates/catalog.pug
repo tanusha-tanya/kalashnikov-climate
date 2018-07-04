@@ -1,0 +1,17 @@
+extends _layouts/default
+
+block title
+  title Каталог
+block header
+  include  _layouts/header_inner/header_inner
+block content
+  section.main__section
+    .container
+      .wrapper-flex
+        .left
+          include  modules/leftmenu/leftmenu
+        .right
+          h1 Каталог продукции
+          include  modules/catalog/catalog
+block footer
+  include  _layouts/footer/footer
