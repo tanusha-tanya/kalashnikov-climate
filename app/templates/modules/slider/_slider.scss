@@ -100,24 +100,35 @@
       background: none;
       color: $inactiveBtn;
       &:hover{
-        color: $inactiveBtn;
+        color: $hoverBtn;
+        .slider__button{
+          background: $hoverBtn;
+        }
+          .slider__svg{
+          transform: scaleX(1.5) translateX(-3px);
+        }
       }
     }
+
   }
   &__button{
     display: none;
     @media(min-width:$tablet){
       display:block;
-      padding: 8px 20px;
+      padding: 6px 20px;
       background:$inactiveBtn;
       display: inline-block;
       margin-left: 18px;
+      width: 60px;
+      height: 40px;
+      box-sizing: border-box;
+      transform:scale(-1);
     }
   }
   &__svg{
-    transform:scale(-1);
     color: $hoverSvg;
     fill: $hoverSvg;
+    transition: transform .3s;
   }
   &__nav{
     display: flex;

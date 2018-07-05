@@ -6,9 +6,13 @@
       display: flex;
       margin: 0 -10px;
       flex-wrap: wrap;
+      width: 100%;
+      width: calc(100% + 20px);
     }
     @media(min-width:$notebook){
       margin: 0 -15px;
+      width: 100%;
+      width: calc(100% + 30px);
     }
   }
   &__item{
@@ -23,6 +27,7 @@
       width: 33%;
       width: calc(33% - 30px);
       margin: 0 15px;
+      margin-bottom: 50px;
     }
   }
   &__img{

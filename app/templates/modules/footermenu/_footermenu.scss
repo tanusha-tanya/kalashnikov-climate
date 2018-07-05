@@ -1,12 +1,13 @@
 .footermenu{
   display:flex;
-  @media(min-width:$tablet){
-    justify-content: space-between;
-  }
+  
   &__ul{
     padding:0;
     margin-right: 90px;
     margin-top: -30px;
+    @media(min-width:$tablet){
+      margin-right: 86px;
+    }
   }
   &__li{
     list-style:none;

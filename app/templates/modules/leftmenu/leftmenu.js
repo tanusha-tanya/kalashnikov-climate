@@ -1,12 +1,9 @@
-window.onload = function () {
-const leftmenu = document.querySelector(".leftmenu");
-  if(leftmenu !== null){
-    let buttons =  document.querySelectorAll(".leftmenu__svg")
-    console.log(buttons)
-    /*for(let i = 0; i < button.length; i++){
-      button.addEventListener("click", function(){
-        console.log(button[i])
-      })
-    }*/
+const leftmenuButton = document.querySelectorAll(".leftmenu__svg")
+if (leftmenuButton){
+  for(let i = 0; i < leftmenuButton.length; i++){
+    leftmenuButton[i].addEventListener("click", function(){
+      let span = this.parentElement.parentElement;
+      span.classList.toggle("leftmenu__opencat")
+    })
   }
 }
