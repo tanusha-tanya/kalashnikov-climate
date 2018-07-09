@@ -1,0 +1,24 @@
+.askbutton{
+  &__link{
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: $hoverSvg;
+    font: $pointer;
+    text-align: center;
+    padding: 11px 30px;
+    height: 50px;
+    background: #F3930E;
+    box-sizing: border-box;
+    transition: background .3s;
+    &:hover, &:active, &:focus{
+      background: #E57C04;
+      color: $hoverSvg;
+    }
+    @media(min-width:$tablet){
+      margin: 0;
+    }
+  }
+}

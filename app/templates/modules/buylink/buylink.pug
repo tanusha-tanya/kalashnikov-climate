@@ -1,0 +1,7 @@
+mixin buylink()
+  -
+    const link = attributes.link
+    delete attributes.link
+  .buylink
+    svg.buylink__svg(role="img")(width="15")(height="15"): use(xlink:href="#compass")
+    a.buylink__href(href=`${link}`) Где купить

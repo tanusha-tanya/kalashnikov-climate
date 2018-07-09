@@ -1,0 +1,65 @@
+.detail{
+  margin-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid $download;
+  &__pick{
+    background: $inactiveBg;
+    padding: 30px 0;
+    text-align: center;
+  }
+  &__img{
+    max-width: 100%;
+    @media(min-width: $notebook){
+      width:1170px;
+    }
+  }
+  &__ol{
+    @media(min-width: $notebook){
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+    }
+  }
+  &__li{
+    color: $inactiveBtn;
+    font: $pointer;
+    list-style: none;
+    counter-increment: list;
+    position:relative;
+    @media(min-width: $tablet){
+      font:  $partnerstitle;
+      margin-top: 40px;
+    }
+    @media(min-width: $notebook){
+      width: 50%;
+      width: calc(50% - 30px);
+      margin:  32px 15px;
+      padding-left: 30px;
+      box-sizing: border-box;
+    }
+    &:before{
+      content: counter(list) " ";
+      position: relative;
+      margin-left: -10px;
+      @media(min-width: $notebook){
+        margin-left: -40px;
+      }
+    }
+    &:after{
+      content: '';
+      width: 40px;
+      height: 2px;
+      position:absolute;
+      background: $download;
+      top: 30px;
+      left: -40px;
+    }
+    p{
+      color: $inactiveTxt;
+      font: $link;
+      @media(min-width: $notebook){
+        max-width: 470px;
+      }
+    }
+  }
+}

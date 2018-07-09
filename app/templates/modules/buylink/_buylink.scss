@@ -1,0 +1,13 @@
+.buylink{
+  margin:20px auto;
+  &__href{
+    color: $inactiveBtn;
+    text-decoration: none;
+    border-bottom: 1px solid;
+  }
+  &__svg{
+    fill: $inactiveBtn;
+    color: $inactiveBtn;
+    margin-right: 10px;
+  }
+}

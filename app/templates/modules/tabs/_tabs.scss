@@ -55,6 +55,7 @@
     top:0;
     height:0;
     overflow: hidden;
+    margin-bottom:40px;
     &-active{
       position:relative;
       opacity: 1;
@@ -68,6 +69,12 @@
     p{
       margin: 30px 0;
     }
+  }
+  &__table{
+    margin: 0 0 -20px 0;
+    position: relative;
+    width: 100%;
+    width: calc(100% + 20px);
   }
 }
 .features{
@@ -148,22 +155,19 @@
     .table__cell{
       font: $tableth;
     }
-    .table__row{
-      border-top: 0;
-    }
   }
   &__row{
-    border:1px solid $tableBorder;
+    border-bottom:1px solid $tableBorder;
   }
   &__cell{
     background: $inactiveBg;
     padding:20px;
-    width:200px;
     box-sizing: border-box;
+    min-width:180px;
     &:first-of-type{
       font:$tabletd;
       background: $hoverSvg;
-      width:172px;
+      min-width:230px;
       padding-left:0;
     }
   }
