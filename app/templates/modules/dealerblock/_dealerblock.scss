@@ -1,0 +1,48 @@
+.onlineshops{
+  margin-bottom: 60px;
+  @media(min-width:$tablet){
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media(min-width:$notebook){
+    width: 83%;
+  }
+  &__item{
+    margin: 20px 0;
+    @media(min-width:$tablet){
+      margin: 10px 90px 0 10px;
+    }
+  }
+  &__link{
+    color: $inactiveBtn;
+    font: $pointer;
+  }
+
+}
+.dealers{
+  &__fieldset{
+    border: 0;
+    outline: none;
+    padding:0;
+  }
+  &__label{
+    border: 0;
+    outline: none;
+    position: relative;
+  }
+  &__svg{
+    position: absolute;
+    top: 0;
+    left: 20px;
+  }
+  &__input{
+    border: 0;
+    outline: none;
+    background: $inactiveBg;
+    height: 50px;
+    width: 100%;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    margin: 10px 0;
+  }
+}

@@ -1,5 +1,7 @@
 .buylink{
   margin:20px auto;
+  display: flex;
+  align-items: center;
   &__href{
     color: $inactiveBtn;
     text-decoration: none;

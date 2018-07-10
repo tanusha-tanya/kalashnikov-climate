@@ -1,0 +1,86 @@
+.accessories{
+  border-bottom: 1px $download solid;
+  padding-bottom: 40px;
+  &__items{
+    max-width: 400px;
+    margin: 0 auto;
+    @media(min-width:$tablet){
+      display: flex;
+      flex-wrap:wrap;
+      margin: 0 -10px;
+      max-width: 100%;
+    }
+    @media(min-width:$notebook){
+      margin: 0 -15px;
+    }
+  }
+  &__item{
+    @media(min-width:$tablet){
+      width: 50%;
+      width: calc(50% - 20px);
+      margin: 30px 10px;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 70px;
+      position:relative;
+    }
+    @media(min-width:$notebook){
+      width: 25%;
+      width: calc(25% - 30px);
+      margin: 30px 15px;
+    }
+  }
+  &__pick{
+    padding: 30px 0;
+    box-sizing: border-box;
+    background: $inactiveBg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media(min-width:$tablet){
+      max-width: 100%;
+      height: 295px;
+    }
+    @media(min-width:$notebook){
+      height: 235px;
+    }
+  }
+  &__link{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    text-decoration: none;
+    span{
+      font:$pointer;
+    }
+  }
+  &__arrowsvg{
+    color:$download;
+    fill:$download;
+  }
+  &__buylink{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    align-items: center;
+    @media(min-width:$tablet){
+      position: absolute;
+      bottom:0;
+      width: 100%;
+}
+    .buylink{
+      margin:0;
+    }
+  }
+  &__num{
+    font:$partnerstitle;
+    display: inline-block;
+  }
+  &__svg{
+    display: inline-block;
+  }
+  &__spoiler{
+    display: flex;
+    justify-content: flex-end;
+  }
+}

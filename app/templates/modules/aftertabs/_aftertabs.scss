@@ -1,0 +1,62 @@
+.aftertabs{
+  max-width: 290px;
+  margin: 20px auto;
+  @media(min-width:$notebook){
+    margin: 60px 0;
+  }
+  @media(min-width:$tablet){
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__prisecolors{
+    @media(min-width:$notebook){
+      display: flex;
+    }
+    @media(min-width:$notebook){
+      align-items: center;
+    }
+  }
+  &__buyask {
+    @media(min-width:$tablet){
+      display: flex;
+      align-items: center;
+    }
+  }
+  .price{
+    @media(min-width:$notebook){
+      width:260px;
+      margin-right:60px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+  }
+  .buylink{
+    @media(min-width:$tablet){
+      margin-right: 40px;
+    }
+    @media(min-width:$notebook){
+      font: $pointer;
+    }
+  }
+  .colors{
+    @media(min-width:$tablet){
+      margin-top: 30px;
+      margin-left: 20px;
+    }
+    @media(min-width:$notebook){
+      align-items: center;
+      margin-top: 0;
+    }
+  }
+  .askbutton{
+    width:290px;
+    margin: 20px auto;
+    @media(min-width:$tablet){
+      width:220px
+    }
+    @media(min-width:$notebook){
+      width:350px
+    }
+  }
+}

@@ -1,5 +1,6 @@
 extends _layouts/default
 include modules/buylink/buylink
+include modules/spoiler/spoiler
 block title
   title Тепловая завеса KVC-D10E9-31/32
 block header
@@ -9,10 +10,10 @@ block content
     include modules/slider/slider
     .container
       include modules/tabs/tabs
-      include modules/price/price
-      include modules/colors/colors
-      +buylink(link = "dilers.html")
-      include modules/askbutton/askbutton
-    include modules/detail/detail 
+      include modules/aftertabs/aftertabs
+    include modules/detail/detail
+    .container
+      include modules/accessories/accessories
+      include modules/dealerblock/dealerblock
 block footer
   include  _layouts/footer/footer
