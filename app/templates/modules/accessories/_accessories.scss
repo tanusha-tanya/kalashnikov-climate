@@ -1,5 +1,6 @@
 .accessories{
   border-bottom: 1px $download solid;
+  border-top: 1px solid $download;
   padding-bottom: 40px;
   &__items{
     max-width: 400px;
@@ -8,7 +9,7 @@
       display: flex;
       flex-wrap:wrap;
       margin: 0 -10px;
-      max-width: 100%;
+      max-width: calc(100% + 20px);
     }
     @media(min-width:$notebook){
       margin: 0 -15px;

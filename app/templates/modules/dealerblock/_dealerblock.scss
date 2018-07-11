@@ -1,5 +1,12 @@
+.dealerblock{
+  padding: 60px 0;
+  &__onlineshops{
+    margin-top: 40px;
+  }
+}
 .onlineshops{
   margin-bottom: 60px;
+  margin-top: 30px;
   @media(min-width:$tablet){
     display: flex;
     flex-wrap: wrap;
@@ -10,7 +17,7 @@
   &__item{
     margin: 20px 0;
     @media(min-width:$tablet){
-      margin: 10px 90px 0 10px;
+      margin: 10px 90px 10px 0;
     }
   }
   &__link{
@@ -20,20 +27,48 @@
 
 }
 .dealers{
+  &__search{
+    margin-top: 35px;
+  }
   &__fieldset{
     border: 0;
     outline: none;
     padding:0;
+    span{
+      display: none;
+      @media(min-width: $tablet){
+        font: $pointer;
+        display: block;
+        width: 16%;
+        width: calc(16% + 15px)
+      }
+    }
+    @media(min-width: $tablet){
+      display: flex;
+      align-items: center;
+    }
   }
   &__label{
     border: 0;
     outline: none;
     position: relative;
+    &.activeInput{
+      .dealers__svg{
+        color: $inactiveTxt;
+        fill: $inactiveTxt;
+      }
+    }
   }
   &__svg{
     position: absolute;
     top: 0;
     left: 20px;
+    fill:$inactiveSvg;
+    color:$inactiveSvg;
+    transition: fill .3s, color .3s;
+    @media(min-width: $tablet){
+      top: 25px;
+    }
   }
   &__input{
     border: 0;
@@ -44,5 +79,79 @@
     padding: 20px 50px;
     box-sizing: border-box;
     margin: 10px 0;
+    max-width: 340px;
+  }
+  &__type{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px $download solid;
+    margin-bottom: 40px;
+  }
+  &__typeitem{
+    padding:20px;
+    position: relative;
+    &:after{
+      content: "";
+      width: 100%;
+      height: 4px;
+      position: absolute;
+      background: none;
+      bottom: -2px;
+      left: 0;
+      transition: background .3s;
+    }
+    &-active{
+      &:after{
+        background: $activeBtn;
+      }
+    }
+  }
+  &__link{
+    text-decoration: none;
+    font: $link;
+  }
+  &__amount{
+    display: none;
+  }
+  &__toggle{
+    display: flex;
+  }
+  &__button{
+    padding: 20px;
+    display: flex;
+    align-items:center;
+    &-active{
+      background: $uppArrow;
+    }
+  }
+  &__buttonsvg{
+    margin-right:20px;
+  }
+  &__show{
+    position: absolute;
+    overflow:hidden;
+    opacity:0;
+    transition: opacity .3s;
+    height: 0;
+    &-active{
+      position: relative;
+      opacity: 1;
+      height: auto;
+    }
+  }
+  &__table{
+    display: table;
+  }
+  &__row{
+    display: table-row;
+  }
+  &__cell{
+    display: table-cell;
+    border-bottom: 1px $download solid;
+    padding: 20px 30px;
+  }
+  &__spoiler{
+    display: flex;
+    justify-content: flex-end;
   }
 }
