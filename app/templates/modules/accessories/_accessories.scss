@@ -2,9 +2,10 @@
   border-bottom: 1px $download solid;
   border-top: 1px solid $download;
   padding-bottom: 40px;
+  padding-top: 35px;
   &__items{
     max-width: 400px;
-    margin: 0 auto;
+    margin: 40px auto;    
     @media(min-width:$tablet){
       display: flex;
       flex-wrap:wrap;

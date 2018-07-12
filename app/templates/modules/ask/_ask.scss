@@ -71,13 +71,13 @@
       top: 25px;
     }
     &-phone{
-      top: -1px;
+      top: 26px;
       @media(min-width:$tablet){
         top: 23px;
       }
     }
     &-email{
-      top: 1px;
+      top: 26px;
       @media(min-width:$tablet){
         top: 26px;
       }

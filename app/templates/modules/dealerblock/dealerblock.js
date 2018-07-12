@@ -67,22 +67,75 @@ function activeTab(indexLink){
   dealersButtons[indexLink].classList.add("dealers__button-active");
   dealersShow[indexLink].classList.add("dealers__show-active")
 }
-(function($){
-  $(window).on("load",function(){
-    $(".dealers__table").mCustomScrollbar({
-      axis:"x",
-      theme: "my-theme",
-      scrollButtons:{ enable: true }
+
+
+  ymaps.ready(init);
+  function init(){
+    let myMap = new ymaps.Map('mymap', {
+      center: [55.72, 37.77],
+      zoom: 13
     });
-  });
-})(jQuery);
+    let myPlacemark = new ymaps.Placemark([55.72, 37.77], {
+      hintContent: 'Содержимое всплывающей подсказки',
+      balloonContent: 'Содержимое балуна'
+    }, {
+    iconLayout: 'default#image',
+    iconImageHref: '/images/svg/placemark.svg',
+    iconImageSize: [30, 42],
+    iconImageOffset: [-3, -42]});
 
-ymaps.ready(init);
+    myMap.geoObjects.add(myPlacemark);
+  }
 
-function init(){
-  let myMap = new ymaps.Map('map', {
-        center: [57.053319, 53.987401],
-        zoom: 13
-  });
-  console.log("map")
-}
+/*  $(function(){
+      ymaps.ready(init);
+      function init() {
+      var myMap = new ymaps.Map('map', {
+          center: [56.8522511,53.2091607],
+
+          zoom: 12
+      }, {
+          balloonPanelMaxMapArea: Infinity
+      });
+      var placemarks = [];
+      var firstMark;
+
+$('.js-map_point').each(function(index, element){
+  var coords = $(element).data('coords').split(',');
+  var balloon = $(element).data('baloon');
+  var id = $(element).data('id');
+  coords = [Number(coords[0]), Number(coords[1])];
+          placemarks[id] = new ymaps.Placemark(coords,{
+              balloonContent: balloon
+          },{
+              preset: 'islands#circleIcon',
+              iconColor: '#262626'
+          });
+          myMap.geoObjects.add(placemarks[id]);
+          if (!firstMark) {
+              firstMark = placemarks[id];
+          }
+      })
+  firstMark.options.set('preset','islands#circleDotIcon');
+  firstMark.options.set('iconColor','#F93877');
+  firstMark.balloon.open();
+
+  $('.js-map_point').click(function(){
+    var coords = $(this).data('coords').split(',');
+    var geoPoint = [Number(coords[0]), Number(coords[1])];
+    var id = $(this).data('id');
+    var mark = placemarks[id];
+            placemarks.forEach(function(item, i, arr) {
+                  item.options.set('preset','islands#circleIcon');
+                  item.options.set('iconColor','#262626');
+              });
+              mark.options.set('preset','islands#circleDotIcon');
+              mark.options.set('iconColor','#F93877');
+              mark.balloon.open();
+          $('.js-map__item').removeClass('map__item-active');
+          $(this).parents('.js-map__item').addClass('map__item-active');
+  	    return false;
+      })
+
+  }
+})*/

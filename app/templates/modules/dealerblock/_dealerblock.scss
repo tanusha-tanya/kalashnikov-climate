@@ -1,5 +1,5 @@
 .dealerblock{
-  padding: 60px 0;
+  padding: 40px 0;
   &__onlineshops{
     margin-top: 40px;
   }
@@ -24,9 +24,21 @@
     color: $inactiveBtn;
     font: $pointer;
   }
-
 }
 .dealers{
+  &__map{
+    padding-top: 172%;
+    height:0;
+    position: relative;
+    margin-top: 10px;
+  }
+  .dealers__yamap{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left: 0;
+  }
   &__search{
     margin-top: 35px;
   }
@@ -110,16 +122,33 @@
     text-decoration: none;
     font: $link;
   }
+  &__tabs{
+    position: relative;
+  }
   &__amount{
     display: none;
+    @media(min-width: $tablet){
+      display: block;
+      position: absolute;
+      left:0;
+      top: 20px;
+      font: $pointer;
+    }
   }
   &__toggle{
     display: flex;
+    @media(min-width: $tablet){
+      justify-content: flex-end;
+    }
   }
   &__button{
     padding: 20px;
     display: flex;
     align-items:center;
+    width: 50%;
+    @media(min-width: $tablet){
+      width: 143px;
+    }
     &-active{
       background: $uppArrow;
     }
@@ -141,6 +170,7 @@
   }
   &__table{
     display: table;
+    width: 100%;
   }
   &__row{
     display: table-row;
@@ -149,9 +179,12 @@
     display: table-cell;
     border-bottom: 1px $download solid;
     padding: 20px 30px;
+    min-width: 120px;
+    box-sizing: border-box;
   }
   &__spoiler{
     display: flex;
     justify-content: flex-end;
+    margin-top: 30px;
   }
 }
