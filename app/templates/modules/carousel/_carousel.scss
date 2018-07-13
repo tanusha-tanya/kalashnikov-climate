@@ -81,14 +81,40 @@
     max-height: 100%;
   }
   &__link{
-    display: flex;
-    justify-content: space-between;
     margin-top: 30px;
     text-decoration: none;
+    position: relative;
+    display: block;
+    &:before{
+      content:"";
+      width: 20px;
+      height: 2px;
+      background: $download;
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      transition: transform .3s, background .3s;
+    }
+    &:hover{
+      &:before{
+        transform: translateX(11px) scaleX(1.9);
+        background: $inactiveBtn;
+      }
+      .carousel__svg{
+        transform: translateX(16px);
+        color: $inactiveBtn;
+        fill: $inactiveBtn;
+      }
+    }
   }
   &__svg{
     color: $download;
     fill: $download;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    transition: transform .3s,  fill .3s, color .3s;
+    z-index: 10;
   }
   .owl-carousel .owl-stage-outer{
     @media(min-width:$notebook){

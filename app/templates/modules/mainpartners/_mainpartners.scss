@@ -2,7 +2,7 @@
   background-image: url("/images/partners_bg.jpg");
   background-size: cover;
   background-position: center;
-  padding: 25px 0;
+  padding: 20px 0;
   @media(min-width:$tablet){
     padding: 40px 30px;
   }
@@ -30,7 +30,7 @@
   &__text{
     color: $hoverSvg;
     font: $pointer;
-    margin: 40px 0;
+    margin: 30px 0;
     @media(min-width:$tablet){
       font:$partnerstitle;
       max-width: 70%;
@@ -40,6 +40,6 @@
   &__askbutton{
     width: 210px;
     position: relative;
-    margin: 0 auto;
+    margin: 40px auto 10px auto;
   }
 }

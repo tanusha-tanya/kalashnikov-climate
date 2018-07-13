@@ -7,7 +7,7 @@ $( document ).ready(function() {
     dots:false,
     navContainer: '.flipping',
     navElement: 'div class="flipping__arrow"',
-    navText: ['<svg class="flipping__svg" role="img" width="20" height="10"> <use xlink:href="#sliderarrow"></svg>', '<svg class="flipping__svg" role="img" width="20" height="10"> <use xlink:href="#sliderarrow"></svg>'],
+    navText: ['<svg class="flipping__svg" role="img" width="20" height="12"> <use xlink:href="#arrow"></svg>', '<svg class="flipping__svg" role="img" width="20" height="12"> <use xlink:href="#arrow"></svg>'],
     responsive:{
         0:{
             items:1

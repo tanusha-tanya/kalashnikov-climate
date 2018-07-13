@@ -53,4 +53,13 @@
       transform: translateX(0);
     }
   }
+  .closelist{
+    &>.mobilemenu__svg{
+      transform: rotate(0);
+    }
+    &>.mobilemenu__ul-sub{
+      height: auto;
+      transform: translateX(100%);
+    }
+  }
 }

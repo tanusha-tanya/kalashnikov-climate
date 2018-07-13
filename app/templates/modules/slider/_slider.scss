@@ -15,7 +15,7 @@
     padding: 0 15px;
     @media(min-width: $tablet){
       height: 630px;
-      padding: 0 35px;
+      padding: 0 30px;
     }
     @media(min-width: $notebook){
       height: 500px;
@@ -99,13 +99,20 @@
       font: $pointer;
       background: none;
       color: $inactiveBtn;
+      display: flex;
+      align-items: center;
+      width: 30%;
       &:hover{
         color: $hoverBtn;
         .slider__button{
-          background: $hoverBtn;
+          background: $inactiveBtn;
+          &:before{
+            transform: translateX(6px) scaleX(1.4);
+            right: 19px;
+          }
         }
-          .slider__svg{
-          transform: scaleX(1.5) translateX(-3px);
+        .slider__svg{
+          transform: translateX(7px);
         }
       }
     }
@@ -115,19 +122,32 @@
     display: none;
     @media(min-width:$tablet){
       display:block;
-      padding: 6px 20px;
       background:$inactiveBtn;
       display: inline-block;
       margin-left: 18px;
       width: 60px;
       height: 40px;
       box-sizing: border-box;
-      transform:scale(-1);
+      position: relative;
+    &:before{
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background: $hoverSvg;
+      top: 20px;
+      right: 17px;
+      transition: transform .3s;
     }
+  }
   }
   &__svg{
     color: $hoverSvg;
     fill: $hoverSvg;
+    position: absolute;
+    top: 15px;
+    right: 8px;
+    z-index: 10;
     transition: transform .3s;
   }
   &__nav{
@@ -160,7 +180,7 @@
 .flipping{
   margin: 0 -5px;
   &__arrow{
-    padding: 10px 20px;
+    width:60px;
     background:$inactiveBg;
     display: inline-block;
     margin: 0 5px;
@@ -168,12 +188,25 @@
     transition: background .3s;
     height: 40px;
     cursor: pointer;
+    position:relative;
+    &:before{
+      content:"";
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background: $inactiveSvg;
+      transition: transform .3s, background .3s;
+    }
     &:hover{
       background: $activeBtn;
       .flipping__svg{
-      transform: scaleX(1.5) translateX(-3px);
-      fill: $hoverSvg;
-      color: $hoverSvg;
+          color: $hoverSvg;
+          fill: $hoverSvg;
+          transform: translateX(7px);
+      }
+      &:before{
+        background: $hoverSvg;
+        transform: translateX(6px) scaleX(1.4);
       }
     }
   }
@@ -181,10 +214,28 @@
     color:$inactiveSvg;
     fill:$inactiveSvg;
     transition:transform .3s, fill .3s, color .3s;
+    position: absolute;
+    z-index: 10;
+  }
+  .owl-prev{
+    transform:scale(-1);
+    &:before{
+      left: 20px;
+      bottom: 19px;
+    }
+    .flipping__svg{
+      left: 30px;
+      bottom: 14px;
+    }
   }
   .owl-next{
-    transform:rotate(180deg);
-    padding-top: 9px;
-    padding-bottom: 11px;
+    &:before{
+      right: 20px;
+      top: 19px;
+    }
+    .flipping__svg{
+      right: 10px;
+      top: 14px;
+    }
   }
 }

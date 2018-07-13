@@ -5,18 +5,23 @@ for(let i = 0; i < listbtn.length; i++){
     let parent = this.parentElement;
     let child = parent.querySelectorAll(".mobilemenu__li");
     if(parent.classList.contains("openlist")){
-      parent.classList.remove("openlist")
+      parent.classList.add("closelist");
+      parent.classList.remove("openlist");
+      function hideList(){
+        parent.classList.remove("closelist");
+      }
+      setTimeout(hideList, 300);
       for(let i = 0; i < child.length; i++){
-        child[i].classList.remove("openlist")
+        child[i].classList.remove("openlist");
       };
     }
     else{
-      parent.classList.add("openlist")
+      parent.classList.add("openlist");
     }
   })
 }
 function closeList(){
   for(let i = 0; i < li.length; i++){
-    li[i].classList.remove("openlist")
+    li[i].classList.remove("openlist");
   }
 }

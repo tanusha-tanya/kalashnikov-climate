@@ -6,26 +6,47 @@
     font:$pointer;
     display: inline-block;
     margin-right: 22px;
+    vertical-align: middle;
   }
   &__arrow{
-    padding: 15px 20px;
+    width: 60px;
+    height: 40px;
     background: $inactiveBtn;
     display: inline-block;
     transition: background .3s;
-    transform: rotate(180deg);
+    position: relative;
+    vertical-align: middle;
+    &:before{
+      content: "";
+      right: 22px;
+      top: 20px;
+      position: absolute;
+      background: $hoverSvg;
+      width: 20px;
+      height: 2px;
+      transition: transform .3s;
+    }
   }
   &__svg{
     color:$hoverSvg;
     fill: $hoverSvg;
     display: inline-block;
     transition: transform .3s;
+    right: 15px;
+    top: 15px;
+    position: absolute;
+    z-index: 10;
+    transition: transform .3s;
   }
   &:hover{
     .more__svg{
-      transform: scaleX(1.5) translateX(-3px);
+      transform: translateX(10px);
     }
     .more__arrow{
       background: $hoverBtn;
+        &:before{
+          transform: translateX(6px) scaleX(1.5);
+        }
     }
     .more__text{
       color: $hoverBtn;

@@ -40,9 +40,9 @@
   }
   &__svg{
     margin-right: 30px;
-    width: 70px;
+    flex-shrink: 0;
   }
-  &__figcaption{    
+  &__figcaption{
     color: $inactiveTxt;
     @media(min-width:$notebook){
       font:$pointer;
