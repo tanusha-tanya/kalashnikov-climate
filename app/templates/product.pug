@@ -1,12 +1,16 @@
 extends _layouts/default
-
+include modules/spoiler/spoiler
 block title
   title Тепловая техника Kalashnikov
 block header
   include  _layouts/header_inner/header_inner
 block content
   section.main__section
-    h1 Тепловая завеса KVC-D
-    #map(style="width:400px; height:300px")
+    .container
+      h1 Тепловая завеса KVC-D
+      include modules/categotyfiltr/categotyfiltr
+      include modules/product/product
+      include modules/article/article
+      include modules/features/features
 block footer
   include  _layouts/footer/footer

@@ -1,0 +1,36 @@
+.features{
+  @media(min-width:$tablet){
+    margin-top:40px;
+  }
+  &__param{
+    display: flex;
+    margin:0;
+    padding:0;
+    &:last-of-type{
+      .features__pick{
+        margin-bottom:0;
+      }
+      .features__text{
+          border:0;
+      }
+    }
+  }
+  &__pick{
+    width: 70px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin-right: 20px;
+    margin-bottom:1px;
+    background: $uppArrow;
+  }
+  &__text{
+    width: 90%;
+    width: calc(100% - 90px);
+    border-bottom: 1px solid $download;
+    display: flex;
+    align-items: center;
+  }
+}
