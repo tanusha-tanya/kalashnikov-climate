@@ -1,0 +1,20 @@
+extends _layouts/default
+
+block title
+  title Kalashnikov — самый известный российский бренд в мире
+block header
+  include  _layouts/header_inner/header_inner
+block content
+  section.main__section
+  .container
+    .wrapper-flex
+      .left
+        include  modules/listnews/listnews
+      .right
+        h1.newsdetail__h1 KALASHNIKOV — самый известный российский бренд в мире
+        .newsdetail__date Дата публикации 14 мая, 2018 г.
+        include  modules/newsslider/newsslider
+        include  modules/newsdetail/newsdetail
+        include  modules/goods/goods
+block footer
+  include  _layouts/footer/footer

@@ -15,12 +15,13 @@ $( document ).ready(function() {
         1220:{
             items:2,
             center:true,
-            margin: 30
+            margin: 30,
+            autoWidth:true
         }
     }
   });
 
-  let items = $('.slider .owl-item:not(.cloned)'),
+  let items = $('.slider .owl-item:not(.cloned), .sliderdetail .owl-item:not(.cloned), .newsslider .owl-item:not(.cloned)'),
       total = items.length,
       current;
   (total<10)?

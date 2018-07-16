@@ -33,6 +33,7 @@
       margin: 0 15px;
       width: calc(33% - 30px);
       display: block;
+
     }
   }
   &__img{
@@ -62,7 +63,13 @@
     font:$h4;
   }
   &__h4{
-    margin:10px 0;
+    margin-bottom: 10px;
+    @media(min-width:$tablet){
+      font: $h4;
+    }
+    @media(min-width:$notebook){
+      margin: 10px 0;
+    }
   }
   &__text{
     color:$muteTxt;

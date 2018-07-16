@@ -3,9 +3,12 @@
   border-top: 1px solid $download;
   padding-bottom: 40px;
   padding-top: 35px;
+  @media(min-width:$notebook){
+    padding-top: 60px;
+  }
   &__items{
     max-width: 400px;
-    margin: 40px auto;    
+    margin: 40px auto;
     @media(min-width:$tablet){
       display: flex;
       flex-wrap:wrap;
@@ -14,6 +17,7 @@
     }
     @media(min-width:$notebook){
       margin: 0 -15px;
+      margin-top: 40px;
     }
   }
   &__item{
@@ -55,11 +59,46 @@
     span{
       font:$pointer;
     }
+    &:hover{
+      .accessories__arrow{
+        &:before{
+          transform: translateX(7px) scaleX(1.5);
+          background:$inactiveBtn;
+        }
+      }
+      .accessories__arrowsvg{
+        transform: translateX(11px);
+        color:$inactiveBtn;
+        fill: $inactiveBtn;
+      }
+    }
+  }
+  &__title{
+    margin-right: 40px;
+    display: inline-block;
+  }
+  &__arrow{
+    position:relative;
+    &:before{
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background: $download;
+      right: 20px;
+      top: 12px;
+      transition: transform .3s, background .3s;
+    }
   }
   &__arrowsvg{
     color:$download;
     fill:$download;
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    transition: transform .3s, color .3s, fill .3s;
   }
+
   &__buylink{
     display: flex;
     justify-content: space-between;
@@ -69,7 +108,7 @@
       position: absolute;
       bottom:0;
       width: 100%;
-}
+      }
     .buylink{
       margin:0;
     }

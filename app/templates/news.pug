@@ -1,5 +1,4 @@
 extends _layouts/default
-include  modules/spoiler/spoiler
 block title
   title Новости
 block header
@@ -8,14 +7,7 @@ block content
   section.main__section
     .container
       h1 Новости
-      .news__items
-        include modules/news/news
-        include modules/news/news
-        include modules/news/news
-        include modules/news/news
-        include modules/news/news
-        include modules/news/news
-        include modules/news/news
+      include modules/news/news
       .news__spoiler
         +spoiler("Показать еще")
 block footer

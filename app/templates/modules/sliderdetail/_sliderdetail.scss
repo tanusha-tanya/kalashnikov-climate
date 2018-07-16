@@ -1,0 +1,12 @@
+.sliderdetail{
+  .slider__items{
+    .owl-stage-outer{
+      transform: translateX(0);
+    }
+  }
+  .slider__item{
+    @media(min-width: $notebook){
+      width:1170px;
+    }
+  }
+}

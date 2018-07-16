@@ -1,15 +1,16 @@
-function spoiler(){
 const spoilarrow = document.querySelector(".spoilarrow");
 const spoilarrowText = document.querySelector(".spoilarrow__text");
-let txt = spoilarrowText.textContent;
-spoilarrow.onclick = function(){
-  if(spoilarrow.classList.contains("spoildown")){
-    spoilarrow.classList.remove("spoildown");
-    spoilarrowText.textContent = txt;
+if(spoilarrow){
+  let txt = spoilarrowText.textContent;
+  let spoilpick = document.querySelector(".spoilarrow__pick");
+  spoilarrow.onclick = function(){
+    if(spoilpick.classList.contains("spoildown")){
+      spoilpick.classList.remove("spoildown");
+      spoilarrowText.textContent = txt;
+    }
+    else{
+      spoilpick.classList.add("spoildown");
+      spoilarrowText.textContent = "Вверх";
+    }
   }
-  else{
-    spoilarrow.classList.add("spoildown");
-    spoilarrowText.textContent = "Вверх";
-  }
-}
 }

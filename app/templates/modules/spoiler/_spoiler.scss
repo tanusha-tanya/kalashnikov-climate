@@ -7,27 +7,41 @@
     display: inline-block;
     margin-right: 22px;
   }
+  &__pick{
+    display: inline-block;
+    position:relative;
+    transform: rotate(-270deg);
+    &.spoildown{
+      transform: rotate(270deg);
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 20px;
+      background: $inactiveBtn;
+      left: -14px;
+      bottom:0;
+      transition: transform .3s;
+    }
+  }
   &__svg{
     color:$inactiveBtn;
     fill: $inactiveBtn;
-    display: inline-block;
-    transform: rotate(-90deg);
+    position:absolute;
+    left: -5px;
+    top:-6px;
+    z-index: 100;
     transition: transform .3s;
   }
   &:hover{
     .spoilarrow__svg{
-      transform: rotate(-90deg) scaleX(1.5) translateX(-3px);
+      transform: translateX(7px);
     }
-  }
-  &.spoildown{
-    .spoilarrow__svg{
-      transform: rotate(90deg);
-      transition: transform .3s;
-    }
-      &:hover{
-        .spoilarrow__svg{
-          transform: rotate(90deg) scaleX(1.5) translateX(3px);
-        }
+    .spoilarrow__pick{
+      &:before{
+        transform: scaleX(1.5) translateX(3px);
+      }
     }
   }
 }

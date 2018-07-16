@@ -1,0 +1,33 @@
+.newsslider{
+  &__item{
+    margin: 30px 0 20px 0;
+    height: 0;
+    width: 100%;
+    padding-top: 69%;
+    position: relative;
+    @media(min-width: $tablet){
+      padding-top: 48%;
+      margin-top: 40px;
+    }
+    @media(min-width: $notebook){
+      padding-top: 0;
+      height: 340px;
+      width: 870px;
+    }
+  }
+  &__bg{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    @media(min-width: $notebook){
+      position: static;
+    }
+  }
+}

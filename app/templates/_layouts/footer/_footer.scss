@@ -41,7 +41,6 @@
       }
       &.openmenu{
         transform: translateX(0);
-        min-height: 100vh;
         overflow: auto;
         @media(min-width:$tablet){
           min-height: 300px;
@@ -55,8 +54,10 @@
       margin:15px 0 25px 0;
       @media(min-width:$tablet){
         order: 2;
-        width: 100%;
-        margin:0;
+        width: 50%;
+        width: calc(50% - 20px);
+        margin: 0 10px;
+        flex-shrink: 0;        
         justify-content: flex-start;
         .download{
           margin-right: 20px;
@@ -81,6 +82,7 @@
       @media(min-width:$tablet){
         order: 1;
         width: 41%;
+        width: calc(41% - 20px);
       }
       @media(min-width:$notebook){
         margin: 0 15px;
@@ -130,9 +132,9 @@
       flex-wrap:wrap;
       @media(min-width:$tablet){
         flex-wrap:nowrap;
+        justify-content: flex-start;
       }
       @media(min-width:$notebook){
-        justify-content: flex-start;
         margin:20px -15px 30px -15px;
       }
     }

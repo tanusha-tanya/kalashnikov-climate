@@ -22,6 +22,11 @@
       width:1170px;
     }
   }
+  &__h3{
+    @media(min-width: $notebook){
+      font: $pluses;
+    }
+  }
   &__ol{
     @media(min-width: $notebook){
       display: flex;

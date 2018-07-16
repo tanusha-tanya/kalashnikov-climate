@@ -1,39 +1,77 @@
 .back{
-  padding: 10px 20px;
-  background: $inactiveBtn;
-  display: inline-block;
-  transition: background .3s;
-  width:60px;
-  height: 40px;
-  box-sizing: border-box;
-  margin-right: 10px;
-  @media(min-width:$tablet){
-    width:125px;
-    padding: 10px;
-    margin-right: 20px;
-    flex-shrink: 0;
+  &__link{
+    background: $inactiveBtn;
+    display: block;
+    transition: background .3s;
+    width:60px;
+    height: 40px;
+    margin-right: 10px;
+    position: relative;
+    @media(min-width:$tablet){
+      width:125px;
+      padding: 10px;
+      box-sizing: border-box;
+      margin-right: 20px;
+      flex-shrink: 0;
+      width:125px;
+    }
+  }
+  &:hover{
+    .back__link{
+      background: $hoverBtn;
+      .back__svg{
+        transform: translateX(10px)
+      }
+      .back__arrow{
+        &:before{
+          transform: translateX(7px) scaleX(1.5);
+        }
+      }
+    }
   }
   &__svg{
     color: $hoverSvg;
     fill: $hoverSvg;
-    display: inline-block;
+    position: absolute;
     transition: transform .3s;
-  }
-  &:hover{
-    background: $hoverBtn;
-    .back__svg{
-      transform: scaleX(1.5) translateX(-3px);
+    top: -25px;
+    left: 30px;
+    z-index: 100;
+    @media(min-width:$tablet){
+      top: -15px;
+      right: 10px;
+      left: auto;
     }
   }
+
   &__span{
     display: none;
     @media(min-width:$tablet){
       display: inline-block;
       color: $hoverSvg;
-      margin-left: 10px;
+      margin-left: 50px;
     }
   }
   @media(min-width:$notebook){
     display: none;
+  }
+  &__arrow{
+    display: block;
+    transform: rotate(180deg);
+    &:before{
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background:$hoverSvg;
+      top: -21px;
+      left: 20px;
+      transition: transform .3s;
+      @media(min-width:$tablet){
+        top: -11px;
+        right: 20px;
+        left: auto;
+      }
+    }
   }
 }
