@@ -27,12 +27,35 @@ if(dealersFilter){
       activeTab(indexLink);
     })
   };
-  if(window.innerWidth >= 768){
-    for(let i = 0; i < dealersLinks.length; i++){
-      if(dealersLinks[i].dataset.text !== undefined)
-      dealersLinks[i].text = dealersLinks[i].dataset.text;
-    };
+
+  let dataText = [], actuallyText = [];
+
+  for(let i = 0; i < dealersLinks.length; i++){
+    actuallyText.push(dealersLinks[i].text)
+    if(dealersLinks[i].dataset.text !== undefined){
+      dataText.push(dealersLinks[i].dataset.text)
+    }
+    else{
+      dataText.push(dealersLinks[i].text)
+    }
   }
+
+  function changeText(){
+    if(window.innerWidth >= 768){
+      for(let i = 0; i < dealersLinks.length; i++){
+        dealersLinks[i].text = dataText[i];
+      }
+    }
+    else{
+      for(let i = 0; i < dealersLinks.length; i++){
+        dealersLinks[i].text = actuallyText[i];
+      }
+    }
+  }
+changeText()
+window.addEventListener("resize", function(){
+    changeText();
+  })
 }
 
 function changeSvg(input, label){

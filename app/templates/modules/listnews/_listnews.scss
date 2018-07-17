@@ -1,0 +1,14 @@
+.listnews{
+  &__title{
+    color:$muteTxt;
+  }
+  &__item{
+    color:$muteTxt;
+    margin: 30px 0;
+    padding-right: 20px;
+  }
+  &__link{
+    color:$muteTxt;
+    margin: 30px 0;
+  }
+}
