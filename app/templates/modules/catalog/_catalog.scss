@@ -4,13 +4,13 @@
     margin-top: 12px;
     @media(min-width:$tablet){
       display: flex;
-      margin: 0 -10px;
+      margin: 40px -10px 0 -10px;
       flex-wrap: wrap;
       width: 100%;
       width: calc(100% + 20px);
     }
     @media(min-width:$notebook){
-      margin: 0 -15px;
+      margin: 40px -15px 0 -15px;
       width: 100%;
       width: calc(100% + 30px);
     }
@@ -58,9 +58,42 @@
     margin-top: 30px;
     text-decoration: none;
     font: $pointer;
+    span{
+      margin-right: 60px;
+    }
+    &:hover{
+      .catalog__svg{
+        transform: translateX(13px);
+        color: $inactiveBtn;
+        fill: $inactiveBtn;
+      }
+      .catalog__arrow{
+        &:before{
+          transform: translateX(10px) scaleX(1.5);
+          background: $inactiveBtn;
+        }
+      }
+    }
   }
   &__svg{
     color: $download;
     fill: $download;
+    position: absolute;
+    right: 0;
+    top: 6px;
+    transition: transform .3s, color .3s, fill .3s;
+  }
+  &__arrow{
+    position: relative;
+    &:before{
+      content: '';
+      transition: transform .3s, background .3s;
+      width: 20px;
+      height: 2px;
+      background: $download;
+      position: absolute;
+      right:  20px;
+      top: 10px;
+    }
   }
 }

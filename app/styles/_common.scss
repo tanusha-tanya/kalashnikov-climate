@@ -79,17 +79,19 @@ a{
 }
 .main__section{
   flex-grow:1;
-  &.noscroll{
-    display: none;
-    @media(min-width:$tablet){
-      display: block;
-    }
+}
+.noscroll{
+  display: none!important;
+  @media(min-width:$tablet){
+    display: block!important;
   }
 }
+
 .right{
-  margin: -45px 0 0 0;
+  margin: -22px 0 0 0;
   @media(min-width:$notebook){
-    margin: -45px  15px 0 15px;
+    margin: 0  15px;
+    margin-top: -10px;
     width: 75%;
     width: calc(75% - 30px);
     overflow: hidden;

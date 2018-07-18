@@ -85,23 +85,26 @@
     text-decoration: none;
     position: relative;
     display: block;
+    span{
+      margin-right: 40px;
+    }
     &:before{
       content:"";
       width: 20px;
       height: 2px;
       background: $download;
       position: absolute;
-      right: 20px;
+      right: 15px;
       top: 10px;
       transition: transform .3s, background .3s;
     }
     &:hover{
       &:before{
-        transform: translateX(11px) scaleX(1.9);
+        transform: translateX(7px) scaleX(1.5);
         background: $inactiveBtn;
       }
       .carousel__svg{
-        transform: translateX(16px);
+        transform: translateX(10px);
         color: $inactiveBtn;
         fill: $inactiveBtn;
       }
@@ -111,7 +114,7 @@
     color: $download;
     fill: $download;
     position: absolute;
-    right: 10px;
+    right: 4px;
     top: 5px;
     transition: transform .3s,  fill .3s, color .3s;
     z-index: 10;
