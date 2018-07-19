@@ -7,10 +7,19 @@ block header
 block content
   section.main__section
     .container
-      h1 Тепловая завеса KVC-D
-      include modules/categotyfiltr/categotyfiltr
-      include modules/product/product
-      include modules/article/article
-      include modules/features/features
+      .wrapper-flex
+        .left
+          include  modules/leftmenu/leftmenu
+        .right
+          h1 Тепловая завеса KVC-D
+          include modules/categoryfilter/categoryfilter
+          .goods__items
+            include  modules/goods/goods
+            include  modules/goods/goods
+            include  modules/goods/goods
+            include  modules/goods/goods
+          include modules/product/product
+          include modules/article/article
+          include modules/features/features
 block footer
   include  _layouts/footer/footer

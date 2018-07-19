@@ -1,7 +1,7 @@
 .newsdetail{
   margin: 40px 0;
   border-bottom: 1px solid $download;
-  @media(min-width:$notebook){
+  @media(min-width:$tablet){
     padding-bottom: 50px;
   }
   &__h1{
@@ -10,14 +10,14 @@
       font: $bigh1;
       margin-top: 0;
     }
-    @media(min-width:$notebook){
-      margin-top: 45px;
-    }
   }
   &__date{
     color: $muteTxt;
     @media(min-width: $tablet){
       margin-top: 10px;
+    }
+    @media(min-width: $notebook){
+      margin-top: 15px;
     }
   }
   &__back{

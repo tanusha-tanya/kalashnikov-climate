@@ -1,0 +1,24 @@
+.categoryfilter{
+  display: flex;
+  &__button{
+    width: 150px;
+    height: 50px;
+    background: $activeBtn;
+    color: $hoverSvg;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+  }
+  &__filter{
+    width: 150px;
+    height: 50px;
+    background: $uppArrow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__svg{
+    color: $activeBtn;
+    fill:$activeBtn;
+  }
+}

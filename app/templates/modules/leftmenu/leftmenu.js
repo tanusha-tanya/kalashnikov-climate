@@ -3,15 +3,20 @@ if (leftmenuButton){
   for(let i = 0; i < leftmenuButton.length; i++){
     leftmenuButton[i].addEventListener("click", function(){
       let span = this.parentElement.parentElement;
-      let height = 0;
       let insidecats = span.querySelector(".leftmenu__insidecats");
       let insidecat = insidecats.querySelectorAll(".leftmenu__insidecat");
-      for(let i = 0; i < insidecat.length; i++){
-        height+= insidecat[i].offsetHeight;
-        console.log(insidecat[i])
+      if(span.classList.contains("leftmenu__opencat")){
+        span.classList.add("leftmenu__closecat");
+        setTimeout(function(){
+          span.classList.remove("leftmenu__opencat");
+        }, 300)
       }
-      insidecats.style.height = height+"px";
-      span.classList.toggle("leftmenu__opencat");
+      else{
+        span.classList.add("leftmenu__opencat");
+        setTimeout(function(){
+          span.classList.remove("leftmenu__closecat");
+        }, 300)
+      }
     })
   }
 }

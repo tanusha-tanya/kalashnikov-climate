@@ -1,3 +1,115 @@
-.goods{
-
+.good{
+  @media(min-width: $tablet){
+    width: 50%;
+    width: calc(50% - 20px);
+    margin: 30px 10px;
+  }
+  @media(min-width: $notebook){
+    width: 33%;
+    width: calc(33% - 30px);
+    margin: 30px 15px;
+  }
+  &__pick{
+    background:$inactiveBg;
+    padding: 25px;
+    @media(min-width: $notebook){
+      padding: 60px 15px;
+    }
+  }
+  &__img{
+    max-width: 100%;
+  }
+  &__link{
+    text-decoration: none;
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-between;
+    @media(min-width: $notebook){
+      margin: 15px 0;
+    }
+    span{
+      margin-right: 60px;
+      font: $pointer;
+    }
+    &:hover{
+      .good__svg{
+        transform: translateX(15px);
+      }
+      .good__arrow{
+        &:before{
+          transform: translateX(10px) scaleX(1.5);
+        }
+      }
+    }
+  }
+  &__arrow{
+    position:relative;
+    font: $title;
+    &:before{
+      content: '';
+      position:absolute;
+      width: 25px;
+      height: 2px;
+      background: $download;
+      right: 18px;
+      top: 10px;
+    }
+  }
+  &__svg{
+    color:$download;
+    fill:$download;
+    position:absolute;
+    right: 10px;
+    top: 6px;
+    transition: transform;
+  }
+  &__features{
+    display: flex;
+  }
+  &__feature{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    @media(min-width: $notebook){
+      margin-right: 5px;
+    }
+  }
+  &__featuresvg{
+    margin-right: 10px;
+    @media(min-width: $notebook){
+      margin-right: 5px;
+    }
+  }
+  &__text{
+    font:$littleTxt;
+    color:$muteTxt;
+    @media(min-width: $notebook){
+      display: none;
+    }
+  }
+  &__price{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    @media(min-width: $notebook){
+      margin: 15px 0;
+    }
+    .buylink{
+      margin: 0;
+    }
+    .price__num{
+      font: $partnerstitle;
+      margin-right: 5px;
+    }
+  }
+}
+.goods__items{
+  @media(min-width: $tablet){
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+  @media(min-width: $notebook){
+    margin: 0 -15px;
+  }
 }

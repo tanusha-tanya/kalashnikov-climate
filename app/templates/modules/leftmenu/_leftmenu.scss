@@ -5,6 +5,7 @@
   &__cats{
     padding: 0;
     margin-top:33px;
+    overflow: hidden;
   }
   &__span{
     padding: 10px 15px;
@@ -22,12 +23,20 @@
       .leftmenu__insidecats{
         margin-top: 20px;
         margin-bottom: 40px;
+        transform: translateX(0);
+        position:static;
+        visibility: visible;
       }
       .leftmenu__span{
         background: $menubg;
       }
       .leftmenu__svg{
         transform: scale(-1);
+      }
+    }
+    &.leftmenu__closecat{
+        .leftmenu__insidecats{
+        transform: translateX(-300px);
       }
     }
   }
@@ -41,9 +50,10 @@
   }
   &__insidecats{
     padding: 0;
-    transition: height .3s;
-    height: 0;
-    overflow: hidden;
+    transition: transform .3s;
+    transform: translateX(-300px);
+    position:absolute;
+    visibility: hidden;
   }
   &__insidecat{
     list-style: none;

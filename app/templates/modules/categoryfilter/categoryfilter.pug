@@ -1,0 +1,8 @@
+.categoryfilter
+  label.categoryfilter__button.categoryfilter__button-active(for="all")
+    span Все
+    input.categoryfilter__input(type="checkbox", value="all", id="all")
+  label.categoryfilter__button(for="filter")
+    span
+      svg.categoryfilter__svg(role="img")(width="30")(height="22"): use(xlink:href="#i_filter")
+    input.categoryfilter__input(type="checkbox", value="filter", id="filter")
