@@ -1,8 +1,38 @@
 .categoryfilter
-  label.categoryfilter__button.categoryfilter__button-active(for="all")
-    span Все
-    input.categoryfilter__input(type="checkbox", value="all", id="all")
-  label.categoryfilter__button(for="filter")
-    span
+  .categoryfilter__buttonblock
+    label.categoryfilter__button.categoryfilter__button-small.categoryfilter__button-active(for="all")
+      input.categoryfilter__input(type="checkbox", value="all", id="all", checked="checked")
+      span Все
+    label.categoryfilter__button.categoryfilter__button-small(for="filter")
+      input.categoryfilter__input(type="checkbox", value="filter", id="filter")
       svg.categoryfilter__svg(role="img")(width="30")(height="22"): use(xlink:href="#i_filter")
-    input.categoryfilter__input(type="checkbox", value="filter", id="filter")
+    label.categoryfilter__button.categoryfilter__button-full(for="electro")
+      input.categoryfilter__input(type="checkbox", value="electro", id="electro")
+      span С электрическим ист.т.
+      svg.categoryfilter__svg(role="img")(width="37")(height="30"): use(xlink:href="#electrosvg")
+    label.categoryfilter__button.categoryfilter__button-full(for="water")
+      input.categoryfilter__input(type="checkbox", value="water", id="water")
+      span С водяным ист. тепла
+      svg.categoryfilter__svg(role="img")(width="37")(height="30"): use(xlink:href="#watersvg")
+    label.categoryfilter__button.categoryfilter__button-full(for="heating")
+      input.categoryfilter__input(type="checkbox", value="heating", id="heating")
+      span Без обогрева
+      svg.categoryfilter__svg(role="img")(width="30")(height="30"): use(xlink:href="#heatingsvg")
+    label.categoryfilter__button.categoryfilter__button-full(for="name")
+      input.categoryfilter__input(type="checkbox", value="name", id="name")
+      span Наименование без тега
+  .categoryfilter__selectblock
+    .categoryfilter__selectitem
+      .categoryfilter__select
+        span Тип монтажа
+        svg.categoryfilter__svg(role="img")(width="10")(height="6"): use(xlink:href="#selectarrow")
+      .categoryfilter__popup
+        label.categoryfilter__popuplabel
+          span Тип 1
+          input.categoryfilter__popupinput(type="checkbox", value="type1", id="type1")
+        label.categoryfilter__popuplabel
+          span Тип 2
+          input.categoryfilter__popupinput(type="checkbox", value="type2", id="type2")
+        label.categoryfilter__popuplabel
+          span Тип 3
+          input.categoryfilter__popupinput(type="checkbox", value="type3", id="type3")

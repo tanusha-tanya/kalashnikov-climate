@@ -1,13 +1,48 @@
 .categoryfilter{
-  display: flex;
+  &__buttonblock{
+    display: flex;
+    margin: 0 -5px;
+    position: relative;
+    flex-wrap: wrap;
+  }
   &__button{
-    width: 150px;
+    padding: 14px;
+    box-sizing: border-box;
     height: 50px;
-    background: $activeBtn;
-    color: $hoverSvg;
+    background: $uppArrow;
+    color: $activeBtn;
     border: 0;
     outline: none;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background .3s;
+    font: $pointer;
+    &-small{
+      margin: 40px 5px 5px 5px;
+      width: 50%;
+      width:calc(50% - 10px);
+    }
+    &-full{
+      width: 100%;
+      width: calc(100% - 10px);
+      margin: 5px 5px 5px 5px;
+      justify-content: space-between;
+    }
+    &-active{
+      color: $hoverSvg;
+      background: $activeBtn;
+      transition: background .3s;
+      svg{
+        color: $hoverSvg;
+        fill: $hoverSvg;
+      }
+    }
+  }
+  &__input{
+    position: absolute;
+    visibility: hidden;
   }
   &__filter{
     width: 150px;
@@ -18,7 +53,26 @@
     justify-content: center;
   }
   &__svg{
-    color: $activeBtn;
-    fill:$activeBtn;
+    color: $inactiveTxt;
+    fill:$inactiveTxt;
+  }
+  &__selectblock{
+    margin-top: 20px;
+  }
+  &__selectitem{
+    position: relative;
+  }
+  &__select{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__popup{
+    display: none;
+    &-open{
+      position: absolute;
+      display: block;
+    }
   }
 }

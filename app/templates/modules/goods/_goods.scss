@@ -10,8 +10,12 @@
     margin: 30px 15px;
   }
   &__pick{
-    background:$inactiveBg;
+    background: #F6F7FA;
     padding: 25px;
+    height: 250px;
+    align-items: center;
+    display: flex;
+    box-sizing: border-box;
     @media(min-width: $notebook){
       padding: 60px 15px;
     }
@@ -76,6 +80,8 @@
   }
   &__featuresvg{
     margin-right: 10px;
+    color: $inactiveSvg;
+    fill:$inactiveSvg;
     @media(min-width: $notebook){
       margin-right: 5px;
     }
