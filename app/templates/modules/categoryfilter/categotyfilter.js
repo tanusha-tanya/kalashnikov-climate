@@ -16,12 +16,15 @@ if(filter){
       filterClose()
     }
   }
-  all.onchange= function(){
+  all.onchange= function(event){
     if(this.checked){
       buttonFilter.checked = false;
       labelAll.classList.add("categoryfilter__button-active");
       labelFilter.classList.remove("categoryfilter__button-active");
       filterClose()
+      }
+      else{
+        event.preventDefault();
       }
     }
   }
@@ -37,7 +40,7 @@ function filterClose(){
 }
 function buttonsClick(){
   let buttonblock = filter.querySelector(".categoryfilter__hideblock");
-  let input = buttonblock.querySelectorAll("input");
+  let input = buttonblock.querySelectorAll(".categoryfilter__input");
   for(let i=0; i < input.length; i++){
     input[i].addEventListener('change', function(){
       let label = this.parentNode;
@@ -50,6 +53,7 @@ function buttonsClick(){
 function selectOpen(){
   let selectBlock = filter.querySelector(".categoryfilter__selectblock");
   let select = selectBlock.querySelectorAll(".categoryfilter__select");
+  let popups =  selectBlock.querySelector('.categoryfilter__popup');
   for(let i=0; i < select.length; i++){
     select[i].addEventListener('click', function(){
       let selectitem = this.parentNode;
@@ -58,7 +62,11 @@ function selectOpen(){
         popup.classList.remove('categoryfilter__popup-open');
       }
       else{
+        for(let i=0; i < popups.length; i++){
+          popups.remove('categoryfilter__popup-open');
+        }
         popup.classList.add('categoryfilter__popup-open');
+        this.classList.add('categoryfilter__select-open')
       }
     })
   }
