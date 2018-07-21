@@ -5,6 +5,12 @@
     position: relative;
     flex-wrap: wrap;
   }
+  &__openblock{
+    
+  }
+  &__hideblock{
+    display: none;
+  }
   &__button{
     padding: 14px;
     box-sizing: border-box;
@@ -19,10 +25,15 @@
     align-items: center;
     transition: background .3s;
     font: $pointer;
-    &-small{
+    &-filter{
       margin: 40px 5px 5px 5px;
       width: 50%;
-      width:calc(50% - 10px);
+      width:calc(47% - 10px);
+    }
+    &-all{
+      margin: 40px 5px 5px 5px;
+      width: 50%;
+      width:calc(53% - 10px);
     }
     &-full{
       width: 100%;
