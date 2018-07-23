@@ -1,33 +1,31 @@
 .categoryfilter
-  .categoryfilter__buttonblock.categoryfilter__openblock
+  .categoryfilter__buttonblock
     label.categoryfilter__button.categoryfilter__button-active.categoryfilter__button-all(for="all")
       input.categoryfilter__input.categoryfilter__input-all(type="checkbox", value="all", id="all", checked)
       span Все
     label.categoryfilter__button.categoryfilter__button-filter(for="filter")
       input.categoryfilter__input.categoryfilter__input-filter(type="checkbox", value="filter", id="filter")
       svg.categoryfilter__svg(role="img")(width="30")(height="22"): use(xlink:href="#i_filter")
-  .categoryfilter__hideblock
-    .categoryfilter__buttonblock
-      label.categoryfilter__button.categoryfilter__button-full(for="electro")
-        input.categoryfilter__input(type="checkbox", value="electro", id="electro")
-        span С электрическим ист.т.
-        svg.categoryfilter__svg(role="img")(width="37")(height="30"): use(xlink:href="#electrosvg")
-      label.categoryfilter__button.categoryfilter__button-full(for="water")
-        input.categoryfilter__input(type="checkbox", value="water", id="water")
-        span С водяным ист. тепла
-        svg.categoryfilter__svg(role="img")(width="37")(height="30"): use(xlink:href="#watersvg")
-      label.categoryfilter__button.categoryfilter__button-full(for="heating")
-        input.categoryfilter__input(type="checkbox", value="heating", id="heating")
-        span Без обогрева
-        svg.categoryfilter__svg(role="img")(width="30")(height="30"): use(xlink:href="#heatingsvg")
-      label.categoryfilter__button.categoryfilter__button-full(for="name")
-        input.categoryfilter__input(type="checkbox", value="name", id="name")
-        span Наименование без тега
-    .categoryfilter__selectblock
+    label.categoryfilter__button.categoryfilter__button-hide.categoryfilter__button-full(for="electro")
+      input.categoryfilter__input(type="checkbox", value="electro", id="electro")
+      span(data-text="С электрическим источником тепла") С электрическим ист.т.
+      svg.categoryfilter__svg(role="img")(width="37")(height="30"): use(xlink:href="#electrosvg")
+    label.categoryfilter__button.categoryfilter__button-hide.categoryfilter__button-full(for="water")
+      input.categoryfilter__input(type="checkbox", value="water", id="water")
+      span(data-text="С водяным источником тепла") С водяным ист. тепла
+      svg.categoryfilter__svg(role="img")(width="37")(height="30"): use(xlink:href="#watersvg")
+    label.categoryfilter__button.categoryfilter__button-hide.categoryfilter__button-full(for="heating")
+      input.categoryfilter__input(type="checkbox", value="heating", id="heating")
+      span Без обогрева
+      svg.categoryfilter__svg(role="img")(width="30")(height="30"): use(xlink:href="#heatingsvg")
+    label.categoryfilter__button.categoryfilter__button-hide.categoryfilter__button-full(for="name")
+      input.categoryfilter__input(type="checkbox", value="name", id="name")
+      span Наименование без тега
+    .categoryfilter__selectblock.categoryfilter__selectblock-hide
       .categoryfilter__selectitem
         .categoryfilter__select
           span Тип монтажа
-          svg.categoryfilter__svg(role="img")(width="10")(height="6"): use(xlink:href="#selectarrow")
+          svg.categoryfilter__selectsvg(role="img")(width="10")(height="6"): use(xlink:href="#selectarrow")
         .categoryfilter__popup
           .categoryfilter__popupitem
             input.categoryfilter__popupinput(type="checkbox", value="type1", id="type1")
@@ -44,7 +42,7 @@
       .categoryfilter__selectitem
         .categoryfilter__select
           span Производительность
-          svg.categoryfilter__svg(role="img")(width="10")(height="6"): use(xlink:href="#selectarrow")
+          svg.categoryfilter__selectsvg(role="img")(width="10")(height="6"): use(xlink:href="#selectarrow")
         .categoryfilter__popup
           .categoryfilter__popupitem
             input.categoryfilter__popupinput(type="checkbox", value="prod1", id="prod1")
@@ -61,7 +59,7 @@
       .categoryfilter__selectitem
         .categoryfilter__select
           span Потребляемая мощность
-          svg.categoryfilter__svg(role="img")(width="10")(height="6"): use(xlink:href="#selectarrow")
+          svg.categoryfilter__selectsvg(role="img")(width="10")(height="6"): use(xlink:href="#selectarrow")
         .categoryfilter__popup
           .categoryfilter__popupitem
             input.categoryfilter__popupinput(type="checkbox", value="power1", id="power1")
@@ -78,7 +76,7 @@
       .categoryfilter__selectitem
         .categoryfilter__select
           span Макс. высота монтажа
-          svg.categoryfilter__svg(role="img")(width="10")(height="6"): use(xlink:href="#selectarrow")
+          svg.categoryfilter__selectsvg(role="img")(width="10")(height="6"): use(xlink:href="#selectarrow")
         .categoryfilter__popup
           .categoryfilter__popupitem
             input.categoryfilter__popupinput(type="checkbox", value="height1", id="height1")
