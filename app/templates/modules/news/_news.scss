@@ -9,12 +9,13 @@
   }
   &__item{
     margin: 40px 0;
+    align-content: flex-start;
     @media(min-width: $tablet){
       display: flex;
       margin: 30px -15px;
     }
     @media(min-width: $notebook){
-      width: 50%;    
+      width: 50%;
       margin: 20px 0;
     }
   }

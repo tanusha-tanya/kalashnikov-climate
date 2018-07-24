@@ -2,11 +2,9 @@
   margin: 80px auto;
   border-top: 1px $download solid;
   @media(min-width:$tablet){
-    margin: 50px auto -10px auto;
+    margin: 50px auto 10px auto;
   }
-  @media(min-width:$notebook){
-    margin: 40px auto -50px auto;
-  }
+
   h2{
     font:$partnerstitle;
     margin-top: 35px;
