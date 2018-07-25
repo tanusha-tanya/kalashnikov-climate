@@ -1,0 +1,14 @@
+.servicecontent{
+  p{
+    font: $pointer;
+  }
+  .download__link{
+    font: $pointer;
+    color: $inactiveTxt;
+    text-decoration: underline;
+  }
+  .download__svg{
+    color: $inactiveTxt;
+    fill: $inactiveTxt;
+  }
+}

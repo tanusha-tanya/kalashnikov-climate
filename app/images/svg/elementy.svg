@@ -1,0 +1,23 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.2653 13.2653V0H0V13.2653" transform="translate(43.8789 18.3672) rotate(90)" stroke="#F3930E" stroke-width="2"/>
+<path d="M4.08163 0L0 4.08163" transform="translate(27.5508 18.3672)" stroke="#F3930E" stroke-width="2"/>
+<path d="M4.08163 0L0 4.08163" transform="translate(18.3672 27.5508)" stroke="#F3930E" stroke-width="2"/>
+<path d="M4.08163 0L0 4.08163" transform="translate(22.4492 18.3672) rotate(90)" stroke="#F3930E" stroke-width="2"/>
+<path d="M0 5.10204V0" transform="translate(31.6328)" stroke="#404040" stroke-width="2"/>
+<path d="M0 5.10204V0" transform="translate(18.3672)" stroke="#404040" stroke-width="2"/>
+<path d="M0 5.10204V0" transform="translate(31.6328 44.8984)" stroke="#404040" stroke-width="2"/>
+<path d="M0 5.10204V0" transform="translate(18.3672 44.8984)" stroke="#404040" stroke-width="2"/>
+<path d="M0 5.10204V0" transform="translate(44.8984 18.3672) rotate(-90)" stroke="#404040" stroke-width="2"/>
+<path d="M0 5.10204V0" transform="translate(44.8984 31.6328) rotate(-90)" stroke="#404040" stroke-width="2"/>
+<path d="M0 5.10204V0" transform="translate(0 18.3672) rotate(-90)" stroke="#404040" stroke-width="2"/>
+<path d="M0 5.10204V0" transform="translate(0 31.6328) rotate(-90)" stroke="#404040" stroke-width="2"/>
+<path d="M4.08163 0L0 4.08163" transform="translate(31.6328 27.5508) rotate(90)" stroke="#F3930E" stroke-width="2"/>
+<path d="M13.2653 13.2653V0H0V13.2653" transform="translate(18.3672 6.12305)" stroke="#F3930E" stroke-width="2"/>
+<path d="M13.2653 13.2653V0H0V13.2653" transform="translate(6.12109 31.6328) rotate(-90)" stroke="#F3930E" stroke-width="2"/>
+<path d="M13.2653 13.2653V0H0V13.2653" transform="translate(31.6328 43.877) rotate(180)" stroke="#F3930E" stroke-width="2"/>
+<circle cx="4.59184" cy="4.59184" r="3.59184" transform="translate(20.4062 20.4082)" stroke="#F3930E" stroke-width="2"/>
+<path d="M0 0V14" transform="translate(39 18)" stroke="#F3930E" stroke-width="2"/>
+<path d="M0 0V14" transform="translate(11 18)" stroke="#F3930E" stroke-width="2"/>
+<path d="M0 0V14" transform="translate(32 11) rotate(90)" stroke="#F3930E" stroke-width="2"/>
+<path d="M0 0V14" transform="translate(32 39) rotate(90)" stroke="#F3930E" stroke-width="2"/>
+</svg>

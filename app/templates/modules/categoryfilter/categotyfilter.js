@@ -115,7 +115,7 @@ if(filter){
   window.addEventListener("resize", function(){
     changeText();
   })
-  let select = selectBlock.querySelectorAll(".categoryfilter__select");
+  let selects = selectBlock.querySelectorAll(".categoryfilter__select");
   let popups =  selectBlock.querySelectorAll('.categoryfilter__popup');
   for(let i=0; i < select.length; i++){
     select[i].addEventListener('click', function(){
@@ -139,7 +139,6 @@ if(filter){
     })
   }
   function setCounter(){
-    let selects = filter.querySelectorAll(".categoryfilter__select");
     for(let i = 0; i < selects.length; i++){
       let count = 0;
       let inputs = selects[i].querySelectorAll(".categoryfilter__popupinput");

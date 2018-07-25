@@ -4,6 +4,9 @@
   border-top: 1px solid $borderColor;
   border-bottom: 1px solid $borderColor;
   margin-top: -15px;
+  &-inner{
+    border-top: 0;
+  }
   @media(min-width:$notebook){
     display: flex;
     justify-content: space-between;

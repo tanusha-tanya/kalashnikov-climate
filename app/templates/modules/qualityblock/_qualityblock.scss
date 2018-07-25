@@ -1,0 +1,28 @@
+.qualityblock{
+  margin: 30px 0;
+  @media(min-width: $notebook){
+    display:flex;
+    margin: 30px -15px;
+  }
+  &__item{
+    display:flex;
+    margin: 20px 0;
+    @media(min-width: $tablet){
+      align-items: center;
+      margin: 30px 0;
+    }
+    @media(min-width: $notebook){
+      width: 50%;
+      width:calc(50% - 30px);
+      margin: 0 15px;
+      padding-left: 20px;
+    }
+  }
+  &__svg{
+    margin-right:30px;
+    flex-shrink: 0;
+  }
+  &__text{
+    font: $pointer;
+  }
+}

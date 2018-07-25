@@ -1,0 +1,52 @@
+.pluses{
+  &__ol{
+    @media(min-width: $notebook){
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+    }
+  }
+  &__li{
+    color: $inactiveBtn;
+    font: $pointer;
+    list-style: none;
+    counter-increment: list;
+    position:relative;
+    margin: 40px 0;
+    @media(min-width: $tablet){
+      font:  $partnerstitle;
+    }
+    @media(min-width: $notebook){
+      width: 50%;
+      width: calc(50% - 30px);
+      margin:  32px 15px;
+      padding-left: 30px;
+      box-sizing: border-box;
+      font: $partnerstitle;
+    }
+    &:before{
+      content: counter(list) " ";
+      position: relative;
+      margin-left: -10px;
+      @media(min-width: $notebook){
+        margin-left: -40px;
+      }
+    }
+    &:after{
+      content: '';
+      width: 40px;
+      height: 2px;
+      position:absolute;
+      background: $download;
+      top: 30px;
+      left: -40px;
+    }
+    p{
+      color: $inactiveTxt;
+      font: $link;
+      @media(min-width: $notebook){
+        max-width: 470px;
+      }
+    }
+  }
+}

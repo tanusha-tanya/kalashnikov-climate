@@ -1,12 +1,13 @@
 extends _layouts/default
-include modules/spoiler/spoiler
 block title
   title Сервисные центры
 block header
   include  _layouts/header_inner/header_inner
 block content
   section.main__section
-  .container
-    include modules/dealers/dealers
+    .container
+      h1 Сервисные центры
+      include modules/servicecontent/servicecontent
+      include modules/dealers/dealers
 block footer
   include  _layouts/footer/footer

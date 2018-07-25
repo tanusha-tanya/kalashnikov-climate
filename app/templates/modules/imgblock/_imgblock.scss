@@ -1,0 +1,15 @@
+.imgblock{
+  &__pick{
+    height: 300px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @media(min-width:$tablet){
+      height: 340px;
+    }
+    @media(min-width:$notebook){
+      height: 500px;
+    }
+  }
+}
