@@ -2,12 +2,13 @@ $(document).ready(function () {
   var owl = $(".examples__carousel");
   owl.owlCarousel({
     loop: true,
-    margin: 10,
+    margin: 20,
     nav: false,
     dots: false,
     responsive: {
       0: {
-        items: 1
+        items: 2,
+        autoWidth: true
       },
       1220: {
         items: 2,
@@ -16,4 +17,5 @@ $(document).ready(function () {
         autoWidth: true
       }
     }
-  });
+  })
+});

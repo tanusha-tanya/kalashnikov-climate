@@ -1,0 +1,27 @@
+.form
+  .container
+    .form__title
+      h4 Задать вопрос
+    form.form__form.ajaxform(action="")
+      fieldset.form__fieldset
+        label.form__label
+          svg.form__svg.form__svg-name(role="img")(width="16")(height="16"): use(xlink:href="#user")
+          input.form__input.form__input-name(type="text")(placeholder="Имя")(name="name")
+      fieldset.form__fieldset.form__fieldset-flex
+        label.form__label.form__label-double
+          svg.form__svg.form__svg-phone(role="img")(width="13")(height="22"): use(xlink:href="#phone")
+          input.form__input.form__input-phone(type="text")(placeholder="+7")
+        label.form__label.form__label-double
+          svg.form__svg.form__svg-email(role="img")(width="20")(height="16"): use(xlink:href="#mail")
+          input.form__input.form__input-email(type="text")(placeholder="E-email")
+      fieldset.form__fieldset
+        input.form__input.form__input-confirm.js-confirm(type="checkbox")(id="confirm")
+        label.form__label.form__label-confirm(for="confirm")
+          span Согласен&nbsp;
+            a(href="#") на обработку персональных данных
+      fieldset.form__fieldset.form__fieldset-comment
+        legend.form__legend Ваш вопрос
+        label.form__label
+          textarea.form__textarea(placeholder="Опишите ваш вопрос или добавьте любые комментарии")
+          label.form__sendlabel(for="askButton")
+            input(type="submit")(value="Отправить")(disabled="disabled").form__button.button-disabled#askButton

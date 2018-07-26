@@ -1,0 +1,231 @@
+.form{
+  &__title{
+    border-top: 1px solid $download;
+    margin: 30px 0;
+    padding-top: 30px;
+    @media(min-width:$notebook){
+      margin: 60px 0;
+      padding-top: 60px;
+    }
+  }
+  &__form{
+    position: relative;
+    @media(min-width:$tablet){
+      box-sizing: border-box;
+    }
+    @media(min-width:$notebook){
+      padding: 0 100px;
+    }
+  }
+  &__fieldset{
+    border: none;
+    outline: none;
+    margin: 0;
+    padding:0;
+  &-flex{
+    @media(min-width:$tablet){
+      margin: 15px -15px;
+    }
+  }
+    &:hover, &:focus{
+      border: none;
+      outline: none;
+    }
+    &-comment{
+      margin-top:20px;
+      position: relative;
+    }
+  }
+  &__label{
+    position:relative;
+    display:block;
+    @media(min-width:$tablet){
+      width: 100%;
+    }
+    &-double{
+      @media(min-width:$tablet){
+        width: calc(50% - 30px);
+        margin: 0 15px;
+        display: block;
+        float: left;
+      }
+    }
+    &-confirm{
+      margin: 20px auto;
+    }
+    &.notempty{
+      .ask__svg{
+        fill:$activeBtn;
+        color:$activeBtn;
+      }
+    }
+    &.error-label{
+      .ask__input{
+        border-color:$inactiveBtn;
+      }
+    }
+  }
+  &__svg{
+    position:absolute;
+    left:17px;
+    fill:$formsvg;
+    color:$formsvg;
+    transition: color .3s;
+    &-name{
+      top: 25px;
+    }
+    &-phone{
+      top: 26px;
+      @media(min-width:$tablet){
+        top: 23px;
+      }
+    }
+    &-email{
+      top: 26px;
+      @media(min-width:$tablet){
+        top: 26px;
+      }
+    }
+  }
+  &__input, &__textarea{
+    border: none;
+    outline: none;
+    background: $inactiveBg;
+    padding: 15px 50px;
+    margin: 10px auto;
+    color: $activeBtn;
+    width:100%;
+    box-sizing: border-box;
+    opacity:1;
+    border:1px solid transparent;
+    transition: border .3s;
+    font: $pointer;
+    &:hover, &:focus{
+      border:1px solid transparent;
+      outline: none;
+    }
+    &::-moz-placeholder{
+      color: $muteTxt;
+      opacity:1;
+      font: $pointer;
+    }
+    &:-moz-placeholder{
+      color: $muteTxt;
+      opacity:1;
+      font: $pointer;
+    }
+    &:-webkit-input-placeholder{
+      color: $muteTxt;
+      opacity:1;
+      font: $pointer;
+    }
+    &::-webkit-input-placeholder{
+      color: $muteTxt;
+      opacity:1;
+      font: $pointer;
+    }
+  }
+  &__input{
+    &-confirm{
+      position: absolute;
+      visibility: hidden;
+      &+label{
+        font: $littleTxt;
+        display: flex;
+        position: relative;
+        align-items: center;
+        &:before{
+          content: '';
+          display: block;
+          width:15px;
+          min-width:15px;
+          height:15px;
+          border:$inactiveSvg 1px solid;
+          margin-right: 10px;
+          text-align: left;
+          transition: background .3s, border .3s;
+        }
+        &:hover, &:focus{
+          &:before{
+            opacity:0.5;
+            background: $inactiveBtn;
+            border-color:$inactiveBtn;
+            transition: opacity .3s;
+          }
+          &:after{
+            content: "";
+            display: block;
+            width: 9px;
+            height: 5px;
+            border: $hoverSvg 2px solid;
+            border-left-color:transparent;
+            border-bottom-color:transparent;
+            transform: rotate(130deg) skewX(-3deg);
+            position:absolute;
+            left:2px;
+            top: 10px;
+            opacity:0.5;
+            transition: opacity .3s;
+            @media(min-width:401px){
+              top: 1px;
+            }
+          }
+        }
+      }
+      &:checked{
+        &+label{
+          &:after{
+            content: "";
+            display: block;
+            width: 9px;
+            height: 5px;
+            border: $hoverSvg 2px solid;
+            border-left-color:transparent;
+            border-bottom-color:transparent;
+            transform: rotate(130deg) skewX(-3deg);
+            position:absolute;
+            left:2px;
+            top: 10px;
+            opacity:1;
+            transition: opacity .3s;
+            @media(min-width:401px){
+              top: 1px;
+            }
+          }
+          &:before{
+            background: $inactiveBtn;
+            border-color:$inactiveBtn;
+            opacity:1;
+            transition: opacity .3s;
+          }
+        }
+      }
+    }
+  }
+  &__textarea{
+    padding-left: 17px;
+    padding-bottom: 60px;
+    margin-top:20px;
+    height: 161px;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  &__sendlabel{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+  &__button{
+    color: $hoverSvg;
+    font: $pointer;
+    text-align: center;
+    padding: 11px 30px;
+    background: #F3930E;
+    box-sizing: border-box;
+    border:0;
+    outline: none;
+  }
+  &__legend{
+    font:$pointer;
+  }
+}

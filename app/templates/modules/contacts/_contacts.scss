@@ -1,0 +1,18 @@
+.contacts{
+  margin-top: 35px;
+  @media(min-width:$tablet){
+    margin: 40px 0;
+  }
+  @media(min-width:$notebook){
+    margin-bottom: 110px;
+  }
+  .content {
+    p{
+      line-height: 2em;
+      @media(min-width:$tablet){
+      font: $pointer;
+      line-height: 2em;
+      }
+    }
+  }
+}

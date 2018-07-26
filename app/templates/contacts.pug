@@ -7,16 +7,14 @@ block content
   section.main__section
     .container
       .wrapper-flex
-        .left-visible
+        .col
           h1  Контакты
-          h2 Головной офис компании
-          .content
-            p г. Ижевск,  ул. Лесозаводская 23/110 +7(3412) 905-410, 905-411, 905-412
+          include modules/contacts/contacts
           include modules/social/social
-        .right
+        .col
           include modules/contactmap/contactmap
     include modules/contactbanner/contactbanner
-    .container
-      include modules/form/form
+    include modules/contactsservice/contactsservice
+    include modules/form/form
 block footer
   include  _layouts/footer/footer

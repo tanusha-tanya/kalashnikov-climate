@@ -1,0 +1,27 @@
+.contactmap{
+  padding-top: 166%;
+  height: 0;
+  position: relative;
+  margin-top: 40px;
+  @media(min-width:$tablet){
+    margin-top: 60px;
+    padding-top: 42%;
+    height: 100%;
+    width: 100%;
+  }
+  @media(min-width:$notebook){
+    margin-top: 0;
+    padding-top: 0;
+  }
+  &__map{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    &>ymaps{
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

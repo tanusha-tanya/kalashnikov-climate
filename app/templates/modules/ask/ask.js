@@ -1,9 +1,9 @@
 function changeButtonIfAgree(button, agree){
     if (agree.is(':checked')) {
-        button.removeClass('ask__button-disabled');
+        button.removeClass('button-disabled');
         button.attr('disabled', false);
     } else {
-        button.addClass('ask__button-disabled');
+        button.addClass('button-disabled');
         button.attr('disabled', true);
     }
 }
@@ -36,6 +36,6 @@ $(document).ready(function() {
         $(text[i]).parent("label").addClass("error-label");
         $(text[i]).parent("label").append('<div class="error__text">Пожалуйста, заполните поле</div>');
       }
-    };  
+    };
   });
 })

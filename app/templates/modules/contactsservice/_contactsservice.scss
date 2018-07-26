@@ -1,0 +1,60 @@
+.contactsservice{
+  background-image: url("/images/servicebg.png");
+  padding: 40px 20px 50px 30px;
+  background-size: cover;
+  background-position: center;
+  margin-top: 60px;
+  @media(min-width:$tablet){
+    margin-top: 40px;
+    padding: 70px 65px;
+  }
+  &__tel{
+    display: flex;
+    color: $hoverSvg;
+    margin-bottom: 14px;
+    @media(min-width:$tablet){
+      margin-bottom: 23px;
+    }
+  }
+  &__svg{
+    color: $hoverSvg;
+    fill:$hoverSvg;
+    margin-right: 10px;
+    @media(min-width:$tablet){
+      width: 34px;
+      height: 34px;
+      margin-right: 23px;
+    }
+  }
+  &__num{
+    color: $hoverSvg;
+    font: $tel;
+    @media(min-width:$tablet){
+      font: $telbig;
+    }
+  }
+  &__text{
+    color: $hoverSvg;
+    font: $pointer;
+  }
+  &__link{
+    position: relative;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: block;
+    width: 220px;
+    text-align: center;
+    color: $hoverSvg;
+    box-sizing: border-box;
+    background: $inactiveBtn;
+    text-decoration: none;
+    padding: 15px 30px;
+    &:hover{
+      color: $hoverSvg;
+    }
+    @media(min-width:$tablet){
+      margin: 0;
+      margin-top: 40px;
+    }
+  }
+}

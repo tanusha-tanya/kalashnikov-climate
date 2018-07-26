@@ -120,7 +120,6 @@ gulp.task('images', function() {
     })))
     .pipe(gulp.dest('.tmp/images'));
 });
-
 // inject bower components
 gulp.task('wiredep', function() {
     gulp.src('app/styles/main.scss')
@@ -160,7 +159,7 @@ gulp.task('s', ['styles', 'scripts', 'template', 'sprites', 'svg', 'watch'], fun
     notify: false,
     port: 9000,
     server: {
-      baseDir: ['.tmp', 'app'],      
+      baseDir: ['.tmp', 'app'],
       files: [".tmp/styles/*.css", ".tmp/*.html", ".tmp/scripts/*.js"]
     }
   });
