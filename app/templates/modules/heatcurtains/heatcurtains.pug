@@ -1,0 +1,72 @@
+.heatcurtains
+  .heatcurtains__text Заполните изветные вам условия в которых будет использована Тепловая завеса ТД «Калашников» и мы предложим вам товары из нашего каталога с указанием технических характеристик
+  form.heatcurtains__filter
+    fieldset.heatcurtains__item.heatcurtains__item-city
+      label.heatcurtains__label.heatcurtains__label-city
+        legend.heatcurtains__legend.heatcurtains__legend-left Город
+        svg.heatcurtains__svg(role="img")( width="14")( height="20"): use(xlink:href="#baloon")
+        input.heatcurtains__textinput.heatcurtains__textinput-city(type="text")(placeholder="Город")
+    fieldset.heatcurtains__item.heatcurtains__item-info
+      svg.heatcurtains__weathersvg(role="img")( width="46")( height="49"): use(xlink:href="#weather")
+      span При выборе города система подставит соответсвующие погодные данные
+    fieldset.heatcurtains__item
+      legend.heatcurtains__legend Температура воздуха
+      input.heatcurtains__textinput(type="text")(placeholder="Внутренняя")
+      input.heatcurtains__textinput(type="text")(placeholder="Наружная")
+    fieldset.heatcurtains__item
+      legend.heatcurtains__legend Параметры теплоснабжения
+      input.heatcurtains__textinput(type="text")(placeholder="t прямой воды")
+      input.heatcurtains__textinput(type="text")(placeholder="t обратной воды")
+    fieldset.heatcurtains__item
+      legend.heatcurtains__legend Способ монтажа
+      label.heatcurtains__labelinput
+        input.heatcurtains__checkboxinput(type="checkbox")
+        span Горизонтальный
+      label.heatcurtains__labelinput
+        input.heatcurtains__checkboxinput(type="checkbox")
+        span Вертикальный односторонний
+      label.heatcurtains__labelinput
+        input.heatcurtains__checkboxinput(type="checkbox")
+        span Вертикальный с двух сторон
+    fieldset.heatcurtains__item
+      legend.heatcurtains__legend Расположение двери
+        span.heatcurtains__explain относительно преобладающего направления ветра
+      label.heatcurtains__labelinput
+        input.heatcurtains__checkboxinput(type="checkbox")
+        span Нет информации
+      label.heatcurtains__labelinput
+        input.heatcurtains__checkboxinput(type="checkbox")
+        span Подветренное
+      label.heatcurtains__labelinput
+        input.heatcurtains__checkboxinput(type="checkbox")
+        span Наветренное
+      label.heatcurtains__labelinput
+        input.heatcurtains__checkboxinput(type="checkbox")
+        span Боковое
+    fieldset.heatcurtains__item
+      legend.heatcurtains__legend Параметры вентиляции
+      label.heatcurtains__labelinput
+        input.heatcurtains__checkboxinput(type="checkbox")
+        span Вентиляции нет
+      label.heatcurtains__labelinput
+        input.heatcurtains__checkboxinput(type="checkbox")
+        span Сбалансирована
+      label.heatcurtains__labelinput
+        input.heatcurtains__checkboxinput(type="checkbox")
+        span Преобладание притока
+      label.heatcurtains__labelinput
+        input.heatcurtains__checkboxinput(type="checkbox")
+        span Преобладание вытяжки
+    fieldset.heatcurtains__item
+      legend.heatcurtains__legend Материал корпуса
+      label.heatcurtains__labelinput
+        input.heatcurtains__checkboxinput(type="checkbox")
+        span Окрашенная сталь
+      label.heatcurtains__labelinput
+        input.heatcurtains__checkboxinput(type="checkbox")
+        span Нержавеющая сталь
+    fieldset.heatcurtains__item
+      legend.heatcurtains__legend Частота открываний/ закрываний
+      .heatcurtains__slider
+    fieldset.heatcurtains__item
+      input.heatcurtains__buttoninput(type="button")(value="Рассчитать")

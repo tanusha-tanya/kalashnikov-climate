@@ -1,0 +1,51 @@
+.calculatorxls{
+  margin-top: 30px;
+  @media(min-width:$tablet){
+    padding: 40px 50px 48px 40px;
+    background: $inactiveBg;
+  }
+  @media(min-width:$notebook){
+    width:67%;
+    width: calc(67% - 30px);
+    margin: 0 15px;
+    height: 250px;
+    box-sizing: border-box;
+  }
+  &__descript{
+    display: flex;
+    padding: 10px;
+    padding-bottom: 17px;
+    background: $inactiveBg;
+    align-items: flex-start;
+  }
+  &__svg{
+    margin-right: 20px;
+  }
+  &__text{
+    margin-top: 5px;
+    @media(min-width:$tablet){
+      font: $pointer;
+      margin-top: 10px;
+    }
+  }
+  &__button{
+    margin-top: 10px;
+    color: $hoverSvg;
+    display: block;
+    max-width: 290px;
+    height: 50px;
+    background: $inactiveBtn;
+    font: $pointer;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 12px;
+    &:hover{
+      color: $hoverSvg;
+    }
+    @media(min-width:$tablet){
+      width: 220px;
+      margin-left:103px;
+    }
+  }
+}

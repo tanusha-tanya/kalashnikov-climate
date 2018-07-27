@@ -1,0 +1,9 @@
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M27.9993 3.94009V1.7765C28.0116 1.31544 27.8588 0.865712 27.5696 0.512145C27.4372 0.353592 27.2731 0.225872 27.0886 0.137544C26.904 0.0492165 26.7031 0.00232053 26.4993 0H1.50004C1.50004 0 1.09915 0.0570286 0.917344 0.148075C0.735534 0.239122 0.574666 0.368669 0.44538 0.528149C0.15418 0.875252 -0.00406008 1.31886 7.91978e-05 1.7765L7.91978e-05 3.94009M27.9993 3.94009H7.91978e-05M27.9993 3.94009V8H7.91978e-05V3.94009" transform="translate(1 11)" stroke="currentColor" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M0 10V0" transform="translate(24 1)" stroke="currentColor" stroke-width="2"/>
+<path d="M0 10V0" transform="translate(6 1)" stroke="currentColor" stroke-width="2"/>
+<path d="M0 0H30" transform="translate(0 1)" stroke="currentColor" stroke-width="2"/>
+<path d="M0 0V8" transform="translate(15.1172 22)" stroke="currentColor" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M0 0C0.832134 2.00047 2.28837 4.00095 3.42845 4.70588" transform="translate(23.5703 22)" stroke="currentColor" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M0 0C0.832134 2.00047 2.28837 4.00095 3.42845 4.70588" transform="translate(6.42969 22) scale(-1 1)" stroke="currentColor" stroke-width="2" stroke-miterlimit="10"/>
+</svg>

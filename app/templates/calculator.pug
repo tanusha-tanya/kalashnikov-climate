@@ -1,0 +1,16 @@
+extends _layouts/default
+block title
+  title Подбор техники
+block header
+  include  _layouts/header_inner/header_inner
+block content
+  section.main__section
+    .container
+      h1 Подбор техники
+      include modules/calculator/calculator
+      .wrapper-flex.wrapper-aligntop
+        include modules/calculatorxls/calculatorxls
+        include modules/gotocatalog/gotocatalog
+      include modules/catalogarticle/catalogarticle
+block footer
+  include  _layouts/footer/footer

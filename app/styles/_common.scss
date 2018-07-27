@@ -79,7 +79,11 @@ a{
     display:flex;
     margin: 0 -15px;
   }
+  &.wrapper-aligntop{
+    align-items: flex-start;
+  }
 }
+
 .main__section{
   flex-grow:1;
 }
