@@ -1,7 +1,5 @@
 .catalogarticle{
   @media(min-width:$notebook){
     width:67%;
-    width: calc(67% - 30px);
-    margin: 0 15px;
   }
 }
