@@ -1,0 +1,123 @@
+ .result{
+   margin-top: 30px;
+   border-bottom: 1px solid $download;
+   padding-bottom: 40px;
+   @media(min-width: $notebook){
+    margin-top: 80px;
+   }
+   &__items{
+     @media(min-width: $notebook){
+      display: flex;
+      margin: 0 -15px;
+      flex-wrap: wrap;
+     }
+   }
+    &__top{
+      @media(min-width: $tablet){
+        display: flex;
+        justify-content: space-between;
+        background: $inactiveBg;
+      }
+    }
+    &__item{
+      border: 1px solid $download;
+      margin: 9px 0 30px 0;
+      box-sizing: border-box;
+      @media(min-width: $tablet){
+        margin: 30px 0;
+      }
+      @media(min-width: $notebook){
+         width: 50%;
+         width: calc(50% - 30px);
+         margin: 30px 15px;
+      }
+    }
+    &__descript{
+      font: $pointer;
+      color: $muteTxt;
+    }
+    &__pick{
+      background: $inactiveBg;
+      height: 252px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 25px;
+      @media(min-width: $tablet){
+        order: 2;
+        height: 105px;
+        padding: 28px 5px;
+        }
+      }
+      &__img{
+        @media(min-width: $tablet){
+        max-height: 100%;
+      }
+    }
+  &__title{
+    padding: 20px 18px 27px 18px;
+  }
+  &__name{
+    font: $pointer;
+  }
+  &__cat{
+    display: block;
+    font: $partnerstitle;
+  }
+  &__characteristics{
+    padding: 0 4px;
+    @media(min-width: $tablet){
+      padding: 0 20px;
+    }
+  }
+  &__characteristic{
+    padding: 17px;
+    border-bottom: 1px solid $download;
+    display: flex;
+    justify-content: space-between;
+    @media(min-width: $tablet){
+      padding: 17px 0;
+      margin: 0 -5px;
+    }
+    @media(min-width: $notebook){
+     padding: 20px 0;
+    }
+    &-spoil{
+      border-bottom: 0;
+      @media(min-width: $tablet){
+        padding: 17px;
+        margin: 0;
+      }
+    }
+  }
+  &__characterleft{
+    margin-right: 15px;
+  }
+  &__characterright{
+    text-align: right;
+  }
+  &__spoiler{
+    display: none;
+  }
+  &__charactertitle{
+    @media(min-width: $tablet){
+      font: $pointer;
+    }
+  }
+  .spoilarrow{
+    @media(min-width: $tablet){
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    &__text{
+      font: $link;
+    }
+    &__svg{
+      @media(min-width: $tablet){
+      top: 14px;
+    }
+    }
+  }
+ }

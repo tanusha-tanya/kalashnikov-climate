@@ -1,0 +1,30 @@
+.breadcrumbs{
+  display: none;
+  @media(min-width: $notebook){
+    display: block;
+  }
+  &__ul{
+    padding: 0;
+    margin: -27px 0 60px 0;
+  }
+  &__li{
+    list-style:none;
+    display: inline-block;
+  }
+  &__link{
+    color: $muteTxt;
+    text-decoration: none;
+    &:after{
+      content: "";
+      display: inline-block;
+      margin: 0 8px;
+      border: 1px solid $muteTxt;
+      border-left: transparent;
+      border-top: transparent;
+      width: 5px;
+      height: 5px;
+      transform: rotate(-45deg);
+      margin-bottom: 2px;
+    }
+  }
+}

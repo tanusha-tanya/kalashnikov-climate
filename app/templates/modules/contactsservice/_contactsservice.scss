@@ -1,12 +1,12 @@
 .contactsservice{
   background-image: url("/images/servicebg.png");
-  padding: 40px 20px 50px 30px;
+  padding: 25px 5px 35px 15px;
   background-size: cover;
   background-position: center;
   margin-top: 60px;
   @media(min-width:$tablet){
     margin-top: 40px;
-    padding: 70px 65px;
+    padding: 50px 45px;
   }
   &__tel{
     display: flex;
@@ -24,6 +24,10 @@
       width: 34px;
       height: 34px;
       margin-right: 23px;
+    }
+    @media(min-width:$notebook){
+      width: 40px;
+      height: 40px;
     }
   }
   &__num{

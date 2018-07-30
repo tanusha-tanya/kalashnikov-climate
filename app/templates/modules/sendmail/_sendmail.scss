@@ -1,0 +1,133 @@
+.sendmail{
+  margin-top: 20px;
+  &__form{
+    @media(min-width:$tablet){
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &__label{
+    position: relative;
+    margin: 30px 0;
+    display:block;
+  }
+  &__input{
+    padding: 14px 50px;
+    box-sizing: border-box;
+    border: 0;
+    outline:  none;
+    background: $inactiveBg;
+    width: 290px;
+    color: $muteTxt;
+    font: $pointer;
+    @media(min-width:$tablet){
+      width: 461px;
+      margin-right: 10px;
+    }
+    @media(min-width:$notebook){
+      width: 570px;
+    }
+  }
+  &__svg{
+    position: absolute;
+    left: 15px;
+    top: 17px;
+    color: $formsvg;
+    fill: $formsvg;
+  }
+  &::-moz-placeholder{
+    color: $muteTxt;
+    opacity:1;
+    font: $pointer;
+  }
+  &:-moz-placeholder{
+    color: $muteTxt;
+    opacity:1;
+    font: $pointer;
+  }
+  &:-webkit-input-placeholder{
+    color: $muteTxt;
+    opacity:1;
+    font: $pointer;
+  }
+  &::-webkit-input-placeholder{
+    color: $muteTxt;
+    opacity:1;
+    font: $pointer;
+  }
+  &__checkbox{
+    position: absolute;
+    visibility: hidden;
+    &:checked{
+      +label{
+        &:before{
+          background: $inactiveBtn;
+          border-color: $inactiveBtn;
+        }
+        &:after{
+          border: $hoverSvg 2px solid;
+          border-left-color: transparent;
+          border-bottom-color: transparent;
+          }
+        }
+      }
+    }
+  &__checklabel{
+    padding-left: 40px;
+    position: relative;
+    display: block;
+    font: $pointer;
+    a{
+      text-decoration: none;
+    }
+    &:before{
+      box-sizing: border-box;
+      width: 15px;
+      height: 15px;
+      border: 2px solid $inactiveSvg;
+      content: '';
+      position: absolute;
+      left: 13px;
+      top: 2px;
+      transition: background .3s, border .3s;
+    }
+    &:after{
+      content: "";
+      display: block;
+      width: 7px;
+      height: 3px;
+      transform: rotate(130deg) skewX(-3deg);
+      position: absolute;
+      left: 15px;
+      top: 4px;
+      opacity: 1;
+      transition: opacity .3s;
+      border: transparent;
+    }
+  }
+  &__button{
+    width: 290px;
+    height: 50px;
+    box-sizing: border-box;
+    border: 0;
+    outline: none;
+    background: $inactiveBtn;
+    margin: 30px 0;
+    color: $hoverSvg;
+    font: $pointer;
+    @media(min-width:$tablet){
+      width: 235px;
+    }
+    @media(min-width:$notebook){
+      width: 240px;
+    }
+  }
+  &__field{
+    order: 1;
+    width: auto;
+    &-check{
+      order: 2;
+      width: 100%;
+    }
+  }
+}

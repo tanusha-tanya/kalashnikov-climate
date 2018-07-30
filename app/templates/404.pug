@@ -1,7 +1,12 @@
 extends _layouts/default
 block title
-  title О компании
+  title Страница не найдена
 block header
   include  _layouts/header_inner/header_inner
 block content
-  h1 Страница не найдена
+  section.main__section
+    .container
+      h1 Страница не найдена
+      include modules/404/404
+block footer
+  include  _layouts/footer/footer

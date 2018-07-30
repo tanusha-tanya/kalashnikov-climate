@@ -1,0 +1,21 @@
+.notfounded{
+  margin-top: 86px;
+  margin-bottom: -88px;
+  @media(min-width:$tablet){
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-bottom: -95px;
+  }
+  @media(min-width:$notebook){
+    margin-bottom: -129px;
+  }
+  &__svg{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    @media(min-width:$tablet){
+      margin: 0 10px;
+    }
+  }
+}

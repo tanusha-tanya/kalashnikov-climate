@@ -3,8 +3,11 @@ extends _layouts/default
 block title
   title Тепловая техника Kalashnikov
 block header
-  include  _layouts/header/header
+  include  _layouts/header_inner/header_inner
 block content
-  h1 Результаты поиска
+  section.main__section
+    .container
+      h1 Результаты поиска
+      include modules/searchpage/searchpage
 block footer
   include  _layouts/footer/footer
