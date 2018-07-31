@@ -1,5 +1,8 @@
 .calculator{
-  margin-top: 40px;
+  margin-top: 30px;
+  @media(min-width: $tablet){
+    margin-top: 40px;
+  }
   &__menu{
     @media(min-width: $tablet){
       display: flex;

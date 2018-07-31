@@ -1,6 +1,9 @@
 .news{
   &__items{
-    margin-top: 40px;
+    margin-top: -8px;
+    @media(min-width: $tablet){
+      margin-top: 18px;
+    }
     @media(min-width: $notebook){
       display: flex;
       margin: 0 -15px;
@@ -11,6 +14,7 @@
   &__item{
     margin: 40px 0;
     align-content: flex-start;
+    align-items: flex-start;
     @media(min-width: $tablet){
       display: flex;
       margin: 30px -15px;

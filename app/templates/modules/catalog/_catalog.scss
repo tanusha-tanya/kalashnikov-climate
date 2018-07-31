@@ -1,10 +1,10 @@
 .catalog{
   &__items{
     width:100%;
-    margin-top: 12px;
+    margin-top: -3px;
     @media(min-width:$tablet){
       display: flex;
-      margin: 40px -10px 0 -10px;
+      margin: 30px -10px 0 -10px;
       flex-wrap: wrap;
       width: 100%;
       width: calc(100% + 20px);

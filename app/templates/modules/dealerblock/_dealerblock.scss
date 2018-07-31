@@ -3,6 +3,22 @@
   &__onlineshops{
     margin-top: 40px;
   }
+  &-page{
+    .dealerblock__onlineshops{
+      margin-top: 20px;
+      @media(min-width:$tablet){
+        margin-top: 30px;
+      }
+    }
+    .onlineshops{
+        margin-top: 20px;
+    }
+    .onlineshops__item{
+      @media(min-width:$tablet){
+        margin: 5px 80px 5px 0;
+      }
+    }
+  }
 }
 .onlineshops{
   margin-bottom: 60px;
