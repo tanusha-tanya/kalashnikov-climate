@@ -26,6 +26,9 @@
   &__search{
     margin-top: 35px;
     box-sizing: border-box;
+    @media(min-width: $notebook){
+      margin-top: 80px;
+    }
   }
   &__fieldset{
     border: 0;

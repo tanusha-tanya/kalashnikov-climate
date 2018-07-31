@@ -11,4 +11,10 @@
     color: $inactiveTxt;
     fill: $inactiveTxt;
   }
+  @media(min-width:$tablet){
+    max-width: 80%;
+    p{
+      margin: 30px 0;
+    }
+  }
 }

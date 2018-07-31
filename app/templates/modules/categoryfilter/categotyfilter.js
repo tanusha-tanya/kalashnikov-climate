@@ -86,27 +86,8 @@ if(filter){
     let close = select.querySelector(".categoryfilter__closesvg");
     for(let i=0; i < inputs.length; i++){
       inputs[i].addEventListener("change", function(){
-        //setCounter(this);
       })
     }
   }
-  /*function setCounter(input){
-      let count = 0;
-      let span = input.parentNode.parentNode.querySelector(".categoryfilter__counter");
-      console.log(span)
-        if(input.checked){
-          count++;
-        }
-        if(!input.checked){
-          count--;
-        }
-        if(count > 0){
-          span.textContent = ": " + count;
-          input.parentNode.parentNode.classList.add("categoryfilter__select-active");
-          //close.style.display = "block";
-        }
-        else{
-          span.textContent = "";
-        }
-    }*/
+
 }

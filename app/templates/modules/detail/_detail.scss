@@ -7,6 +7,9 @@
   &__header{
     margin-top: -20px;
     margin-bottom: 20px;
+    @media(min-width: $notebook){
+      margin-bottom: 50px;
+    }
   }
   &__descript{
     margin-top: 40px;

@@ -4,6 +4,11 @@
   border-top: 1px solid $borderColor;
   border-bottom: 1px solid $borderColor;
   margin-top: -15px;
+  &__h1{
+    @media(min-width:$notebook){
+      margin-top: -11px!important;
+    }
+  }
   &-inner{
     border-top: 0;
   }
@@ -13,6 +18,10 @@
     padding-top:60px;
     padding-bottom: 90px;
     position:relative;
+    &-inner{
+      padding-top:40px;
+      padding-bottom: 40px;
+    }
   }
   &__left{
    @media(min-width:$notebook){

@@ -24,6 +24,9 @@
     z-index: 999;
     position: relative;
     padding-bottom: 30px;
+    @media(min-width: $notebook){
+      margin-top: 27px
+    }
   }
   &__button{
     padding: 14px;

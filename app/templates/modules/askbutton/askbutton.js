@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-	$('.askbutton__link').magnificPopup({
+	$('.askbutton__link, .header__link').magnificPopup({
 		type: 'ajax',
 		overflowY: 'scroll'
   });
