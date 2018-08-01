@@ -1,4 +1,4 @@
-const listbtn = document.querySelectorAll(".mobilemenu__svg");
+const listbtn = document.querySelectorAll(".mobilemenu__arrow");
 const li = document.querySelectorAll(".mobilemenu__li");
 for(let i = 0; i < listbtn.length; i++){
   listbtn[i].addEventListener("click", function(){

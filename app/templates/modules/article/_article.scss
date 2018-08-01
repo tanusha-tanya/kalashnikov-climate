@@ -12,6 +12,9 @@
     @media(min-width:$tablet){
       font:$slidertext;
     }
+    @media(min-width:$notebook){
+      font:$pluses;
+    }
   }
   p{
     @media(min-width:$tablet){

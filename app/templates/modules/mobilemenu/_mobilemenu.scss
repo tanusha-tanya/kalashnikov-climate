@@ -6,6 +6,9 @@
       transition: transform .3s;
       height:0;
       overflow: hidden;
+      .mobilemenu__link{
+        font: $link;
+      }
     }
   }
   &__li{
@@ -14,10 +17,10 @@
     &-first{
       font: $link;
       padding-left: 10px;
-      .mobilemenu__svg{
+      .mobilemenu__arrow{
         position: absolute;
         right: 10px;
-        top: 29px;
+        top: 10px;
       }
       &.openlist{
         background:$menubg;
@@ -45,8 +48,10 @@
     transition: transform .3s;
   }
   .openlist{
-    &>.mobilemenu__svg{
-      transform: rotate(180deg);
+    &>.mobilemenu__arrow{
+      svg{
+        transform: rotate(180deg);
+      }
     }
     &>.mobilemenu__ul-sub{
       height: auto;
@@ -61,5 +66,10 @@
       height: auto;
       transform: translateX(100%);
     }
+  }
+  &__arrow{
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
   }
 }

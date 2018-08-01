@@ -5,10 +5,7 @@
   }
   &-page{
     .dealerblock__onlineshops{
-      margin-top: 20px;
-      @media(min-width:$tablet){
-        margin-top: 30px;
-      }
+      margin-top: 30px;
     }
     .onlineshops{
         margin-top: 20px;

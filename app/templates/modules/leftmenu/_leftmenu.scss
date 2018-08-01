@@ -12,6 +12,8 @@
   }
   &__span{
     padding: 10px 15px;
+    position: relative;
+    padding-right: 35px;
     &:hover{
       background: $menubg;
       .leftmenu__link{
@@ -34,7 +36,7 @@
         background: $menubg;
       }
       .leftmenu__svg{
-        transform: scale(-1);
+        transform: rotate(180deg);
       }
     }
     &.leftmenu__closecat{
@@ -47,7 +49,6 @@
     text-decoration: none;
   }
   &__svg{
-    margin-left: 10px;
     transition: transform .3s;
     cursor: pointer;
   }
@@ -61,5 +62,15 @@
   &__insidecat{
     list-style: none;
     margin: 20px 40px 0 50px;
+  }
+  &__arrow{
+    padding: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-left: 10px;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: -3px;
   }
 }

@@ -1,4 +1,4 @@
-const leftmenuButton = document.querySelectorAll(".leftmenu__svg")
+const leftmenuButton = document.querySelectorAll(".leftmenu__arrow")
 if (leftmenuButton){
   for(let i = 0; i < leftmenuButton.length; i++){
     leftmenuButton[i].addEventListener("click", function(){

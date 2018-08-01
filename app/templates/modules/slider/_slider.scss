@@ -1,10 +1,10 @@
 .slider{
   &__items{
     @media(min-width: $notebook){
-     .owl-stage-outer{
+     /*.owl-stage-outer{
       transform: translateX(-109px);
       overflow: unset;
-    }
+    }*/
   }
     @media(min-width: $desctop){
       transform: translateX(0);

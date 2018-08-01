@@ -20,11 +20,11 @@ h1, .h1{
 h2, .h2{
   font: $h3;
   margin: 0;
-  @media(min-width:$mobile){
+  @media(min-width:$tablet){
     font: $bigh2;
   }
   @media(min-width:$notebook){
-    font: $pluses
+    font: $pluses;
   }
 }
 h3, .h3{

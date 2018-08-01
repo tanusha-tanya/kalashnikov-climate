@@ -51,6 +51,10 @@
       height: 235px;
     }
   }
+  &__img{
+    flex-shrink: 0;
+    max-width: 100%;
+  }
   &__link{
     display: flex;
     justify-content: space-between;

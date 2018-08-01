@@ -16,6 +16,12 @@
       box-sizing: border-box;
       width:50%;
       width: calc(50% + 30px);
+      padding: 30px;
+      padding-bottom: 50px;
+    }
+    @media(min-width:$notebook){
+      padding: 40px 30px 30px 40px;
+      width: 42%;
     }
   }
   &__params{
@@ -33,11 +39,14 @@
     display: flex;
     padding: 0;
     width: 100%;
-    margin: 20px 10px;
-    margin-left:0;
+    margin: 20px 10px 0 0;
     align-items: center;
     @media(min-width:$tablet){
       position: relative;
+      margin: 10px 10px 0 0;
+    }
+    @media(min-width:$notebook){
+      margin: 10px 0;
     }
   }
   &__svg{
@@ -59,6 +68,9 @@
       height: auto;
       width:50%;
       width: calc(50% - 30px)
+    }
+    @media(min-width:$notebook){
+      width: calc(58%)
     }
   }
   &__img{
@@ -117,20 +129,33 @@
   &__question{
     display: none;
     @media(min-width:$tablet){
+      cursor: pointer;
       display: block;
       position:absolute;
-      right: -58px;
+      right: 0;
       top: 0;
       width: 18px;
       height: 18px;
-      padding: 1px;
       transition: background;
       box-sizing: border-box;
       background: $hoverSvg;
+      padding-right: 2px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media(min-width:$notebook){
+        width: 15px;
+        height: 15px;
+      }
       svg{
         color: $inactiveSvg;
         fill: $inactiveSvg;
         transition: fill .3s, color .3s;
+        @media(min-width:$notebook){
+          width: 13px;
+          height: 13px;
+        }
       }
     }
   }

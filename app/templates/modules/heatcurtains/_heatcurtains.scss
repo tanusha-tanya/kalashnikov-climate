@@ -128,13 +128,9 @@
       &+label{
         color: $inactiveTxt;
         &:before{
-          background: $inactiveBtn;
+          //background: $inactiveBtn;
           border-color: $inactiveBtn;
-        }
-        &:after{
-          border: $hoverSvg 2px solid;
-          border-left-color: transparent;
-          border-bottom-color: transparent;
+          border-width: 5px;
         }
       }
     }
@@ -157,19 +153,7 @@
       left: -15px;
       top: 2px;
       transition: background .3s, border .3s;
-    }
-    &:after{
-      content: "";
-      display: block;
-      width: 7px;
-      height: 3px;
-      transform: rotate(130deg) skewX(-3deg);
-      position: absolute;
-      left: -13px;
-      top: 3px;
-      opacity: 1;
-      transition: opacity .3s;
-      border: transparent;
+      border-radius: 100%;
     }
   }
   &__explain{
