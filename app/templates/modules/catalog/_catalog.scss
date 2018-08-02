@@ -55,9 +55,12 @@
   &__link{
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 20px;
     text-decoration: none;
     font: $pointer;
+    @media(min-width: $tablet){
+      margin-top: 30px;
+    }
     span{
       margin-right: 60px;
     }

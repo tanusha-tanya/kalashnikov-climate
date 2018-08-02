@@ -60,6 +60,7 @@
     justify-content: space-between;
     margin-top: 30px;
     text-decoration: none;
+    padding-left: 9px;
     span{
       font:$pointer;
     }
@@ -108,6 +109,7 @@
     justify-content: space-between;
     margin: 20px 0;
     align-items: center;
+    padding-left: 9px;
     @media(min-width:$tablet){
       position: absolute;
       bottom:0;

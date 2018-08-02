@@ -1,5 +1,5 @@
-mixin more(text)
-  .more
+mixin more(text, link)
+  a(href= link).more
     .more__text= text
     .more__arrow
       svg.more__svg(role="img")(width="20")(height="12"): use(xlink:href="#arrow")

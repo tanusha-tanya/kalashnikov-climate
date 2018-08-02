@@ -2,12 +2,12 @@
   @media(min-width: $tablet){
     width: 50%;
     width: calc(50% - 20px);
-    margin: 30px 10px;
+    margin: 10px 10px 0 10px;
   }
   @media(min-width: $notebook){
     width: 33%;
     width: calc(33% - 30px);
-    margin: 30px 15px;
+    margin: 10px 15px 0 15px;
   }
   &__pick{
     background: #F6F7FA;
@@ -31,6 +31,7 @@
     display: flex;
     margin: 20px 0;
     justify-content: space-between;
+    padding-left: 9px;
     @media(min-width: $notebook){
       margin: 15px 0;
     }
@@ -72,6 +73,7 @@
   }
   &__features{
     display: flex;
+    padding-left: 9px;
   }
   &__feature{
     display: flex;
@@ -101,6 +103,7 @@
     display: flex;
     justify-content: space-between;
     margin: 20px 0;
+    padding-left: 9px;
     @media(min-width: $notebook){
       margin: 15px 0;
     }
@@ -120,13 +123,14 @@
   }
 }
 .goods__items{
-  margin-top: 30px;
+  margin-top: -15px;
   @media(min-width: $tablet){
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -10px;
+    margin-top: 25px;
   }
   @media(min-width: $notebook){
     margin: 0 -15px;
+    margin-top: 25px;
   }
 }

@@ -61,8 +61,8 @@
       font:$abouttitleBig;
     }
     @media(min-width:$notebook){
-      margin-top:30px;
       font:$abouttitleBigiest;
+      padding-left: 20px;
     }
   }
   &__text{

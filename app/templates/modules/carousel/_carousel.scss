@@ -79,6 +79,7 @@
     width: auto!important;//перекрываем owlCarousel
     max-width:100%;
     max-height: 100%;
+    flex-shrink: 0;
   }
   &__link{
     margin-top: 30px;
@@ -87,6 +88,9 @@
     display: block;
     span{
       margin-right: 40px;
+      @media(min-width:$tablet){
+        font: $pointer;
+      }
     }
     &:before{
       content:"";
@@ -122,12 +126,6 @@
   .owl-carousel .owl-stage-outer{
     @media(min-width:$notebook){
       overflow: unset;
-    }
-  }
-  @media(min-width:$notebook){
-    .owl-carousel .owl-stage{
-      position:absolute;
-      left:0;
     }
   }
 }

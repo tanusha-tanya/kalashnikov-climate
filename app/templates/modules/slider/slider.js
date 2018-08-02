@@ -8,6 +8,7 @@ $( document ).ready(function() {
     navContainer: '.flipping',
     navElement: 'div class="flipping__arrow"',
     navText: ['<svg class="flipping__svg" role="img" width="20" height="12"> <use xlink:href="#arrow"></svg>', '<svg class="flipping__svg" role="img" width="20" height="12"> <use xlink:href="#arrow"></svg>'],
+    autoplay: true,
     responsive:{
         0:{
             items:1

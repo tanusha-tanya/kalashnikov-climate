@@ -71,7 +71,7 @@
       margin-top: 12px;
       display: inline-block;
       @media(min-width:$tablet){
-        margin-top: 20px;
+        margin-top: 15px;
       }
     }
     @media(min-width:$tablet){
@@ -102,7 +102,6 @@
       color: $inactiveBtn;
       display: flex;
       align-items: center;
-      width: 30%;
       &:hover{
         color: $hoverBtn;
         .slider__button{
@@ -141,6 +140,9 @@
       transition: transform .3s;
     }
   }
+  @media(min-width:$notebook){
+    margin-left: 40px;
+  }
   }
   &__svg{
     color: $hoverSvg;
@@ -164,6 +166,8 @@
 .count{
   display: flex;
   &__amount{
+    display: flex;
+    align-items: center;
     &-current{
       color:$inactiveBtn;
       &:after{
@@ -237,6 +241,22 @@
     .flipping__svg{
       right: 10px;
       top: 14px;
+    }
+  }
+}
+.owl-item{
+  @media(min-width:$notebook){
+    .slider__content{
+      opacity:0;
+      transition: opacity 1s;
+    }
+  }
+}
+.owl-item.active.center{
+  @media(min-width:$notebook){
+    .slider__content{
+      opacity: 1;
+      transition: opacity 1s;
     }
   }
 }

@@ -1,0 +1,11 @@
+.product__spoiler{
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+  @media(min-width:$tablet){
+    margin-top: 30px;
+  }
+  @media(min-width:$notebook){
+    margin-right: 10px;
+  }
+}

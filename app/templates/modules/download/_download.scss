@@ -1,12 +1,15 @@
 .download{
   &__svg{
-    color: $muteTxt;
-    fill: $muteTxt;
+    fill: $download;
+    color: $download;
+    vertical-align: bottom;
     transition: color .3s, fill .3s;
+    margin-right: 5px;
+    margin-bottom: 2px;
   }
   &__link{
     color: $muteTxt;
-    font: $link;
+    font-size: 0;
     transition: color .3s;
     text-decoration: none;
       @media(min-width:$notebook){
@@ -15,9 +18,13 @@
     &:hover{
       color:$inactiveBtn;
       .download__svg{
-        fill: $inactiveBtn;
-        color: $inactiveBtn;
+        fill: $download;
+        color: $download;
       }
     }
+  }
+  &__text{
+    font: $link;
+    font-size: 16px;
   }
 }
