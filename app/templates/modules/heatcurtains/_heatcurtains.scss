@@ -29,22 +29,23 @@
       color:$inactiveBtn;
       font: $littleTxt;
       display: flex;
-      margin: 30px 0 60px 0;
+      margin: 30px 0 10px 0;
       border: 0;
-      padding-bottom: 0;
+      padding: 0;
       max-width: 290px;
       @media(min-width:$tablet){
         margin-top: 0;
       }
       @media(min-width:$notebook){
-        width: 300px;
+        width: 100%;
+        max-width: 500px;
         margin: 0 15px 40px 15px;
         font: $link;
       }
     }
     &-city{
       border: 0;
-      padding-bottom: 0;
+      padding: 0;
       display: flex;
       flex-wrap: wrap;
       @media(min-width:$notebook){
@@ -85,7 +86,6 @@
   }
   &__label{
     position: relative;
-
   }
   &__svg{
     position: absolute;
@@ -128,7 +128,6 @@
       &+label{
         color: $inactiveTxt;
         &:before{
-          //background: $inactiveBtn;
           border-color: $inactiveBtn;
           border-width: 5px;
         }
@@ -246,5 +245,8 @@
     @media(min-width:$notebook){
       margin-top: 0;
     }
+  }
+  &__radioblock{
+    margin-top: 25px;
   }
 }

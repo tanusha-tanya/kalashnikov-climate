@@ -1,18 +1,13 @@
 .slider{
   &__items{
-    @media(min-width: $notebook){
-     /*.owl-stage-outer{
-      transform: translateX(-109px);
-      overflow: unset;
-    }*/
-  }
-    @media(min-width: $desctop){
-      transform: translateX(0);
-    }
   }
   &__item{
     height: 300px;
     padding: 0 15px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
     @media(min-width: $tablet){
       height: 630px;
       padding: 0 30px;
@@ -21,6 +16,26 @@
       height: 500px;
       padding:0;
       width: 770px;
+    }
+    &:hover{
+      .slider__href{
+        color: $hoverSvg;
+      }
+      @media(min-width: $tablet){
+        .slider__href{
+          color: $hoverBtn;
+        }
+      }
+      .slider__button{
+        background: $inactiveBtn;
+        &:before{
+          transform: translateX(6px) scaleX(1.4);
+          right: 19px;
+        }
+      }
+      .slider__svg{
+        transform: translateX(7px);
+      }
     }
   }
   &__bg{
@@ -92,6 +107,7 @@
     font: $link;
     color: $hoverSvg;
     text-decoration: none;
+    display: inline;
     &:hover{
       color: $hoverSvg;
     }
@@ -102,19 +118,6 @@
       color: $inactiveBtn;
       display: flex;
       align-items: center;
-      &:hover{
-        color: $hoverBtn;
-        .slider__button{
-          background: $inactiveBtn;
-          &:before{
-            transform: translateX(6px) scaleX(1.4);
-            right: 19px;
-          }
-        }
-        .slider__svg{
-          transform: translateX(7px);
-        }
-      }
     }
 
   }

@@ -1,7 +1,4 @@
 .category{
-  &__items{
-
-  }
   &__item{
     margin: 30px auto;
     @media(min-width:$tablet){
@@ -23,9 +20,6 @@
       padding: 40px 30px 30px 40px;
       width: 42%;
     }
-  }
-  &__params{
-
   }
   &__link{
     text-decoration: none;
@@ -63,6 +57,7 @@
     height:0;
     padding-top:69%;
     position: relative;
+    display: block;
     @media(min-width:$tablet){
       padding-top:0;
       height: auto;
@@ -71,6 +66,17 @@
     }
     @media(min-width:$notebook){
       width: calc(58%)
+    }
+    &:hover{
+      .category__arrow{
+        background:$hoverBtn;
+        &:before{
+          transform: translateX(5px) scaleX(1.5);
+        }
+      }
+      .category__arrowsvg{
+        transform: translateX(7px);
+      }
     }
   }
   &__img{
@@ -97,15 +103,6 @@
     display: block;
     text-decoration: none;
     transition: background .3s;
-    &:hover{
-      &:before{
-        transform: translateX(5px) scaleX(1.5);
-      }
-      .category__arrowsvg{
-        transform: translateX(7px);
-      }
-      background:$hoverBtn;
-    }
     &:before{
       content: "";
       width: 20px;

@@ -59,15 +59,14 @@ if(filter){
 
   let select = filter.querySelectorAll(".categoryfilter__select");
   let popups =  filter.querySelectorAll('.categoryfilter__popup');
+
   for(let i=0; i < select.length; i++){
     select[i].addEventListener('click', function(){
       let selectitem = this.parentNode;
       let popup = selectitem.querySelector('.categoryfilter__popup');
-      selectChange(this);
       if(popup.classList.contains('categoryfilter__popup-open')){
         popup.classList.remove('categoryfilter__popup-open');
         this.classList.remove('categoryfilter__select-open');
-        selectChange(this)
       }
       else{
         for(let j=0; j < popups.length; j++){
@@ -76,18 +75,40 @@ if(filter){
         }
         popup.classList.add('categoryfilter__popup-open');
         this.classList.add('categoryfilter__select-open');
+        selectChange(this);
       }
     })
   }
+
   function selectChange(select){
     let inputs = select.parentNode.querySelectorAll(".categoryfilter__popupinput");
-    let count = 0;
     let span = select.querySelector(".categoryfilter__counter");
     let close = select.querySelector(".categoryfilter__closesvg");
+    let count = span.textContent !== "" ? span.textContent - 1: 0;
     for(let i=0; i < inputs.length; i++){
       inputs[i].addEventListener("change", function(){
+        if(this.checked){
+          count++;
+          changeCount(count, select, span)
+        }
+        else{
+          count--;
+          changeCount(count, select, span)
+        }
+        if(count>=1){
+          select.classList.add("categoryfilter__select-active")
+        }
+        else{
+          select.classList.remove("categoryfilter__select-active")
+        }
       })
     }
   }
-
+  function  changeCount(count, select, span){
+    span.textContent = "";
+    span.textContent = " :"+count;
+    if(count <= 0){
+      span.textContent = "";
+    }
+  }
 }

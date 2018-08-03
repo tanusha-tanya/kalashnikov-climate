@@ -1,5 +1,17 @@
 .gotocatalog{
   margin: 40px 0;
+  text-decoration: none;
+  display:block;
+  &:hover{
+    .gotocatalog__arrow{
+      &:before{
+        transform: scaleX(1.5) translateX(10px);
+      }
+    }
+    .gotocatalog__svg{
+      transform: translateX(18px);
+    }
+  }
   @media(min-width:$notebook){
     width:33%;
     width: calc(33% - 30px);
@@ -26,16 +38,6 @@
     text-decoration: none;
     color: $inactiveBtn;
     font: $pointer;
-    &:hover{
-      .gotocatalog__arrow{
-        &:before{
-          transform: scaleX(1.5) translateX(10px);
-        }
-      }
-      .gotocatalog__svg{
-        transform: translateX(18px);
-      }
-    }
     @media(min-width:$notebook){
       margin-top: 30px;
     }
@@ -43,20 +45,22 @@
   &__arrow{
     position: relative;
     margin-left: 10px;
+    width: 50px;
+    display: inline-block;
     &:before{
       position: absolute;
       width: 20px;
       height: 2px;
       background: $inactiveBtn;
       content: '';
-      top: 12px;
+      top: -5px;
       transition: transform .3s;
     }
   }
   &__svg{
     position: absolute;
-    top: 7px;
-    left:10px;
+    top: -10px;
+    left: 10px;
     z-index: 100;
     transition: transform .3s;
   }

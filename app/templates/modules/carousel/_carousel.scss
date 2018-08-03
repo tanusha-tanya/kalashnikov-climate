@@ -51,12 +51,27 @@
     }
   }
   &__item{
+    display: inline-block;
     width: 229px;
+    text-decoration: none;
     @media(min-width:$tablet){
       width: 339px;
     }
     @media(min-width:$notebook){
       width: 370px;
+    }
+    &:hover{
+      .carousel__link{
+        &:before{
+          transform: translateX(7px) scaleX(1.5);
+          background: $inactiveBtn;
+        }
+        .carousel__svg{
+          transform: translateX(10px);
+          color: $inactiveBtn;
+          fill: $inactiveBtn;
+        }
+      }
     }
   }
   &__img{
@@ -76,7 +91,7 @@
     }
   }
   &__pick{
-    width: auto!important;//перекрываем owlCarousel
+    width: auto!important;
     max-width:100%;
     max-height: 100%;
     flex-shrink: 0;
@@ -101,17 +116,6 @@
       right: 15px;
       top: 10px;
       transition: transform .3s, background .3s;
-    }
-    &:hover{
-      &:before{
-        transform: translateX(7px) scaleX(1.5);
-        background: $inactiveBtn;
-      }
-      .carousel__svg{
-        transform: translateX(10px);
-        color: $inactiveBtn;
-        fill: $inactiveBtn;
-      }
     }
   }
   &__svg{

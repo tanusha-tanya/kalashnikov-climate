@@ -1,4 +1,18 @@
 .good{
+  &__href{
+    display: block;
+    text-decoration: none;
+    &:hover{
+      .good__svg{
+        transform: translateX(15px);
+      }
+      .good__arrow{
+        &:before{
+          transform: translateX(10px) scaleX(1.5);
+        }
+      }
+    }
+  }
   @media(min-width: $tablet){
     width: 50%;
     width: calc(50% - 20px);
@@ -39,16 +53,7 @@
       margin-right: 60px;
       font: $pointer;
     }
-    &:hover{
-      .good__svg{
-        transform: translateX(15px);
-      }
-      .good__arrow{
-        &:before{
-          transform: translateX(10px) scaleX(1.5);
-        }
-      }
-    }
+
   }
   &__arrow{
     position:relative;
@@ -122,8 +127,22 @@
     margin-top: 0;
   }
 }
+.categoryfilter{
+  &+.goods__items{
+    margin-top: -25px;
+    @media(min-width: $tablet){
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+    @media(min-width: $notebook){
+      margin: 0 -15px;
+      margin-top: 25px;
+    }
+  }
+}
 .goods__items{
-  margin-top: -15px;
+  margin-top: 40px;
   @media(min-width: $tablet){
     display: flex;
     flex-wrap: wrap;

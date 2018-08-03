@@ -6,6 +6,23 @@
   @media(min-width:$notebook){
     padding-top: 60px;
   }
+  &__href{
+    text-decoration: none;
+    display: block;
+    &:hover{
+      .accessories__arrow{
+        &:before{
+          transform: translateX(7px) scaleX(1.5);
+          background:$inactiveBtn;
+        }
+      }
+      .accessories__arrowsvg{
+        transform: translateX(11px);
+        color:$inactiveBtn;
+        fill: $inactiveBtn;
+      }
+    }
+  }
   &__items{
     max-width: 400px;
     margin: 40px auto;
@@ -63,19 +80,6 @@
     padding-left: 9px;
     span{
       font:$pointer;
-    }
-    &:hover{
-      .accessories__arrow{
-        &:before{
-          transform: translateX(7px) scaleX(1.5);
-          background:$inactiveBtn;
-        }
-      }
-      .accessories__arrowsvg{
-        transform: translateX(11px);
-        color:$inactiveBtn;
-        fill: $inactiveBtn;
-      }
     }
   }
   &__title{
