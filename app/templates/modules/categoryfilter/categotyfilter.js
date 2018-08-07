@@ -2,11 +2,14 @@ const filter = document.querySelector(".categoryfilter");
 if(filter){
   let buttonFilter = filter.querySelector("#filter");
   let selectBlock = filter.querySelector(".categoryfilter__selectblock");
-  let reset = document.createElement("div");
+  let reset = document.createElement("button");
   reset.id = "reset";
   reset.className = "categoryfilter__reset";
   reset.textContent = "Сбросить";
-
+  let send = document.createElement("button");
+  send.id = "apply";
+  send.className = "categoryfilter__apply";
+  send.textContent = "Применить";
   buttonFilter.onchange = function(){
     let catsHide = filter.querySelectorAll(".categoryfilter__button-hide");
     let selectHide = filter.querySelectorAll(".categoryfilter__selectblock-hide");
@@ -67,6 +70,19 @@ if(filter){
   let popups =  filter.querySelectorAll('.categoryfilter__popup');
 
   document.addEventListener('DOMContentLoaded', function(){
+    let arrayOfKeys = Object.keys(localStorage);
+    let checkboxes = filter.querySelectorAll(".categoryfilter__popupinput")
+    for(let i=0; i < arrayOfKeys.length; i++){
+      if (arrayOfKeys[i].indexOf("result") !== -1){
+        let checkboxValue = localStorage.getItem(arrayOfKeys[i]);
+        for(let j = 0; j < checkboxes.length; j++){
+          if(checkboxes[j].value === checkboxValue){
+            checkboxes[j].checked = true;
+          }
+          localStorage.removeItem(arrayOfKeys[i])
+        }
+      }
+    }
     for(let i = 0; i < popups.length; i++){
       let counter = 0;
       let checkbox = popups[i].querySelectorAll('.categoryfilter__popupinput');
@@ -126,7 +142,7 @@ if(filter){
         if(count>=1){
           select.classList.add("categoryfilter__select-active");
           close.style.display="block";
-          selectBlock.appendChild(reset);
+          selectBlock.appendChild(send);
         }
         else{
           select.classList.remove("categoryfilter__select-active");
@@ -154,7 +170,12 @@ if(filter){
   for(let i = 0; i < closeBtn.length; i++){
     closeBtn[i].addEventListener("click", function(){
       let clearSelect = this.parentNode;
+      let thisItem = this.closest(".categoryfilter__selectitem");
+      let thisSelect = thisItem.querySelector(".categoryfilter__select")
+      let thisPopup = thisItem.querySelector(".categoryfilter__popup")
       clearPopup(clearSelect);
+      thisSelect.classList.remove("categoryfilter__select-open");
+      thisPopup.classList.remove("categoryfilter__popup-open");
     })
   };
 
@@ -179,4 +200,20 @@ if(filter){
     }
   })
 
+  let result = [];
+  send.onclick = function(){
+    for(let i = 0; i < popups.length; i++){
+      let checkbox = popups[i].querySelectorAll('.categoryfilter__popupinput');
+      for(let j = 0; j < checkbox.length; j++){
+        if(checkbox[j].checked){
+          result.push(checkbox[j].value);
+        }
+      }
+    }
+    for(let i = 0; i < result.length; i++){
+      localStorage.setItem('result'+[i], result[i]);
+    }
+    let url = window.location.toString().split("?")[0];
+    window.location = url +"?"+result.join("+");
+  }
 }
