@@ -21,10 +21,3 @@ function clearTab(actived, type){
 function addTab(el, type){
   el.classList.add("tab__"+type+"-active");
 }
-
-$(window).on("load",function(){
-  $(".tab__table, .dealers__show-scroll").mCustomScrollbar({
-    axis:"x",
-    theme:"dark"
-  });
-});

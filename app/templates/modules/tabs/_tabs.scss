@@ -63,7 +63,6 @@
       position:relative;
       opacity: 1;
       height:auto;
-      overflow: unset;
     }
     @media(min-width:$tablet){
       margin-top:40px;
@@ -79,6 +78,7 @@
     position: relative;
     width: 100%;
     width: calc(100% + 20px);
+    padding-bottom: 30px;
     .mCSB_scrollTools.mCSB_scrollTools_horizontal{
       right: 15px;
     }
@@ -122,35 +122,5 @@
     font: $littleTxt;
     color: $muteTxt;
     margin-top:10px;
-  }
-}
-.table{
-  border-collapse: collapse;
-  &__thead{
-    .table__cell{
-      font: $tableth;
-    }
-  }
-  &__row{
-    border-bottom:1px solid $tableBorder;
-  }
-  &__cell{
-    background: $inactiveBg;
-    padding:20px;
-    box-sizing: border-box;
-    min-width:180px;
-    &:first-of-type{
-      font:$tabletd;
-      background: $hoverSvg;
-      max-width:178px;
-      padding-left:0;
-    }
-  }
-  &__tbody{
-    .table__row{
-        &:last-of-type{
-          border-bottom: 0;
-        }
-    }
   }
 }

@@ -1,0 +1,43 @@
+.table{
+  border-collapse: collapse;
+  display: flex;
+  &__head{
+    display: flex;
+    .table__cell{
+      font: $tableth;
+    }
+  }
+  &__column{
+    display: flex;
+    flex-direction: column;
+  }
+  &__row{
+    display: flex;
+  }
+  &__cell{
+    background: $inactiveBg;
+    padding:20px;
+    box-sizing: border-box;
+    min-width:180px;
+    height: 60px;
+    border-bottom:1px solid $tableBorder;
+    &:first-of-type{
+      font:$tabletd;
+      background: $hoverSvg;
+      max-width:178px;
+      padding-left:0;
+    }
+  }
+  &__row, &__column{
+    .table__cell{
+        &:last-of-type{
+          border-bottom: 0;
+      }
+    }
+  }
+  &__body{
+    padding-bottom: 50px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
