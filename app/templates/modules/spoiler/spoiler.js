@@ -1,16 +1,22 @@
-const spoilarrow = document.querySelector(".spoilarrow");
-const spoilarrowText = document.querySelector(".spoilarrow__text");
+const spoilarrow = document.querySelectorAll(".spoilarrow");
 if(spoilarrow){
-  let txt = spoilarrowText.textContent;
-  let spoilpick = document.querySelector(".spoilarrow__pick");
-  spoilarrow.onclick = function(){
-    if(spoilpick.classList.contains("spoildown")){
-      spoilpick.classList.remove("spoildown");
-      spoilarrowText.textContent = txt;
+  for(let i = 0; i < spoilarrow.length; i++){
+    let txt = [];
+    let spoilarrowText = document.querySelectorAll(".spoilarrow__text");
+    for(let j = 0; j < spoilarrowText.length;  j++){
+      txt.push(spoilarrowText[j].textContent);
     }
-    else{
-      spoilpick.classList.add("spoildown");
-      spoilarrowText.textContent = "Вверх";
-    }
+    spoilarrow[i].addEventListener("click", function(){
+      let thisText = this.querySelector(".spoilarrow__text");
+      let spoilpick = this.querySelector(".spoilarrow__pick");
+      if(spoilpick.classList.contains("spoildown")){
+        spoilpick.classList.remove("spoildown");
+        thisText.textContent = txt[i];
+      }
+      else{
+        spoilpick.classList.add("spoildown");
+        thisText.textContent = "Вверх";
+      }
+    })
   }
 }

@@ -10,6 +10,7 @@ if(filter){
   send.id = "apply";
   send.className = "categoryfilter__apply";
   send.textContent = "Применить";
+  // Кнопка с фильтром для мобилы
   buttonFilter.onchange = function(){
     let catsHide = filter.querySelectorAll(".categoryfilter__button-hide");
     let selectHide = filter.querySelectorAll(".categoryfilter__selectblock-hide");
@@ -36,6 +37,8 @@ if(filter){
       }
     }
   }
+
+  // Меняем текст на таблетах и десктопах
   let dataText = [], actuallyText = [];
   let labelSpan = document.querySelectorAll(".categoryfilter__button span");
 
@@ -65,6 +68,7 @@ if(filter){
   window.addEventListener("resize", function(){
     changeText();
   });
+
 
   let select = filter.querySelectorAll('.categoryfilter__select');
   let popups =  filter.querySelectorAll('.categoryfilter__popup');
@@ -101,27 +105,27 @@ if(filter){
         svg.style.display = 'block';
       }
     }
+    for(let i=0; i < select.length; i++){
+      select[i].addEventListener('click', function(){
+        let selectitem = this.parentNode;
+        let popup = selectitem.querySelector('.categoryfilter__popup');
+        if(popup.classList.contains('categoryfilter__popup-open')){
+          popup.classList.remove('categoryfilter__popup-open');
+          this.classList.remove('categoryfilter__select-open');
+        }
+        else{
+          for(let j=0; j < popups.length; j++){
+            popups[j].classList.remove('categoryfilter__popup-open');
+            select[j].classList.remove('categoryfilter__select-open');
+          }
+          popup.classList.add('categoryfilter__popup-open');
+          this.classList.add('categoryfilter__select-open');
+          selectChange(this);
+        }
+      })
+    }
   });
 
-  for(let i=0; i < select.length; i++){
-    select[i].addEventListener('click', function(){
-      let selectitem = this.parentNode;
-      let popup = selectitem.querySelector('.categoryfilter__popup');
-      if(popup.classList.contains('categoryfilter__popup-open')){
-        popup.classList.remove('categoryfilter__popup-open');
-        this.classList.remove('categoryfilter__select-open');
-      }
-      else{
-        for(let j=0; j < popups.length; j++){
-          popups[j].classList.remove('categoryfilter__popup-open');
-          select[j].classList.remove('categoryfilter__select-open');
-        }
-        popup.classList.add('categoryfilter__popup-open');
-        this.classList.add('categoryfilter__select-open');
-        selectChange(this);
-      }
-    })
-  }
 
   function selectChange(select){
     let inputs = select.parentNode.querySelectorAll(".categoryfilter__popupinput");
@@ -171,18 +175,19 @@ if(filter){
     closeBtn[i].addEventListener("click", function(){
       let clearSelect = this.parentNode;
       let thisItem = this.closest(".categoryfilter__selectitem");
-      let thisSelect = thisItem.querySelector(".categoryfilter__select")
-      let thisPopup = thisItem.querySelector(".categoryfilter__popup")
+      let thisSelect = thisItem.querySelector(".categoryfilter__select");
+      let thisPopup = thisItem.querySelector(".categoryfilter__popup");
       clearPopup(clearSelect);
-      thisSelect.classList.remove("categoryfilter__select-open");
-      thisPopup.classList.remove("categoryfilter__popup-open");
     })
   };
 
   function clearPopup(select) {
     let popup = select.parentNode.querySelector(".categoryfilter__popup");
+    let thisSelect = select.parentNode.querySelector(".categoryfilter__select");
     let inputs = popup.querySelectorAll(".categoryfilter__popupinput");
-    let span = select.querySelector(".categoryfilter__counter")
+    let span = select.querySelector(".categoryfilter__counter");
+    thisSelect.classList.remove("categoryfilter__select-open");
+    popup.classList.remove("categoryfilter__popup-open");
     for(let i = 0; i < inputs.length; i++){
       inputs[i].checked = false;
       changeCount(0, select, span)
