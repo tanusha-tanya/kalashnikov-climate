@@ -98,7 +98,7 @@ if(filter){
         }
       }
       if(counter > 0){
-        let selectItem = popups[i].closest('.categoryfilter__selectitem');
+        let selectItem = popups[i].parentNode;
         let span = selectItem.querySelector('.categoryfilter__counter');
         let select = selectItem.querySelector('.categoryfilter__select');
         let svg = selectItem.querySelector('.categoryfilter__closesvg');
@@ -134,12 +134,12 @@ if(filter){
     let span = select.querySelector(".categoryfilter__counter");
     let close = select.querySelector(".categoryfilter__closesvg");
     let count = span.textContent !== "" ? parseInt(span.textContent.replace(/\D+/g,"")): 0;
-    let popup = select.closest(".categoryfilter__selectitem").querySelector(".categoryfilter__popup ")
-    for(let i=0; i < inputs.length; i++){
+    let popup = select.parentNode.querySelector(".categoryfilter__popup ");
+    for(let i = 0; i < inputs.length; i++){
       inputs[i].addEventListener("click", function(){
         if(this.checked){
           count++;
-          changeCount(count, select, span)
+          changeCount(count, select, span);
         }
         else{
           count--;
@@ -158,6 +158,7 @@ if(filter){
       })
     }
   }
+
   function  changeCount(count, select, span){
     let close = select.querySelector('.categoryfilter__closesvg');
     span.textContent = "";
@@ -176,7 +177,7 @@ if(filter){
   for(let i = 0; i < closeBtn.length; i++){
     closeBtn[i].addEventListener("click", function(){
       let clearSelect = this.parentNode;
-      let thisItem = this.closest(".categoryfilter__selectitem");
+      let thisItem = this.parentNode.parentNode;
       let thisSelect = thisItem.querySelector(".categoryfilter__select");
       let thisPopup = thisItem.querySelector(".categoryfilter__popup");
       clearPopup(clearSelect);
