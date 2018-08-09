@@ -1,7 +1,6 @@
 const param = document.querySelectorAll(".category__param");
 const question = document.querySelector(".category__question");
 if(question ){
-  console.log(question)
   for(let i = 0; i<param.length; i++){
     param[i].addEventListener("click", function(){
       let capture = this.children[1],
