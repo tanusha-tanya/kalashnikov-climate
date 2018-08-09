@@ -289,12 +289,19 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    cursor: pointer;
   }
   &__reset{
     display: inline-block;
     color: $hoverSvg;
     background: $activeBtn;
     padding: 5px;
+    margin-right: 20px;
+    border: 0;
+    outline: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
     cursor: pointer;
   }
 }

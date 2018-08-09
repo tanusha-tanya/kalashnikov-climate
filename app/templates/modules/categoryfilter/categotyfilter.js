@@ -10,6 +10,7 @@ if(filter){
   send.id = "apply";
   send.className = "categoryfilter__apply";
   send.textContent = "Применить";
+
   // Кнопка с фильтром для мобилы
   buttonFilter.onchange = function(){
     let catsHide = filter.querySelectorAll(".categoryfilter__button-hide");
@@ -83,8 +84,9 @@ if(filter){
           if(checkboxes[j].value === checkboxValue){
             checkboxes[j].checked = true;
           }
-          localStorage.removeItem(arrayOfKeys[i])
+          localStorage.removeItem(arrayOfKeys[i]);
         }
+        selectBlock.appendChild(reset);
       }
     }
     for(let i = 0; i < popups.length; i++){
@@ -134,7 +136,7 @@ if(filter){
     let count = span.textContent !== "" ? parseInt(span.textContent.replace(/\D+/g,"")): 0;
     let popup = select.closest(".categoryfilter__selectitem").querySelector(".categoryfilter__popup ")
     for(let i=0; i < inputs.length; i++){
-      inputs[i].addEventListener("change", function(){
+      inputs[i].addEventListener("click", function(){
         if(this.checked){
           count++;
           changeCount(count, select, span)
@@ -146,13 +148,13 @@ if(filter){
         if(count>=1){
           select.classList.add("categoryfilter__select-active");
           close.style.display="block";
-          selectBlock.appendChild(send);
         }
         else{
           select.classList.remove("categoryfilter__select-active");
           popup.classList.remove("categoryfilter__popup-open");
           close.style.display="none"
         }
+        selectBlock.appendChild(send);
       })
     }
   }
@@ -218,7 +220,19 @@ if(filter){
     for(let i = 0; i < result.length; i++){
       localStorage.setItem('result'+[i], result[i]);
     }
+
     let url = window.location.toString().split("?")[0];
-    window.location = url +"?"+result.join("+");
+    window.location = result.length > 0? url +"?"+result.join("+"): url;
+  }
+
+  reset.onclick = function(){
+    for(let i = 0; i < popups.length; i++){
+      let checkbox = popups[i].querySelectorAll('.categoryfilter__popupinput');
+      for(let j = 0; j < checkbox.length; j++){
+        checkbox[j].checked = false;
+      }
+    }
+    let url = window.location.toString().split("?")[0];
+    window.location = url;
   }
 }

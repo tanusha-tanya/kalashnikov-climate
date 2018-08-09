@@ -1,21 +1,21 @@
 .categoryfilter
   .categoryfilter__wrapblock
     .categoryfilter__buttonblock
-      .categoryfilter__button.categoryfilter__button-active.categoryfilter__button-all
+      a(href="product.html").categoryfilter__button.categoryfilter__button-active.categoryfilter__button-all
         span Все
       label.categoryfilter__button.categoryfilter__button-filter(for="filter")
         input.categoryfilter__input.categoryfilter__input-filter(type="checkbox", value="filter", id="filter")
         svg.categoryfilter__svg(role="img")(width="30")(height="22"): use(xlink:href="#i_filter")
-      a(href="#").categoryfilter__button.categoryfilter__button-hide.categoryfilter__button-full(for="electro")
+      a(href="product.html").categoryfilter__button.categoryfilter__button-hide.categoryfilter__button-full(for="electro")
         span(data-text="С электрическим источником тепла") С электрическим ист.т.
         svg.categoryfilter__svg(role="img")(width="37")(height="30"): use(xlink:href="#electrosvg")
-      a(href="#").categoryfilter__button.categoryfilter__button-hide.categoryfilter__button-full(for="water")
+      a(href="product.html").categoryfilter__button.categoryfilter__button-hide.categoryfilter__button-full(for="water")
         span(data-text="С водяным источником тепла") С водяным ист. тепла
         svg.categoryfilter__svg(role="img")(width="37")(height="30"): use(xlink:href="#watersvg")
-      a(href="#").categoryfilter__button.categoryfilter__button-hide.categoryfilter__button-full(for="heating")
+      a(href="product.html").categoryfilter__button.categoryfilter__button-hide.categoryfilter__button-full(for="heating")
         span Без обогрева
         svg.categoryfilter__svg(role="img")(width="30")(height="30"): use(xlink:href="#heatingsvg")
-      a(href="#").categoryfilter__button.categoryfilter__button-hide.categoryfilter__button-full(for="name")
+      a(href="product.html").categoryfilter__button.categoryfilter__button-hide.categoryfilter__button-full(for="name")
         input.categoryfilter__input(type="checkbox", value="name", id="name")
         span Наименование без тега
       .categoryfilter__selectblock.categoryfilter__selectblock-hide
@@ -99,6 +99,3 @@
               input.categoryfilter__popupinput(type="checkbox", value="height3", id="height3")
               label.categoryfilter__popuplabel(for="height3")
                 span Высота 3
-      .categoryfilter__controls
-        span.categoryfilter__apply Применить
-        span.categoryfilter__reset Сбросить
