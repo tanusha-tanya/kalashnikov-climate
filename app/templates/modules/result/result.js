@@ -23,11 +23,11 @@ if(result){
       changeText();
   });
 
-  let arrow = result.querySelectorAll(".spoilarrow");
-  for(let i = 0; i < arrow.length; i++){
-    arrow[i].addEventListener("click", function(){
-      let item = this.closest(".result__item");
-      let spoiler = item.querySelector(".result__spoiler");
+  let resultItem = result.querySelectorAll(".result__item");
+  for(let i = 0; i < resultItem.length; i++){
+    let arrow = resultItem[i].querySelector(".spoilarrow")
+    arrow.addEventListener("click", function(){
+      let spoiler = resultItem[i].querySelector(".result__spoiler");
       if(spoiler.classList.contains("result__spoiler-open")){
         spoiler.classList.remove("result__spoiler-open")
       }

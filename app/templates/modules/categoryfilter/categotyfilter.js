@@ -197,7 +197,7 @@ if(filter){
     }
   }
 
-  document.body.addEventListener("click", function(event){
+  document.body.onclick = function(event){
     if(!event.target.closest(".categoryfilter__selectitem")){
       for(let i = 0; i < select.length; i++){
         select[i].classList.remove("categoryfilter__select-open");
@@ -206,7 +206,7 @@ if(filter){
         popups[i].classList.remove("categoryfilter__popup-open");
       }
     }
-  })
+  }
 
   let result = [];
   send.onclick = function(){
