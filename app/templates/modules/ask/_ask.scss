@@ -211,12 +211,21 @@
     font: $pointer;
     text-align: center;
     padding: 11px 30px;
-    background: #F3930E;
+    background: $inactiveBtn;
     box-sizing: border-box;
     border:0;
     outline: none;
+    cursor: pointer;
+    transition: background .3s;
     &-disabled{
       background:$formsvg;
+      cursor: not-allowed;
+    }
+    &:hover{
+      background: $hoverBtn;
+    }
+    &.sent{
+      background: $activeBtn;
     }
   }
 }

@@ -53,8 +53,10 @@
     background: $inactiveBtn;
     text-decoration: none;
     padding: 15px 30px;
+    transition: background .3s;
     &:hover{
       color: $hoverSvg;
+      background: $hoverBtn;
     }
     @media(min-width:$tablet){
       margin: 0;

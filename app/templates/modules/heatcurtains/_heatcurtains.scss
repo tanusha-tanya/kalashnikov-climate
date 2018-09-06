@@ -1,5 +1,8 @@
 .heatcurtains{
   margin: 37px 0 0;
+  @media(min-width:$tablet){
+    margin-top: 45px;
+  }
   &__filter{
     margin-top: 51px;
     @media(min-width:$tablet){
@@ -14,8 +17,9 @@
     outline: none;
     padding: 40px 0;
     border-bottom: 1px solid $download;
+    box-sizing: border-box;
     @media(min-width:$tablet){
-      padding: 36px 0 50px 0;
+      padding: 0 0 36px 0;
       width: 50%;
       width: calc(50% - 50px);
       margin: 0 15px 40px 15px;
@@ -48,6 +52,10 @@
       padding: 0;
       display: flex;
       flex-wrap: wrap;
+      @media(min-width:$tablet){
+        flex-wrap: nowrap;
+        width: calc(60% - 50px);
+      }
       @media(min-width:$notebook){
         width: auto;
         margin: 0 55px 40px 15px;
@@ -58,8 +66,15 @@
       width: 100%;
       width: calc(100% - 50px);
       text-align: center;
+      margin-top: 20px;
+      @media(min-width:$tablet){
+        margin-top: 0;
+        margin-bottom: 0;
+      }
       @media(min-width:$notebook){
         text-align: left;
+        margin-top: 20px;
+        margin-bottom: 45px;
       }
     }
   }
@@ -99,7 +114,6 @@
     border: 0;
     outline: none;
     background: $inactiveBg;
-    margin: 5px 0;
     max-width: 200px;
     &-city{
       width: 290px;
@@ -114,6 +128,10 @@
     position: relative;
     display: block;
     max-width: 200px;
+    margin-top: 10px;
+    &:first-of-type{
+      margin-top: 0;
+    }
     span{
       position: absolute;
       right: 15px;
@@ -139,9 +157,13 @@
     display: block;
     padding-left: 10px;
     margin: 16px;
+    margin-bottom: 0;
     color: $inactiveSvg;
     transition: color .3s;
     cursor: pointer;
+    &:first-of-type{
+      margin-top: 25px;
+    }
     &:before{
       box-sizing: border-box;
       width: 15px;
@@ -238,15 +260,25 @@
     outline: none;
     color: $hoverSvg;
     font: $pointer;
+    cursor: pointer;
+    transition: background .3s;
     @media(min-width:$tablet){
-      margin-top: 40px;
+      margin-top: 20px;
       width: 220px;
     }
     @media(min-width:$notebook){
       margin-top: 0;
     }
-  }
-  &__radioblock{
-    margin-top: 25px;
+    &:hover{
+      background: $hoverBtn;
+    }
+    &.sent{
+      background: $activeBtn;
+    }
+   }
+  &__text{
+    @media(min-width:$tablet){
+      font:$pointer;
+    }
   }
 }

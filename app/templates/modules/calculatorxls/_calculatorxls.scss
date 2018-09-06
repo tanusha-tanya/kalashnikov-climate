@@ -40,7 +40,7 @@
     text-align: center;
     box-sizing: border-box;
     padding: 12px;
-    &:hover{
+    &:hover, &:focus{
       color: $hoverSvg;
     }
     @media(min-width:$tablet){

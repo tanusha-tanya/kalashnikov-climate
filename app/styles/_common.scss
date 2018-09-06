@@ -133,6 +133,7 @@ a{
 }
 .button-disabled{
   background:$formsvg!important;
+  cursor: not-allowed!important;
 }
 .col{
   @media(min-width:$notebook){

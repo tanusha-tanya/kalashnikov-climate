@@ -1,9 +1,11 @@
 .pluses{
+  margin-top: 50px;
   &__ol{
     @media(min-width: $notebook){
       display: flex;
       flex-wrap: wrap;
       margin: 0 -15px;
+      margin-top: 20px;
     }
   }
   &__li{
@@ -13,6 +15,7 @@
     counter-increment: list;
     position:relative;
     margin: 40px 0;
+
     @media(min-width: $tablet){
       font:  $partnerstitle;
     }
@@ -23,6 +26,7 @@
       padding-left: 30px;
       box-sizing: border-box;
       font: $partnerstitle;
+      margin-bottom: 0;
     }
     &:before{
       content: counter(list) " ";

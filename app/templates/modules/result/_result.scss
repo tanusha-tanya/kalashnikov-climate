@@ -36,6 +36,9 @@
     &__descript{
       font: $pointer;
       color: $muteTxt;
+      @media(min-width: $notebook){
+        font: $link;
+      }
     }
     &__pick{
       background: $inactiveBg;

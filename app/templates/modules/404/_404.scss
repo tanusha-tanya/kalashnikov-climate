@@ -1,12 +1,12 @@
 .notfounded{
-  margin-top: 86px;
+  margin-top: 60px;
   margin-bottom: -88px;
   @media(min-width:$tablet){
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     margin-bottom: -95px;
-    margin-top: 40px;
+    margin-top: 35px;
   }
   @media(min-width:$notebook){
     margin-bottom: -129px;
@@ -20,9 +20,13 @@
     }
   }
   &__h1{
-    font: $partnerstitle;
+    font: $title;
     @media(min-width:$tablet){
       font: $h1middle;
+    }
+    @media(min-width:$notebook){
+      font: $h3;
+      margin-top: 0;
     }
   }
 }
