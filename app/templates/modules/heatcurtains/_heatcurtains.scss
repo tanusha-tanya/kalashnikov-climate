@@ -6,10 +6,15 @@
   &__filter{
     margin-top: 51px;
     @media(min-width:$tablet){
-      margin: 0 -15px;
+      margin: 0 -20px;
       margin-top: 51px;
       display: flex;
       flex-wrap: wrap;
+    }
+    @media(min-width:$notebook){
+      margin: 0 -35px;
+      margin-top: 0px;
+      margin-top: 51px;
     }
   }
   &__item{
@@ -22,28 +27,28 @@
       padding: 0 0 36px 0;
       width: 50%;
       width: calc(50% - 50px);
-      margin: 0 15px 40px 15px;
+      margin: 0 20px 40px 20px;
     }
     @media(min-width:$notebook){
       width: 33%;
-      width: calc(33% - 50px);
-      margin: 0 15px 40px 15px;
+      width: calc(33% - 70px);
+      margin: 0 35px 40px 35px;
     }
     &-info{
       color:$inactiveBtn;
       font: $littleTxt;
       display: flex;
-      margin: 30px 0 10px 0;
+      margin: 30px 0 12px 5px;
       border: 0;
       padding: 0;
       max-width: 290px;
       @media(min-width:$tablet){
-        margin-top: 0;
+        margin: 0 0 12px -15px
       }
       @media(min-width:$notebook){
         width: 100%;
-        max-width: 500px;
-        margin: 0 15px 40px 15px;
+        max-width: 370px;
+        margin: 0 15px 40px 5px;
         font: $link;
       }
     }
@@ -55,10 +60,12 @@
       @media(min-width:$tablet){
         flex-wrap: nowrap;
         width: calc(60% - 50px);
+        margin-left: 20px;
+        margin-bottom: 60px;
       }
       @media(min-width:$notebook){
         width: auto;
-        margin: 0 55px 40px 15px;
+        margin: 0 55px 88px 35px;
       }
     }
     &-send{
@@ -104,8 +111,11 @@
   }
   &__svg{
     position: absolute;
-    top: 18px;
+    top: 15px;
     left: 18px;
+    color: $inactiveSvg;
+    fill: $inactiveSvg;
+    transition: color .3s, fill .3s;
   }
   &__textinput{
     height: 50px;
@@ -115,6 +125,38 @@
     outline: none;
     background: $inactiveBg;
     max-width: 200px;
+    color:$inactiveSvg;
+    transition: color .3s;
+    opacity: 1;
+    &::-moz-placeholder{
+      color:$inactiveSvg;
+      transition: color .3s;
+      opacity: 1;
+    }
+    &::-webkit-input-placeholder{
+      color:$inactiveSvg;
+      transition: color .3s;
+      opacity: 1;
+    }
+    &:-ms-input-placeholder{
+      color:$inactiveSvg;
+      transition: color .3s;
+      opacity: 1;
+    }
+    &::-ms-input-placeholder{
+      color:$inactiveSvg;
+      transition: color .3s;
+      opacity: 1;
+    }
+    &::placeholder{
+      color:$inactiveSvg;
+      transition: color .3s;
+      opacity: 1;
+    }
+    &~ span{
+      color:$inactiveSvg;
+      transition: color .3s;
+    }
     &-city{
       width: 290px;
       max-width: 100%;
@@ -123,6 +165,31 @@
           width: 470px;
         }
     }
+    &:hover, &.active, &:focus{
+        color:$activeBtn;
+        &::-moz-placeholder{
+          color:$activeBtn;
+        }
+        &::-webkit-input-placeholder{
+          color:$activeBtn;
+        }
+        &:-ms-input-placeholder{
+          color:$activeBtn;
+        }
+        &::-ms-input-placeholder{
+          color:$activeBtn;
+        }
+        &::placeholder{
+          color:$activeBtn;
+        }
+        &~ .heatcurtains__svg{
+          color: $activeBtn;
+          fill: $activeBtn;
+        }
+        &~ span{
+          color: $activeBtn;
+        }
+      }
   }
   &__textlabel{
     position: relative;
@@ -135,7 +202,7 @@
     span{
       position: absolute;
       right: 15px;
-      top: 19px;
+      top: 15px;
       font: pointer;
     }
   }
@@ -279,6 +346,9 @@
   &__text{
     @media(min-width:$tablet){
       font:$pointer;
+    }
+    @media(min-width:$notebook){
+      max-width: 700px;
     }
   }
 }

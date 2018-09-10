@@ -20,12 +20,62 @@
     width: 290px;
     color: $muteTxt;
     font: $pointer;
+    color:$inactiveSvg;
+    transition: color .3s;
+    opacity: 1;
     @media(min-width:$tablet){
       width: 461px;
       margin-right: 10px;
     }
     @media(min-width:$notebook){
       width: 570px;
+    }
+    &::-moz-placeholder{
+      color:$inactiveSvg;
+      transition: color .3s;
+      opacity: 1;
+    }
+    &::-webkit-input-placeholder{
+      color:$inactiveSvg;
+      transition: color .3s;
+      opacity: 1;
+    }
+    &:-ms-input-placeholder{
+      color:$inactiveSvg;
+      transition: color .3s;
+      opacity: 1;
+    }
+    &::-ms-input-placeholder{
+      color:$inactiveSvg;
+      transition: color .3s;
+      opacity: 1;
+    }
+    &::placeholder{
+      color:$inactiveSvg;
+      transition: color .3s;
+      opacity: 1;
+    }
+    &:hover, &.active, &:focus{
+      color:$activeBtn;
+      &::-moz-placeholder{
+        color:$activeBtn;
+      }
+      &::-webkit-input-placeholder{
+        color:$activeBtn;
+      }
+      &:-ms-input-placeholder{
+        color:$activeBtn;
+      }
+    &::-ms-input-placeholder{
+        color:$activeBtn;
+      }
+      &::placeholder{
+        color:$activeBtn;
+      }
+    &~ .sendmail__svg{
+        color: $activeBtn;
+        fill: $activeBtn;
+      }
     }
   }
   &__svg{
@@ -34,26 +84,7 @@
     top: 17px;
     color: $formsvg;
     fill: $formsvg;
-  }
-  &::-moz-placeholder{
-    color: $muteTxt;
-    opacity:1;
-    font: $pointer;
-  }
-  &:-moz-placeholder{
-    color: $muteTxt;
-    opacity:1;
-    font: $pointer;
-  }
-  &:-webkit-input-placeholder{
-    color: $muteTxt;
-    opacity:1;
-    font: $pointer;
-  }
-  &::-webkit-input-placeholder{
-    color: $muteTxt;
-    opacity:1;
-    font: $pointer;
+    transition: color .3s, fill .3s;
   }
   &__checkbox{
     position: absolute;

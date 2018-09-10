@@ -18,7 +18,7 @@ h1, .h1{
   }
 }
 h2, .h2{
-  font: $h3;
+  font: $title;
   margin: 0;
   @media(min-width:$tablet){
     font: $bigh2;

@@ -3,12 +3,12 @@
   form.sendmail__form
     .sendmail__field
       label.sendmail__label
-        svg.sendmail__svg(role="img")(width="20")(height="16"): use(xlink:href="#mail")
         input.sendmail__input(placeholder="E-mail")(type="text")
+        svg.sendmail__svg(role="img")(width="20")(height="16"): use(xlink:href="#mail")
     .sendmail__field.sendmail__field-check
       input.sendmail__checkbox(type="checkbox")(id="confirm")
       label.sendmail__checklabel(for="confirm") Я согласен на обработку  &nbsp;
         a(href="/") персональных данных
     .sendmail__field
       label.sendmail__buttonlabel
-        input.sendmail__button(type="button")(value="Отправить результаты") 
+        input.sendmail__button.button-disabled(type="button")(value="Отправить результаты")

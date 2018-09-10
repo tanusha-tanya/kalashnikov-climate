@@ -1,7 +1,7 @@
 $(document).ready(function () {
   var owl = $(".examples__carousel");
   owl.owlCarousel({
-    loop: true,
+    loop: false,
     margin: 20,
     nav: false,
     dots: false,
@@ -11,8 +11,7 @@ $(document).ready(function () {
         autoWidth: true
       },
       1220: {
-        items: 2,
-        center: true,
+        //center: true,
         margin: 30,
         autoWidth: true
       }

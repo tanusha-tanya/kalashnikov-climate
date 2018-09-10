@@ -1,6 +1,18 @@
 .pluses{
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  @media(min-width: $tablet){
+    margin-bottom: 35px;
+  }
+  @media(min-width: $notebook){
+    margin-top: 50px;
+    margin-bottom: 70px;
+  }
   &__ol{
+    margin-top: 5px;
+    @media(min-width: $tablet){
+      margin-top: 45px;
+    }
     @media(min-width: $notebook){
       display: flex;
       flex-wrap: wrap;
@@ -14,16 +26,16 @@
     list-style: none;
     counter-increment: list;
     position:relative;
-    margin: 40px 0;
-
+    margin: 25px 0;
     @media(min-width: $tablet){
       font:  $partnerstitle;
+      margin: 35px 0;
     }
     @media(min-width: $notebook){
       width: 50%;
       width: calc(50% - 30px);
       margin:  32px 15px;
-      padding-left: 30px;
+      padding-left: 60px;
       box-sizing: border-box;
       font: $partnerstitle;
       margin-bottom: 0;
@@ -32,8 +44,12 @@
       content: counter(list) " ";
       position: relative;
       margin-left: -10px;
+      @media(min-width: $tablet){
+        margin-right: 12px;
+      }
       @media(min-width: $notebook){
         margin-left: -40px;
+        margin-right: 22px;
       }
     }
     &:after{
@@ -44,12 +60,21 @@
       background: $download;
       top: 30px;
       left: -40px;
+      @media(min-width: $notebook){
+        left: -6px;
+      }
     }
     p{
       color: $inactiveTxt;
       font: $link;
+      margin-top: 15px;
+      @media(min-width: $tablet){
+        margin-top: 10px;
+        margin-left: 24px;
+      }
       @media(min-width: $notebook){
         max-width: 470px;
+        margin-left: 0px;
       }
     }
   }

@@ -72,19 +72,13 @@
     color:$formsvg;
     transition: color .3s;
     &-name{
-      top: 25px;
+      top: 28px;
     }
     &-phone{
-      top: 26px;
-      @media(min-width:$tablet){
-        top: 23px;
-      }
+      top: 28px;      
     }
     &-email{
-      top: 26px;
-      @media(min-width:$tablet){
-        top: 26px;
-      }
+      top: 28px;
     }
   }
   &__input, &__textarea{
