@@ -5,8 +5,7 @@
   });
   const heatcurtains = document.querySelector(".heatcurtains__filter");
   if(heatcurtains){
-    let form = heatcurtains;
-    inputChange(form);
+    inputChange(heatcurtains);
   }
 });
 

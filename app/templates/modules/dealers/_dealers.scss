@@ -101,7 +101,39 @@
     padding: 20px 50px;
     box-sizing: border-box;
     margin: 10px 0;
+    opacity: 1;
     font: $pointer;
+    transition: color .3s;
+    &::-moz-placeholder{
+      color:$inactiveSvg;
+      transition: color .3s;
+      opacity: 1;
+    }
+    &::-webkit-input-placeholder{
+      color:$inactiveSvg;
+      transition: color .3s;
+      opacity: 1;
+    }
+    &:-ms-input-placeholder{
+      color:$inactiveSvg;
+      transition: color .3s;
+      opacity: 1;
+    }
+    &::-ms-input-placeholder{
+      color:$inactiveSvg;
+      transition: color .3s;
+      opacity: 1;
+    }
+    &::placeholder{
+      color:$inactiveSvg;
+      transition: color .3s;
+      opacity: 1;
+    }
+    &~ .dealers__svg{
+      color: $inactiveSvg;
+      fill: $inactiveSvg;
+      transition: color .3s;
+    }
     @media(min-width: $tablet){
       width: 340px;
     }
@@ -112,6 +144,28 @@
       @media(min-width: $tablet){
         width: 470px;
       }
+    }
+    &:hover, &:focus{
+        color:$activeBtn;
+        &::-moz-placeholder{
+          color:$activeBtn;
+        }
+        &::-webkit-input-placeholder{
+          color:$activeBtn;
+        }
+        &:-ms-input-placeholder{
+          color:$activeBtn;
+        }
+        &::-ms-input-placeholder{
+          color:$activeBtn;
+        }
+        &::placeholder{
+          color:$activeBtn;
+        }
+        &~ .dealers__svg{
+          color: $activeBtn;
+          fill: $activeBtn;
+        }
     }
   }
   &__type{

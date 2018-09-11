@@ -94,26 +94,55 @@
     box-sizing: border-box;
     opacity:1;
     border:1px solid transparent;
-    transition: border .3s;
-    &:hover, &:focus{
+    transition: border .3s, color .3s;
+    &:hover, &.active, &:focus{
       border:1px solid transparent;
       outline: none;
+      color:$activeBtn;
+        &::-moz-placeholder{
+          color:$activeBtn;
+        }
+        &::-webkit-input-placeholder{
+          color:$activeBtn;
+        }
+        &:-ms-input-placeholder{
+          color:$activeBtn;
+        }
+        &::-ms-input-placeholder{
+          color:$activeBtn;
+        }
+        &::placeholder{
+          color:$activeBtn;
+        }
+      & ~.ask__svg{
+        color:$activeBtn;
+        fill:$activeBtn;
+      }
     }
     &::-moz-placeholder{
       color: $muteTxt;
       opacity:1;
+      transition: color .3s;
     }
     &:-moz-placeholder{
       color: $muteTxt;
       opacity:1;
+      transition: color .3s;
     }
     &:-webkit-input-placeholder{
       color: $muteTxt;
       opacity:1;
+      transition: color .3s;
     }
     &::-webkit-input-placeholder{
       color: $muteTxt;
       opacity:1;
+      transition: color .3s;
+    }
+    & ~.ask__svg{
+      color:$muteTxt;
+      fill:$muteTxt;
+      transition: color .3s, fill .3s;
     }
   }
   &__input{

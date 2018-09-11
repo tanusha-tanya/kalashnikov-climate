@@ -75,7 +75,7 @@
       top: 28px;
     }
     &-phone{
-      top: 28px;      
+      top: 28px;
     }
     &-email{
       top: 28px;
@@ -92,31 +92,59 @@
     box-sizing: border-box;
     opacity:1;
     border:1px solid transparent;
-    transition: border .3s;
+    transition: border .3s, color .3s;
     font: $pointer;
-    &:hover, &:focus{
-      border:1px solid transparent;
-      outline: none;
-    }
     &::-moz-placeholder{
       color: $muteTxt;
       opacity:1;
       font: $pointer;
+      transition: color .3s;
     }
     &:-moz-placeholder{
       color: $muteTxt;
       opacity:1;
       font: $pointer;
+      transition: color .3s;
     }
     &:-webkit-input-placeholder{
       color: $muteTxt;
       opacity:1;
       font: $pointer;
+      transition: color .3s;
     }
     &::-webkit-input-placeholder{
       color: $muteTxt;
       opacity:1;
       font: $pointer;
+      transition: color .3s;
+    }
+    &:hover, &.active, &:focus{
+      border:1px solid transparent;
+      outline: none;
+      color:$activeBtn;
+      &::-moz-placeholder{
+        color:$activeBtn;
+      }
+      &::-webkit-input-placeholder{
+        color:$activeBtn;
+      }
+      &:-ms-input-placeholder{
+        color:$activeBtn;
+      }
+      &::-ms-input-placeholder{
+        color:$activeBtn;
+      }
+      &::placeholder{
+        color:$activeBtn;
+      }
+      &~ .form__svg{
+        color: $activeBtn;
+        fill: $activeBtn;
+      }
+      &~ .form__svg{
+        color: $activeBtn;
+        transition: color .3s;
+      }
     }
   }
   &__input{

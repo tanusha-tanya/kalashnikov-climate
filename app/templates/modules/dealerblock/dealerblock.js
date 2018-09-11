@@ -68,10 +68,6 @@ function changeSvg(input, label){
   }
 }
 
-function autoComplete(input, label){
-  console.log("Здесь будет автокомплит")
-}
-
 function activeLink(indexLink){
   let dealersLinks = document.querySelectorAll(".dealers__link");
     for(let i = 0; i < dealersLinks.length; i++){

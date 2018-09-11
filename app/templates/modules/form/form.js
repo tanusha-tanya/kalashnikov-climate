@@ -3,4 +3,9 @@ $(document).ready(function() {
     changeButtonIfAgree($(this).parents('form').find('input[type=submit]'), $(this));
     changeButtonIfAgree($(this).parents('form').find('button[type=submit]'), $(this));
   });
+
 });
+let form = document.querySelector(".ajaxform")
+if(form){
+  inputChange(form);
+}

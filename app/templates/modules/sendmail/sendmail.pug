@@ -1,14 +1,14 @@
 .sendmail
   h2 Выслать результаты расчёта
-  form.sendmail__form
+  form.sendmail__form.ajaxform
     .sendmail__field
-      label.sendmail__label
-        input.sendmail__input(placeholder="E-mail")(type="text")
+      label.sendmail__label.ask__label
+        input.sendmail__input.ask__input(placeholder="E-mail")(type="text")
         svg.sendmail__svg(role="img")(width="20")(height="16"): use(xlink:href="#mail")
     .sendmail__field.sendmail__field-check
-      input.sendmail__checkbox(type="checkbox")(id="confirm")
+      input.sendmail__checkbox.js-confirm(type="checkbox")(id="confirm")
       label.sendmail__checklabel(for="confirm") Я согласен на обработку  &nbsp;
         a(href="/") персональных данных
     .sendmail__field
       label.sendmail__buttonlabel
-        input.sendmail__button.button-disabled(type="button")(value="Отправить результаты")
+        input.sendmail__button.button-disabled(type="submit")(value="Отправить результаты")

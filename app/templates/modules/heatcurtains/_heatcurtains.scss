@@ -209,7 +209,7 @@
   &__radioinput{
     position: absolute;
     visibility: hidden;
-    &:checked{
+    &:checked, &:hover, &:focus{
       &+label{
         color: $inactiveTxt;
         &:before{
