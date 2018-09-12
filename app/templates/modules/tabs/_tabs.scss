@@ -123,5 +123,9 @@
     font: $littleTxt;
     color: $muteTxt;
     margin-top:10px;
+    text-decoration: none;
+    &:hover{
+      text-decoration:none;
+    }
   }
 }

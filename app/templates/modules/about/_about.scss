@@ -14,13 +14,14 @@
   }
   &__icons{
     border-bottom: 1px $download solid;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     @media(min-width:$tablet){
       margin: 0 -10px;
       display: flex;
     }
     @media(min-width:$notebook){
       margin: 0 -15px;
+      padding-bottom: 0px;
     }
   }
   &__column{
