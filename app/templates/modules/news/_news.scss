@@ -36,6 +36,8 @@
     @media(min-width: $notebook){
         width: 33%;
         width: calc(33% - 30px);
+        max-height: 110px;
+        overflow: hidden;
     }
     img{
       max-width: 100%;
@@ -78,7 +80,7 @@
       display: block;
       position: absolute;
       left: 0;
-      bottom: -20px;
+      bottom: 0;
       color: $muteTxt;
       font: $littleTxt;
     }

@@ -81,18 +81,26 @@
     display: flex;
     justify-content: space-between;
     background: $hoverSvg;
+    &:first-of-type{
+      border-top: 1px solid $download;
+      @media(min-width: $tablet){
+        border-top: 0;
+      }
+    }
     @media(min-width: $tablet){
       padding: 17px 0;
       margin: 0 -5px;
     }
     @media(min-width: $notebook){
      padding: 20px 0;
+     padding-top: 17px;
     }
     &-spoil{
       border-bottom: 0;
       @media(min-width: $tablet){
         padding: 17px;
         margin: 0;
+        position: relative;
       }
     }
     &.result__spoiler{
@@ -100,6 +108,7 @@
     }
   }
   &__characterleft{
+    font: $tabletd;
     margin-right: 15px;
   }
   &__characterright{
@@ -127,36 +136,15 @@
     }
   }
   .spoilarrow{
-    @media(min-width: $tablet){
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-    }
-    &__text{
-      font: $link;
-    }
-    &__svg{
+    .spoilarrow__pick{
       @media(min-width: $tablet){
-      top: 14px;
-    }
-    }
-    &__pick{
-      &.spoildown{
-        transform: rotate(270deg);
-        &:before{
-          left: -7px;
-          @media(min-width: $tablet){
-            bottom: 20px;
-          }
-        }
-        .spoilarrow__svg{
-          left:2px;
-          @media(min-width: $tablet){
-            bottom: 16px;
-            top: auto;
-          }
-        }
+        position: absolute;
+        right: 20px;
+        bottom: 24px;
       }
+    }
+    .spoilarrow__text{
+      font: $link;
     }
   }
  }

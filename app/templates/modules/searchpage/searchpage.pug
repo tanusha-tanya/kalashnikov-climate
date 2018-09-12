@@ -19,19 +19,21 @@
   .searchpage__spoil
     +spoiler("Показать еще")
   .searchpage__result
-    .searchpage__title Найдено в
+    .searchpage__title Найдено в 
       a.searchpage__link.searchpage__link-news(href="category.html") Новостях
     .searchpage__quantity всего 2 публикации
   .news
     .news__items
       .news__item
-        img.news__img(src="assets/news.jpg")
+        a.news__img(href="detailnews.html")
+          img(src="assets/news.jpg")
         .news__content
           a.news__link(href="detailnews.html")
             h4.news__h4 KALASHNIKOV — самый известный российский бренд в мире
           .news__text Под данным брендом выпускается в том числе и продукция гражданского назначения...
       .news__item
-        img.news__img(src="assets/news.jpg")
+        a.news__img(href="detailnews.html")
+          img(src="assets/news.jpg")
         .news__content
           a.news__link(href="detailnews.html")
             h4.news__h4 KALASHNIKOV — самый известный российский бренд в мире

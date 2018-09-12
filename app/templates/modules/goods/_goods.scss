@@ -31,8 +31,12 @@
     display: flex;
     box-sizing: border-box;
     justify-content: center;
+    @media(min-width: $tablet){
+      height: 290px;
+    }
     @media(min-width: $notebook){
       padding: 60px 15px;
+      height: 235px;
     }
   }
   &__img{

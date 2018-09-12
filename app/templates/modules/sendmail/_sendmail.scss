@@ -84,10 +84,13 @@
   &__svg{
     position: absolute;
     left: 15px;
-    top: 17px;
+    top: 30px;
     color: $formsvg;
     fill: $formsvg;
     transition: color .3s, fill .3s;
+    @media(min-width:$tablet){
+      top: 19px;
+    }
   }
   &__checkbox{
     position: absolute;

@@ -11,6 +11,9 @@
     color: $inactiveTxt;
     fill: $inactiveTxt;
   }
+  .download__text{
+    font: $pointer;
+  }
   @media(min-width:$tablet){
     max-width: 80%;
     p{

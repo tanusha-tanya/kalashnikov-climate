@@ -1,4 +1,11 @@
 .dealers{
+  margin-bottom: 28px;
+  @media(min-width: $tablet){
+    margin-bottom: -33px;
+  }
+  @media(min-width: $notebook){
+    margin-bottom: -63px;
+  }
   &__map{
     padding-top: 172%;
     height:0;
@@ -24,11 +31,14 @@
     }
   }
   &__search{
-    margin-top: 35px;
+    margin-top: 60px;
     margin-bottom: 35px;
     box-sizing: border-box;
+    @media(min-width: $tablet){
+      margin-top: 50px;
+    }
     @media(min-width: $notebook){
-      margin: 30px -15px 50px -15px;
+      margin: 80px -15px 50px -15px;
     }
   }
   &__fieldset{
@@ -280,5 +290,12 @@
     display: flex;
     justify-content: flex-end;
     margin-top: 30px;
+    position: relative;
+    overflow: unset;
+    .spoilarrow__pick{
+      position:absolute;
+      right: 8px;
+      top: 16px;
+    }
   }
 }
