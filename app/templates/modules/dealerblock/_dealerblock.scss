@@ -36,5 +36,8 @@
   &__link{
     color: $inactiveBtn;
     font: $pointer;
+    &:hover, &:focus{
+      color: $activeBtn;
+    }
   }
 }

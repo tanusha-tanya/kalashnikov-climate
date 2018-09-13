@@ -57,6 +57,9 @@ a{
     color:$hoverTxt;
   }
 }
+textarea{
+  resize: none;
+}
 .container{
   padding: 15px;
   position: relative;
@@ -132,7 +135,7 @@ a{
   }
 }
 .button-disabled{
-  background:$formsvg!important;
+  background: $formsvg!important;
   cursor: not-allowed!important;
 }
 .col{

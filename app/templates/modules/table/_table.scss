@@ -41,11 +41,11 @@
     padding-left: 30px;
     box-sizing: border-box;
     min-width:180px;
-    height: 70px;
+    min-height: 50px;
     border-bottom:1px solid $tableBorder;
     @media(min-width:$tablet){
       min-width:200px;
-      height: 60px;
+      min-height: 60px;
     }
     &:first-of-type{
       min-width:178px;
