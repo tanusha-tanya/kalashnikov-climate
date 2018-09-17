@@ -29,41 +29,41 @@ $(window).on("load",function(){
     }
   }
     changeScroll();
-  window.addEventListener("resize", function(){
-    changeScroll();
-  });
 
-  let tableColumn = tabTable.querySelectorAll(".table__column"),
+  function cellHeight(){
+    let tableColumn = tabTable.querySelectorAll(".table__column"),
       tableCell = tabTable.querySelectorAll(".table__cell"),
       tableRow = tabTable.querySelectorAll(".table__row"),
-      cell, rowHeight, columnHeight, largeHeight;
-      for(let i = 0; i <= tableRow.length; i++){
-        for (let j = 0; j < tableColumn.length; j++){
-          let ColumnCell =  tableColumn[j].querySelectorAll(".table__cell");
-          let height = ColumnCell[i].scrollHeight;
-          heightDetected(height);
-          columnHeight = height;
+      rowHeight = [];
+      for(let i = 0; i < tableRow.length; i++){
+        rowHeight = [];
+        for(let j = 0; j < tableColumn.length; j++){
+          let ColumnCell = tableColumn[j].querySelectorAll(".table__cell");
+          rowHeight.push(ColumnCell[i].clientHeight);
         }
-        cell = tableRow[i].querySelectorAll(".table__cell");
-        for (let j = 0; j < cell.length; j++){
-          let height = cell[j].scrollHeight;
-          heightDetected(height);
-          rowHeight = height;
+        let cell = tableRow[i].querySelectorAll(".table__cell");
+        for (let k = 0; k < cell.length; k++){
+          rowHeight.push(cell[k].clientHeight);
         }
-        function heightDetected(height){
-          let lowHeight = 0;
-          (height <= lowHeight)? height = lowHeight: lowHeight = height;
-          return height
+        rowHeight.sort(compareNumeric);
+        for(let j = 0; j < tableColumn.length; j++){
+          let ColumnCell = tableColumn[j].querySelectorAll(".table__cell");
+            ColumnCell[i].style.height = rowHeight[0] + "px";
         }
-        (rowHeight <= columnHeight)? largeHeight = columnHeight: largeHeight = rowHeight;
-        console.log(largeHeight)
-        for (let j = 0; j < tableColumn.length; j++){
-          let ColumnCell =  tableColumn[j].querySelectorAll(".table__cell");
-          ColumnCell[i].style.height = largeHeight + "px";
+        for (let k = 0; k < cell.length; k++){
+          cell[k].style.height = rowHeight[0] + "px";
         }
-        for (let j = 0; j < cell.length; j++){
-           cell[j].style.height = largeHeight + "px";
-        }
+      }
+
+      function compareNumeric(a, b) {
+        if (a < b) return 1;
+        if (a > b) return -1;
+      }
     }
+    cellHeight()
+    window.addEventListener("resize", function(){
+      changeScroll();
+      cellHeight();
+    });
   }
 });

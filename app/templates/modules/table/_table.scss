@@ -11,7 +11,6 @@
     font: $tabletd;
     &:first-of-type{
       .table__cell{
-        padding: 5px;
         padding-left: 0;
         width: 177px;
         @media(min-width:$notebook){
@@ -37,7 +36,7 @@
     }
   }
   &__cell{
-    padding:20px;
+    padding:15px;
     padding-left: 30px;
     box-sizing: border-box;
     min-width:180px;
@@ -45,7 +44,6 @@
     border-bottom:1px solid $tableBorder;
     @media(min-width:$tablet){
       min-width:200px;
-      min-height: 60px;
     }
     &:first-of-type{
       min-width:178px;

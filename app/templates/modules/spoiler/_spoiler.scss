@@ -1,6 +1,7 @@
 .spoilarrow{
   cursor:pointer;
   font-size: 0;
+  overflow: unset;
   &__text{
     color:$inactiveBtn;
     font:$pointer;
