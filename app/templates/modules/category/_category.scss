@@ -45,23 +45,64 @@
     }
     &-question{
       cursor: pointer;
+      &:hover{
+        .category__question{
+          background: #000000;
+          fill:$hoverSvg;
+          color: $hoverSvg;
+        }
+      }
     }
   }
   &__spoiltext{
     position:absolute;
     opacity: 0;
     transition: opacity .3s;
+    background: #fff;
+    left: -20px;
+    top: 0;
+    width: 100%;
+    padding: 17px 40px 30px 15px;
+    z-index: 99;
+    box-sizing: border-box;
+    font: $category;
+    line-height: 17px;
     &.open{
-      opacity: 1;
-      background: #fff;
-      left: 0;
-      top: 0;
-      width: 100%;
-      width: calc(100% - 30px);
-      padding: 17px 40px 30px 15px;
-      z-index: 99;
-      box-sizing: border-box;
-      font: $category;
+      @media(min-width:$tablet){
+        opacity: 1;
+      }
+    }
+    .close{
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      z-index: 100;
+      width: 20px;
+      height: 20px;
+      &:after, &:before{
+        content: "";
+        width: 2px;
+        height: 14px;
+        background: $inactiveSvg;
+        display:block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: height .3s;
+        &:hover{
+          height: 17px;
+        }
+      }
+      &:after{
+        transform: rotate(45deg);
+      }
+      &:before{
+        transform: rotate(-50deg);
+      }
+    }
+    h4{
+      margin-bottom: 13px;
+      font: $tabletd;
     }
   }
   &__svg{
@@ -86,7 +127,7 @@
     @media(min-width:$notebook){
       width: calc(58%)
     }
-    &:hover{
+    &:hover, &:focus{
       .category__arrow{
         background:$hoverBtn;
         &:before{
@@ -95,6 +136,9 @@
       }
       .category__arrowsvg{
         transform: translateX(7px);
+      }
+      .category__descript{
+        color: $inactiveTxt;
       }
     }
   }
@@ -144,11 +188,11 @@
   }
   &__question{
     display: none;
-    @media(min-width:$notebook){
+    @media(min-width:$tablet){
       display: block;
       position:absolute;
       right: 0;
-      top: 0;
+      bottom: 11px;
       transition: background;
       box-sizing: border-box;
       background: $hoverSvg;
@@ -166,5 +210,11 @@
         height: 13px;
       }
     }
+  }
+  &__descript{
+    font: $pointer;
+    max-width: 370px;
+    margin: 33px 46px;
+    line-height: 23px
   }
 }

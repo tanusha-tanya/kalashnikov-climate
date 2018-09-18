@@ -10,6 +10,9 @@
     flex-direction: column;
     font: $tabletd;
     &:first-of-type{
+      position: relative;
+      z-index: 100;
+      background: $hoverSvg;
       .table__cell{
         padding-left: 0;
         width: 177px;

@@ -36,6 +36,7 @@
         width: 365px;
         left: auto;
         top: 174px;
+        min-height: 300px;
       }
       @media(min-width: $notebook){
         display: none;
@@ -43,9 +44,6 @@
       &.openmenu{
         transform: translateX(0);
         overflow: auto;
-        @media(min-width:$tablet){
-          min-height: 300px;
-        }
       }
       .footer__download{
         width: 100%;
