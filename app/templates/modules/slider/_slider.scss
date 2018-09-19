@@ -59,6 +59,17 @@
       padding-bottom: 40px;
       padding-left: 60px;
     }
+    &-light{
+      .slider__title{
+        color: $hoverSvg;
+      }
+      .slider__text{
+        color: $hoverSvg;
+        &:before{
+          background: $hoverSvg;
+        }
+      }
+    }
   }
   &__title{
     color: $inactiveTxt;
@@ -251,7 +262,7 @@
   @media(min-width:$notebook){
     .slider__content{
       opacity:0;
-      transition: opacity 1s;
+      transition: opacity 1s, background .3s;
     }
   }
 }

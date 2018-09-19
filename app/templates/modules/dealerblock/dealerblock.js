@@ -61,7 +61,6 @@ window.addEventListener("resize", function(){
 function changeSvg(input, label){
   if(input.value.trim().length !== 0){
     label.classList.add("activeInput");
-    autoComplete(input, label)
   }
   else{
     label.classList.remove("activeInput");

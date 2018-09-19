@@ -11,10 +11,10 @@ function questionPopup(){
         parent.removeChild(close);
       }
       else{
-        for(let j = 0; j < question.length; j++){
-          let spoil = question[j].querySelector(".category__spoiltext");
-          spoil.classList.remove("open");
-        }
+        let spoil = document.querySelectorAll(".category__spoiltext");
+          for (var j = 0; j < spoil.length; j++) {
+            spoil[j].classList.remove("open");
+          }
         let spoiltext = this.querySelector(".category__spoiltext");
         spoiltext.classList.add("open");
         spoiltext.appendChild(close);

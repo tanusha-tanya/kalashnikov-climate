@@ -2,15 +2,19 @@ mixin dealers(text)
   .dealers
     .dealers__search
       form(action="").dealers__filter
+        input(type="hidden", name="filter[TYPE_SALES]", value="all")
+        input(type="hidden", name="filter[COUNTRY]", value="")
+        input(type="hidden", name="filter[CITY]", value="")
+        input(type="hidden", name="bx_ajax_id", value="3cdac6678741927492717099cb424f94")
         fieldset.dealers__fieldset
           span Страна
           label.dealers__label
-            input.dealers__input(type="text", placeholder="Страна")
+            input.dealers__input(type="text", placeholder="Страна", data-for ="filter[COUNTRY]", data-list = [{'ID':'8','NAME':'Россия','PROPERTY_ID':'24'}])
             svg.dealers__svg(role="img")(width="14")(height="20"): use(xlink:href="#baloon")
         fieldset.dealers__fieldset
           span Город
           label.dealers__label
-            input.dealers__input.dealers__input-city(type="text", placeholder="Город")
+            input.dealers__input.dealers__input-city(type="text", placeholder="Город", data-for = "filter[CITY]" data-list = [{'ID':'9','NAME':'Москва','PROPERTY_ID':'25'},{'ID':'10','NAME':'Санкт петербург','PROPERTY_ID':'25'}])
             svg.dealers__svg(role="img")(width="14")(height="20"): use(xlink:href="#baloon")
     .dealers__type
       .dealers__typeitem.dealers__typeitem-active
