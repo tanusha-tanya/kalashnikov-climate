@@ -301,3 +301,19 @@
     }
   }
 }
+.autocompleet{
+  position: absolute;
+  padding:  30px 30px;
+  border: 1px solid $inactiveBg;
+  width: 340px;
+  bottom: -50px;
+  border-top: transparent;
+  box-sizing: border-box;
+  &__string{
+    cursor: pointer;
+    transition: color .3s;
+    &:hover{
+      color: $inactiveBtn;
+    }
+  }
+}
