@@ -302,16 +302,24 @@
   }
 }
 .autocompleet{
-  position: absolute;
-  padding:  30px 30px;
-  border: 1px solid $inactiveBg;
-  width: 340px;
-  bottom: -50px;
-  border-top: transparent;
-  box-sizing: border-box;
+  display: none;
+  &.autocompleet-active{
+    display:block;
+    position: absolute;
+    padding:  5px 30px;
+    border: 1px solid $inactiveBg;
+    width: 340px;
+    border-top: transparent;
+    box-sizing: border-box;
+    background: $hoverSvg;
+    z-index: 999;
+  }
   &__string{
+    display: block;
     cursor: pointer;
     transition: color .3s;
+    margin: 5px;
+    font: $link;
     &:hover{
       color: $inactiveBtn;
     }

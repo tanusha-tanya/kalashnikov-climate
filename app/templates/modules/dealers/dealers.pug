@@ -11,11 +11,13 @@ mixin dealers(text)
           label.dealers__label
             input.dealers__input(type="text", placeholder="Страна", data-for ="filter[COUNTRY]", data-list = [{'ID':'8','NAME':'Россия','PROPERTY_ID':'24'}])
             svg.dealers__svg(role="img")(width="14")(height="20"): use(xlink:href="#baloon")
+            .autocompleet
         fieldset.dealers__fieldset
           span Город
           label.dealers__label
             input.dealers__input.dealers__input-city(type="text", placeholder="Город", data-for = "filter[CITY]" data-list = [{'ID':'9','NAME':'Москва','PROPERTY_ID':'25'},{'ID':'10','NAME':'Санкт-петербург','PROPERTY_ID':'25'}])
             svg.dealers__svg(role="img")(width="14")(height="20"): use(xlink:href="#baloon")
+            .autocompleet
     .dealers__type
       .dealers__typeitem.dealers__typeitem-active
         a.dealers__link#all(href="#") Все
