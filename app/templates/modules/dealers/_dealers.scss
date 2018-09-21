@@ -153,6 +153,9 @@
     &-city{
       @media(min-width: $tablet){
         width: 470px;
+        ~.autocompleet-active{
+          width: 470px!important;
+        }
       }
     }
     &:hover, &:focus{
@@ -308,11 +311,14 @@
     position: absolute;
     padding:  5px 30px;
     border: 1px solid $inactiveBg;
-    width: 340px;
+    width: 290px;
     border-top: transparent;
     box-sizing: border-box;
     background: $hoverSvg;
     z-index: 999;
+    @media(min-width:$tablet){
+      width: 340px;
+    }
   }
   &__string{
     display: block;
