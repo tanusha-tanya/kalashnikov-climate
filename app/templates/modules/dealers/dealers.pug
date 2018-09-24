@@ -15,7 +15,7 @@ mixin dealers(text)
         fieldset.dealers__fieldset
           span Город
           label.dealers__label
-            input.dealers__input.dealers__input-city(type="text", placeholder="Город", data-for = "filter[CITY]" data-list = [{'ID':'9','NAME':'Москва','PROPERTY_ID':'25'},{'ID':'10','NAME':'Санкт-петербург','PROPERTY_ID':'25'}])
+            input.dealers__input.dealers__input-city(type="text", placeholder="Город", data-for = "filter[CITY]", data-list = '[{"ID":"16","NAME":"\u041c\u043e\u0441\u043a\u0432\u0430","PROPERTY_ID":"31","XY":[{"X":"55.794572022089","Y":"37.654877291396"},{"X":"55.83266592946","Y":"37.686528723589"},{"X":"55.750876618464","Y":"37.583049004507"}]},{"ID":"17","NAME":"\u0421\u0430\u043d\u043a\u0442 \u043f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433","PROPERTY_ID":"31","XY":[{"X":"59.936174", "Y":"30.311934"},{"X":"59.939095", "Y":"30.315868"}]}]')
             svg.dealers__svg(role="img")(width="14")(height="20"): use(xlink:href="#baloon")
             .autocompleet
     .dealers__type
