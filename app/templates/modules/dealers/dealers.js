@@ -148,14 +148,9 @@ window.onload = function(){
       }
 
       function sortDistance(distanceArr){
-        for(let i =0; i < distanceArr.length; i++){
-          oldDistance.push(distanceArr[i])
-        }
-
-        distanceArr.sort(compareNumeric);
-        let index = oldDistance.indexOf(distanceArr[0]);
+        let minDistans =  Math.min.apply(null,distanceArr);
+        let index = distanceArr.indexOf(minDistans);
         let array = [];
-
         for(let i =0; i < datalist.length; i++){
           for (let m = 0; m < datalist[i].XY.length; m++){
             array.push(datalist[i].ID);
@@ -164,10 +159,6 @@ window.onload = function(){
           cityId = array[index];
       }
 
-      function compareNumeric(a, b) {
-        if (a > b) return 1;
-        if (a < b) return -1;
-      }
       setcityId(cityId);
    }
   }
