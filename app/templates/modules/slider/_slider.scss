@@ -1,13 +1,16 @@
 .slider{
   &__items{
+
   }
   &__item{
     height: 300px;
     padding: 0 15px;
-    display: inline-block;
+    display: block;
     text-decoration: none;
     width: 100%;
     box-sizing: border-box;
+    position: relative;
+    margin: 0 auto;
     @media(min-width: $tablet){
       height: 630px;
       padding: 0 30px;

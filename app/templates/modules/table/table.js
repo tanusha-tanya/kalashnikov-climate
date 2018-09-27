@@ -45,19 +45,14 @@ $(window).on("load",function(){
         for (let k = 0; k < cell.length; k++){
           rowHeight.push(cell[k].clientHeight);
         }
-        rowHeight.sort(compareNumeric);
+
         for(let j = 0; j < tableColumn.length; j++){
           let ColumnCell = tableColumn[j].querySelectorAll(".table__cell");
-            ColumnCell[i].style.height = rowHeight[0] + "px";
+            ColumnCell[i].style.height = Math.max.apply(null,rowHeight) + "px";
         }
         for (let k = 0; k < cell.length; k++){
-          cell[k].style.height = rowHeight[0] + "px";
+          cell[k].style.height = Math.max.apply(null,rowHeight)  + "px";
         }
-      }
-
-      function compareNumeric(a, b) {
-        if (a < b) return 1;
-        if (a > b) return -1;
       }
     }
     cellHeight()

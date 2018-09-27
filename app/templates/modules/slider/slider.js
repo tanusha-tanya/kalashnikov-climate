@@ -1,5 +1,7 @@
 $( document ).ready(function() {
   let owl =  $(".slider__items");
+  if(owl){
+  if($(".slider__item").length > 1){
   owl.owlCarousel({
     loop:true,
     margin:10,
@@ -21,7 +23,6 @@ $( document ).ready(function() {
         }
     }
   });
-
   let items = $('.slider .owl-item:not(.cloned), .sliderdetail .owl-item:not(.cloned), .newsslider .owl-item:not(.cloned)'),
       total = items.length,
       current;
@@ -45,4 +46,9 @@ $( document ).ready(function() {
     $('.count__amount-current').text("0" + current):
     $('.count__amount-current').text(current);
   }
+}
+  else{
+    $(".slider__nav").remove()
+  }
+}
 });

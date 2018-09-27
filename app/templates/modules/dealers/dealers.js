@@ -21,6 +21,7 @@ if(dealers){
       if(fieldHidden[i].name === forId){
           let hiddenInput = fieldHidden[i];
           hiddenInput.value = value;
+          console.log(hiddenInput)
       }
     }
   }
@@ -118,15 +119,14 @@ window.onload = function(){
       let latitude = ymaps.geolocation.latitude;
       let longitude = ymaps.geolocation.longitude;
       let distanceArr = [];
-      let oldDistance = [];
       function isCity(){
         for(let i =0; i < datalist.length; i++){
           if(datalist[i].NAME.indexOf(city) !== -1){
             cityId = datalist[i].ID;
             return cityId
           }
-          else{
-              for (let m = 0; m < datalist[i].XY.length; m++){
+          else if(datalist[i].XY !== undefined){
+            for (let m = 0; m < datalist[i].XY.length; m++){
               let lat = datalist[i].XY[m].X;
               let long = datalist[i].XY[m].Y;
               let distance = Math.sqrt(Math.pow((latitude - lat), 2) + Math.pow((longitude - long), 2));
@@ -151,9 +151,12 @@ window.onload = function(){
         let minDistans =  Math.min.apply(null,distanceArr);
         let index = distanceArr.indexOf(minDistans);
         let array = [];
+
         for(let i =0; i < datalist.length; i++){
-          for (let m = 0; m < datalist[i].XY.length; m++){
-            array.push(datalist[i].ID);
+          if(datalist[i].XY !== undefined){
+            for (let m = 0; m < datalist[i].XY.length; m++){
+              array.push(datalist[i].ID);
+              }
             }
           }
           cityId = array[index];
