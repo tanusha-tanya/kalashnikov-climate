@@ -11,9 +11,8 @@
     }
   }
   &__span{
-    padding: 10px 15px;
     position: relative;
-    padding-right: 35px;
+    padding: 10px 0;
     &:hover{
       background: $menubg;
       .leftmenu__link{
@@ -47,6 +46,11 @@
   }
   &__link{
     text-decoration: none;
+    padding: 10px 15px;
+    padding-right: 35px;
+    &:hover{
+      background: $menubg;
+    }
   }
   &__svg{
     transition: transform .3s;

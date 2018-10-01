@@ -170,7 +170,7 @@ gulp.task('s', ['styles', 'scripts', 'template', 'sprites', 'svg', 'watch'], fun
 gulp.task('s:d', function() {
   browserSync.init({
     notify: false,
-    port: 9000,
+    port: 3000,
     server: {
       baseDir: ['dist']
     }

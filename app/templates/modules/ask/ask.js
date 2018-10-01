@@ -24,7 +24,6 @@ $(document).ready(function() {
         $(this).parent('.ask__label').removeClass('notempty')
     }
   });
-  $('body').find('.ask__input-phone').mask('+7 (999) 999-99-99');
 
   $('body').on('submit','.ajaxform', function(event){
     event.preventDefault();

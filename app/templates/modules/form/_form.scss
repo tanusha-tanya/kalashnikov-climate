@@ -152,6 +152,7 @@
       position: absolute;
       visibility: hidden;
       &+label{
+        cursor:pointer;
         font: $littleTxt;
         display: flex;
         position: relative;
