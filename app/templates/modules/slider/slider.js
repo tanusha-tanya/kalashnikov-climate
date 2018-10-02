@@ -1,7 +1,7 @@
 $( document ).ready(function() {
   let owl =  $(".slider__items");
   if(owl){
-  if($(".slider__item").length > 1){
+  if(($(".slider__item").length > 1)||($(".newsslider__item").length > 1)){
   owl.owlCarousel({
     loop:true,
     margin:10,

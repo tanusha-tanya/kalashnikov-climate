@@ -49,6 +49,11 @@
     flex-direction: column;
     justify-content: flex-end;
     background-position: center;
+    &-noimg{
+      background-size:contain;
+      background-repeat: no-repeat;
+      background-image: url(../images/noimg.svg);
+    }
   }
   &__content{
     padding-bottom: 40px;
