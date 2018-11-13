@@ -4,8 +4,9 @@
     .heatcurtains__item.heatcurtains__item-city
       legend.heatcurtains__legend.heatcurtains__legend-left Город
       label.heatcurtains__label.heatcurtains__label-city(for="city")
-        input.heatcurtains__textinput.heatcurtains__textinput-city(id="city")(type="text")(placeholder="Город")
+        input.heatcurtains__textinput.heatcurtains__textinput-city(id="city")(type="text")(placeholder="Город")(data-city='[{"NAME":"\u0418\u0436\u0435\u0432\u0441\u043a","PROPERTY":{"CALC_AIR_TEMPERATURE_INTERNAL":"-20","CALC_AIR_TEMPERATURE_EXTERNAL":"40"}}]')
         svg.heatcurtains__svg(role="img")( width="14")( height="20"): use(xlink:href="#baloon")
+        .autocompleet
     .heatcurtains__item.heatcurtains__item-info
       svg.heatcurtains__weathersvg(role="img")( width="46")( height="49"): use(xlink:href="#weather")
       span При выборе города система подставит соответсвующие погодные данные
@@ -16,7 +17,7 @@
           input.heatcurtains__textinput(type="text")(placeholder="Внутренняя")
           span °C
         label.heatcurtains__textlabel
-          input.heatcurtains__textinput(type="text")(placeholder="Наружная")
+          input.heatcurtains__textinput#external(type="text")(placeholder="Наружная")
           span °C
     .heatcurtains__item
       legend.heatcurtains__legend Габариты дверного проема
@@ -97,10 +98,10 @@
     .heatcurtains__item
       legend.heatcurtains__legend Материал корпуса
       .heatcurtains__radioblock
-        input.heatcurtains__radioinput(type="radio")(name="carcass")(id="paintedsteel")
+        input.heatcurtains__radioinput(type="checkbox")(id="paintedsteel")
         label.heatcurtains__labelinput(for="paintedsteel")
           span Окрашенная сталь
-        input.heatcurtains__radioinput(type="radio")(name="carcass")(id="stainlesssteel")
+        input.heatcurtains__radioinput(type="checkbox")(id="stainlesssteel")
         label.heatcurtains__labelinput(for="stainlesssteel")
           span Нержавеющая сталь
     .heatcurtains__item

@@ -3,7 +3,9 @@ $(document).ready(function() {
     changeButtonIfAgree($(this).parents('form').find('input[type=submit]'), $(this));
     changeButtonIfAgree($(this).parents('form').find('button[type=submit]'), $(this));
   });
-  $(".form__input-phone").mask("+7(999) 999-9999");
+//$(".form__input-phone").mask("+7(999) 999-9999");
+  $('.form__input-phone').inputmask('+7(999) 999-9999');
+
 });
 let form = document.querySelector(".ajaxform")
 if(form){

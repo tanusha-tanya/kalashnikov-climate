@@ -78,9 +78,58 @@ if(dealers){
     }
     autocompleet.innerHTML = string;
     let autocompleetString = autocompleet.querySelectorAll(".autocompleet__string");
+    arrowsNavigation(autocompleetString)
     selectRow(autocompleetString)
   }
 
+  function arrowsNavigation(stringCollection){
+    for(i = 0; i < stringCollection.length; i++ ){
+      stringCollection[i].setAttribute("tabindex", "1");
+    }
+      let k = 0;
+      document.addEventListener('keydown', (event) => {
+        const keyName = event.key;
+        if(keyName == "ArrowDown"){
+          event.preventDefault();
+          if(k <= stringCollection.length-1){
+            stringCollection[k].focus();
+            k++;
+          }
+          else{
+            k = 1;
+            stringCollection[0].focus();
+          }
+        }
+        else if(keyName == "ArrowUp"){
+          event.preventDefault();
+          if(k <= 1){
+            k = stringCollection.length;
+            stringCollection[k-1].focus();
+          }
+          else{
+            k--;
+            stringCollection[k-1].focus();
+          }
+        }
+        else if(keyName == "Enter"){
+          event.preventDefault()
+          var string = null;
+            for(i = 0; i < stringCollection.length; i++ ){
+              if(document.activeElement === stringCollection[i]){
+                string = stringCollection[i];
+              }
+          }
+          if(string !== null){
+            let text = string.textContent;
+            let word = text.toLowerCase().trim()
+            let input = string.parentNode.parentNode.querySelector("input[type='text']");
+            matchName(word, input);
+            input.value = text;
+            input.parentNode.classList.add("activeInput");
+          }
+        }
+    });
+  }
   //Убираем автокомплит
   function hideAutocompleet(input){
     let autocompleet = input.parentNode.querySelector(".autocompleet");
@@ -107,6 +156,7 @@ if(dealers){
     }
   }
 }
+
 
 window.onload = function(){
   if(ymaps){
@@ -144,7 +194,6 @@ window.onload = function(){
 
       function setcityId(cityId){
         hiddenInput.value = cityId;
-        console.log(hiddenInput)
       }
 
       function sortDistance(distanceArr){
@@ -164,5 +213,16 @@ window.onload = function(){
 
       setcityId(cityId);
    }
+  }
+}
+
+document.body.onclick = function(e){
+  if(!e.target.classList.contains("autocompleet__string")){
+    let autocompleetCollection = document.querySelectorAll(".autocompleet");
+    if(autocompleetCollection){
+      for(let i = 0; i < autocompleetCollection.length; i++){
+        autocompleetCollection[i].classList.remove("autocompleet-active")
+      }
+    }
   }
 }

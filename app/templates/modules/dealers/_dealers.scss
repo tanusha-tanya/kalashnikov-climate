@@ -326,7 +326,7 @@
     transition: color .3s;
     margin: 5px;
     font: $link;
-    &:hover{
+    &:hover, &:focus{
       color: $inactiveBtn;
     }
   }

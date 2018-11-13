@@ -102,6 +102,9 @@
         margin: 0;
         position: relative;
       }
+      .spoilarrow{
+        position: static;
+      }
     }
     &.result__spoiler{
       background: transparent;

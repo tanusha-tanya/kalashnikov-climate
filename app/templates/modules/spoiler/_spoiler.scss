@@ -2,6 +2,8 @@
   cursor:pointer;
   font-size: 0;
   overflow: unset;
+  position: relative;
+  z-index: 100;
   &__text{
     color:$inactiveBtn;
     font:$pointer;
